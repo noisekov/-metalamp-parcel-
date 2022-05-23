@@ -1,0 +1,46 @@
+.header-up {
+    &__container {
+        background-color: #ffffff;
+        padding: 26px 140px;
+        margin: 0 0 40px 0;
+        display: flex;
+        align-items: center;
+        justify-content:space-between;
+    }
+    &__nav {
+        display: flex;
+    }
+}
+
+.nav-up {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-right: 20px;
+    &__item {
+        margin-right:20px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    &__link {
+        font-weight: 400;
+        color: rgba(31, 32, 65, 0.5);
+    }
+    &__style {
+        font-weight: 700;
+        color: rgba(31, 32, 65, 0.75);
+    }
+    &__arrow {
+        position: relative;
+        top: 4px;
+        right: -5px;
+        & img {
+        }
+    }
+}
+
+
+
+
+
