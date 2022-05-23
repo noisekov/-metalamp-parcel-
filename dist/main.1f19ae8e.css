@@ -14,6 +14,7 @@
   padding: 100px 0;
   display: flex;
   align-content: center;
+  position: relative;
 }
 .footer-up__logo {
   margin-bottom: 20px;
@@ -24,6 +25,8 @@
 }
 .footer-up__text-right {
   margin-bottom: 20px;
+  line-height: 171.4285714286%;
+  color: rgba(31, 32, 65, 0.5);
 }
 .footer-up__block {
   display: flex;
@@ -82,6 +85,15 @@
   position: absolute;
   left: -30px;
   top: 0px;
+}
+.footer-up::after {
+  content: "";
+  position: absolute;
+  top: 360px;
+  left: -140px;
+  background: rgba(31, 32, 65, 0.1);
+  height: 1px;
+  width: 1440px;
 }
 .footer-down {
   display: flex;

@@ -12,6 +12,7 @@
         padding: 100px 0;
         display: flex;
         align-content: center;
+        position: relative;
         &__logo {
             margin-bottom: 20px;
         }
@@ -20,6 +21,8 @@
             color: rgba(31, 32, 65, 0.5);
             &-right {
                 margin-bottom: 20px;
+                line-height: calc(24 / 14 * 100%);
+                color: rgba(31, 32, 65, 0.5);
             }
         }
         &__block{
@@ -81,6 +84,15 @@
                 left: -30px;
                 top: 0px;
             }
+        }
+        &::after{
+            content: "";
+            position: absolute;
+            top: 360px;
+            left: -140px;
+            background:  rgba(31, 32, 65, 0.1);
+            height: 1px;
+            width: 1440px;
         }
     }
     &-down {
