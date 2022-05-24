@@ -309,7 +309,7 @@ h1, h2, h3, h4, h5, h6 {
 .footer-mobile__container {
   background-color: #ffffff;
   max-width: 768px;
-  margin: 0 auto;
+  margin: 0 auto 40px;
 }
 .footer-mobile__body {
   margin: 120px 0 20px 0;
@@ -332,6 +332,213 @@ h1, h2, h3, h4, h5, h6 {
 }
 .footer-mobile__icon:last-child {
   margin-right: 0;
+}
+
+.color {
+  background: #ffffff;
+}
+.color__container {
+  padding: 0 140px 145px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+.color__block-title {
+  flex: 0 0 436px;
+}
+
+.block-color {
+  display: flex;
+  margin-bottom: 20px;
+}
+.block-color:last-child {
+  margin-bottom: 0;
+}
+.block-color-first {
+  width: 70px;
+  height: 70px;
+  border-radius: 6px;
+  margin-right: 40px;
+  background-color: #1F2041;
+}
+.block-color-second {
+  width: 70px;
+  height: 70px;
+  border-radius: 6px;
+  margin-right: 40px;
+  background-color: rgba(31, 32, 65, 0.75);
+}
+.block-color-third {
+  width: 70px;
+  height: 70px;
+  border-radius: 6px;
+  margin-right: 40px;
+  background-color: rgba(31, 32, 65, 0.5);
+}
+.block-color-fourth {
+  width: 70px;
+  height: 70px;
+  border-radius: 6px;
+  margin-right: 40px;
+  background-color: rgba(31, 32, 65, 0.25);
+}
+.block-color-fifth {
+  width: 70px;
+  height: 70px;
+  border-radius: 6px;
+  margin-right: 40px;
+  background-color: rgba(31, 32, 65, 0.05);
+}
+.block-color-sixth {
+  width: 70px;
+  height: 70px;
+  border-radius: 6px;
+  margin-right: 40px;
+  background-color: #BC9CFF;
+}
+.block-color-seventh {
+  width: 70px;
+  height: 70px;
+  border-radius: 6px;
+  margin-right: 40px;
+  background-color: #6FCF97;
+}
+.block-color__body-name {
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 147.3684210526%;
+  color: #1F2041;
+}
+.block-color__body-number {
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 147.3684210526%;
+  color: #1F2041;
+}
+
+.block-title {
+  display: flex;
+  margin-bottom: 51px;
+}
+.block-title:last-child {
+  margin-bottom: 0;
+}
+.block-title span {
+  color: rgba(31, 32, 65, 0.25);
+  font-weight: 400;
+  display: inline-block;
+}
+.block-title:first-child span {
+  margin-right: 30px;
+  font-size: 24px;
+  line-height: 120.8333333333%;
+}
+.block-title:nth-child(2) span {
+  margin-right: 35px;
+  font-size: 19px;
+  line-height: 121.0526315789%;
+}
+.block-title:nth-child(3) span {
+  margin-right: 45px;
+  font-size: 12px;
+  line-height: 125%;
+}
+.block-title:last-child span {
+  margin-right: 22px;
+  font-size: 14px;
+  line-height: 171.4285714286%;
+}
+.block-title p {
+  color: #1F2041;
+}
+.block-title:first-child p {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 120.8333333333%;
+}
+.block-title:nth-child(2) p {
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 121.0526315789%;
+}
+.block-title:nth-child(3) p {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 125%;
+  text-transform: uppercase;
+}
+.block-title:last-child p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 171.4285714286%;
+  color: rgba(31, 32, 65, 0.75);
+}
+
+.form-elements {
+  background: #ffffff;
+}
+.form-elements__container {
+  padding: 0 140px 500px;
+}
+.form-elements__text-field {
+  display: block;
+  max-width: 320px;
+  margin-bottom: 20px;
+}
+
+.text-field__header {
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+.text-field__input {
+  padding: 13px 135px 13px 15px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+}
+.text-field__input::-webkit-input-placeholder {
+  color: rgba(31, 32, 65, 0.25);
+}
+.text-field__input:-moz-placeholder {
+  color: rgba(31, 32, 65, 0.25);
+}
+.text-field__input:hover::-webkit-input-placeholder {
+  color: rgba(31, 32, 65, 0.75);
+}
+.text-field__input:hover:-moz-placeholder {
+  color: rgba(31, 32, 65, 0.75);
+}
+.text-field__input:focus::-webkit-input-placeholder {
+  color: rgba(31, 32, 65, 0.75);
+}
+.text-field__input:focus:-moz-placeholder {
+  color: rgba(31, 32, 65, 0.75);
+}
+.text-field__input-active {
+  padding: 13px 135px 13px 15px;
+  border: 1px solid rgba(31, 32, 65, 0.5);
+  border-radius: 4px;
+}
+.text-field__input-active::-webkit-input-placeholder {
+  color: rgba(31, 32, 65, 0.75);
+}
+.text-field__input-active:-moz-placeholder {
+  color: rgba(31, 32, 65, 0.75);
+}
+.text-field__name {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 125%;
+  text-transform: uppercase;
+  color: #1F2041;
+}
+.text-field__name-fn {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: rgba(31, 32, 65, 0.5);
 }
 
 @font-face {

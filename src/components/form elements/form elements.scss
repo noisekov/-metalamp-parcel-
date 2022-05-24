@@ -1,0 +1,71 @@
+.form-elements {
+    background: #ffffff;
+    &__container {
+        padding: 0 140px 500px;
+    }
+    &__text-field{
+        display: block;
+        max-width: 320px;
+        margin-bottom: 20px;
+    }
+}
+.text-field{
+    &__header{
+        margin-bottom: 5px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__input {
+        padding: 13px 135px 13px 15px;
+        border: 1px solid rgba(31, 32, 65, 0.25);
+        border-radius: 4px;
+        &::-webkit-input-placeholder {
+            color: rgba(31, 32, 65, 0.25);
+        }
+        &:-moz-placeholder {
+            color: rgba(31, 32, 65, 0.25);
+        }
+        &:hover{
+            &::-webkit-input-placeholder {
+                color: rgba(31, 32, 65, 0.75);
+            }
+            &:-moz-placeholder {
+                color: rgba(31, 32, 65, 0.75);
+            }
+        }
+        &:focus{
+            &::-webkit-input-placeholder {
+                color: rgba(31, 32, 65, 0.75);
+            }
+            &:-moz-placeholder {
+                color: rgba(31, 32, 65, 0.75);
+            } 
+        }
+        &-active{
+            padding: 13px 135px 13px 15px;
+            border: 1px solid rgba(31, 32, 65, 0.5);
+            border-radius: 4px; 
+            &::-webkit-input-placeholder {
+                color: rgba(31, 32, 65, 0.75);
+            }
+            &:-moz-placeholder {
+                color: rgba(31, 32, 65, 0.75);
+            }
+        }
+    }
+    &__name {
+        font-weight: 700;
+        font-size: 12px;
+        line-height: calc(15 / 12 * 100%);
+        text-transform: uppercase;
+        color: #1F2041;
+        &-fn {
+            text-transform: uppercase;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 15px;
+            text-transform: uppercase;
+            color: rgba(31, 32, 65, 0.5);   
+        }
+    }
+}
