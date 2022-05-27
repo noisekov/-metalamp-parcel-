@@ -2,12 +2,44 @@ section.form-elements
     img.first-logo(src="/images/first-logo.svg", alt="first-logo")
     .form-elements__container 
         .form-elements__text-field
-            .text-field__header
-                .text-field__name Text field 
-                .text-field__name-fn default
-            input.text-field__input(type="text" placeholder="Email" )
+            form(action="/")
+                .text-field__header 
+                    label(for="field").text-field__name Text field 
+                    label.text-field__name-fn default 
+                input.text-field__input(type="text" id="field" placeholder="Email" )
         .form-elements__text-field
-            .text-field__header
-                .text-field__name Text field 
-                .text-field__name-fn Hover / Focus
-            input.text-field__input-active(type="text" placeholder="This is pretty awesome") 
+            form(action="/") 
+                .text-field__header  
+                    label.text-field__name(for="field_active") Text field
+                    label.text-field__name-fn Hover / Focus 
+                input.text-field__input_active(type="text" id="field_active" placeholder="This is pretty awesome")
+        .form-elements__dropdown-guest 
+            form(action="")
+                .text-field__header 
+                    label.text-field__name(for="field-guest") Dropdown
+                a(href="#")
+                    .text-field__input-guest(id="field-guest") Сколько гостей
+                        span.material-icons expand_more
+        .form-elements__masked-text-field
+            form(action="")
+                .text-field__header 
+                    label.text-field__name(for="masked-text-field") Masked text field
+                input.text-field__masked-text-field(type="text" id="masked-text-field" placeholder="дд.мм.гг" )
+        .form-elements__date-dropdown
+            .date-dropdown
+                form(action="")
+                    .text-field__header 
+                        label.text-field__name(for="date-dropdown") Date dropdown
+                    a(href="#")
+                        .text-field__input-date-dropdown(id="date-dropdown") дд.мм.гг
+                            span.material-icons expand_more
+            .date-dropdown
+                form(action="")
+                    .text-field__header 
+                        label.text-field__name(for="date-dropdown") Date dropdown
+                    a(href="#")
+                        .text-field__input-date-dropdown(id="date-dropdown") дд.мм.гг
+                            span.material-icons expand_more
+        
+
+        

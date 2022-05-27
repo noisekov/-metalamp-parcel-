@@ -266,6 +266,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #ffffff;
   color: #BC9CFF;
   margin: 0 20px 0 0;
+  cursor: pointer;
 }
 .nav-up__button-registration {
   padding: 9px 20px 10px 19px;
@@ -276,6 +277,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #ffffff;
   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
   border-radius: 22px;
+  cursor: pointer;
 }
 .nav-up__arrow {
   position: relative;
@@ -485,6 +487,16 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 320px;
   margin-bottom: 20px;
 }
+.form-elements__dropdown-guest {
+  margin-bottom: 20px;
+}
+.form-elements__masked-text-field {
+  margin-bottom: 40px;
+}
+.form-elements__date-dropdown {
+  display: flex;
+  flex-direction: row;
+}
 
 .text-field__header {
   margin-bottom: 5px;
@@ -514,15 +526,15 @@ h1, h2, h3, h4, h5, h6 {
 .text-field__input:focus:-moz-placeholder {
   color: rgba(31, 32, 65, 0.75);
 }
-.text-field__input-active {
+.text-field__input_active {
   padding: 13px 135px 13px 15px;
   border: 1px solid rgba(31, 32, 65, 0.5);
   border-radius: 4px;
 }
-.text-field__input-active::-webkit-input-placeholder {
+.text-field__input_active::-webkit-input-placeholder {
   color: rgba(31, 32, 65, 0.75);
 }
-.text-field__input-active:-moz-placeholder {
+.text-field__input_active:-moz-placeholder {
   color: rgba(31, 32, 65, 0.75);
 }
 .text-field__name {
@@ -539,6 +551,67 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 15px;
   text-transform: uppercase;
   color: rgba(31, 32, 65, 0.5);
+}
+.text-field__input-guest {
+  position: relative;
+  width: 320px;
+  color: rgba(31, 32, 65, 0.75);
+  padding: 13px 15px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+}
+.text-field__input-guest span {
+  position: absolute;
+  top: 8px;
+  right: 5px;
+  color: rgba(31, 32, 65, 0.5);
+}
+.text-field__input-date-dropdown {
+  position: relative;
+  width: 150px;
+  color: rgba(31, 32, 65, 0.75);
+  padding: 13px 15px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+.text-field__input-date-dropdown span {
+  position: absolute;
+  top: 8px;
+  right: 5px;
+  color: rgba(31, 32, 65, 0.5);
+}
+.text-field__masked-text-field {
+  padding: 13px 135px 13px 15px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+}
+.text-field__masked-text-field::-webkit-input-placeholder {
+  color: rgba(31, 32, 65, 0.25);
+  text-transform: uppercase;
+}
+.text-field__masked-text-field:-moz-placeholder {
+  color: rgba(31, 32, 65, 0.25);
+  text-transform: uppercase;
+}
+.text-field__masked-text-field:hover::-webkit-input-placeholder {
+  color: rgba(31, 32, 65, 0.75);
+}
+.text-field__masked-text-field:hover:-moz-placeholder {
+  color: rgba(31, 32, 65, 0.75);
+}
+.text-field__masked-text-field:focus::-webkit-input-placeholder {
+  color: rgba(31, 32, 65, 0.75);
+}
+.text-field__masked-text-field:focus:-moz-placeholder {
+  color: rgba(31, 32, 65, 0.75);
+}
+
+.date-dropdown {
+  margin-right: 20px;
 }
 
 @font-face {

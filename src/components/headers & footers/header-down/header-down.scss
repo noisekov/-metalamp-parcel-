@@ -42,6 +42,7 @@
         background-color: #ffffff;
         color: #BC9CFF;
         margin: 0 20px 0 0;
+        cursor: pointer;
     }
     &__button-registration {
         padding: 9px 20px 10px 19px;
@@ -52,6 +53,7 @@
         color: #ffffff;
         background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
         border-radius: 22px;
+        cursor: pointer;
     }
     &__arrow {
         position: relative;

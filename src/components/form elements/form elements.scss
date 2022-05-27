@@ -8,6 +8,16 @@
         max-width: 320px;
         margin-bottom: 20px;
     }
+    &__dropdown-guest {
+        margin-bottom: 20px;
+    }
+    &__masked-text-field {
+        margin-bottom: 40px;
+    }
+    &__date-dropdown {
+        display: flex;
+        flex-direction: row;
+    }
 }
 .text-field{
     &__header{
@@ -41,7 +51,7 @@
                 color: rgba(31, 32, 65, 0.75);
             } 
         }
-        &-active{
+        &_active{
             padding: 13px 135px 13px 15px;
             border: 1px solid rgba(31, 32, 65, 0.5);
             border-radius: 4px; 
@@ -68,4 +78,68 @@
             color: rgba(31, 32, 65, 0.5);   
         }
     }
+    &__input-guest {
+        position: relative;
+        width: 320px;
+        color:  rgba(31, 32, 65, 0.75);
+        padding: 13px 15px;
+        border: 1px solid rgba(31, 32, 65, 0.25);
+        border-radius: 4px;
+            & span {
+                position: absolute;
+                top: 8px;
+                right: 5px;
+                color: rgba(31, 32, 65, 0.5);
+            }
+    }
+    &__input-date-dropdown {
+        position: relative;
+        width: 150px;
+        color:  rgba(31, 32, 65, 0.75);
+        padding: 13px 15px;
+        border: 1px solid rgba(31, 32, 65, 0.25);
+        border-radius: 4px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+        text-transform: uppercase;
+            & span {
+                position: absolute;
+                top: 8px;
+                right: 5px;
+                color: rgba(31, 32, 65, 0.5);
+            }    
+    }
+    &__masked-text-field {
+        padding: 13px 135px 13px 15px;
+        border: 1px solid rgba(31, 32, 65, 0.25);
+        border-radius: 4px;
+        &::-webkit-input-placeholder {
+            color: rgba(31, 32, 65, 0.25);
+            text-transform: uppercase;
+        }
+        &:-moz-placeholder {
+            color: rgba(31, 32, 65, 0.25);
+            text-transform: uppercase;  
+        }
+        &:hover{
+            &::-webkit-input-placeholder {
+                color: rgba(31, 32, 65, 0.75);
+            }
+            &:-moz-placeholder {
+                color: rgba(31, 32, 65, 0.75);
+            }
+        }
+        &:focus{
+            &::-webkit-input-placeholder {
+                color: rgba(31, 32, 65, 0.75);
+            }
+            &:-moz-placeholder {
+                color: rgba(31, 32, 65, 0.75);
+            } 
+        }
+    }
+}
+.date-dropdown {
+    margin-right: 20px;
 }
