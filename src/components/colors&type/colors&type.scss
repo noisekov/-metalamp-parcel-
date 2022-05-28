@@ -1,21 +1,21 @@
+$darkshade: #1F2041;
+$darkshade75: rgba(31, 32, 65, 0.75);
+$darkshade5: rgba(31, 32, 65, 0.5);
+$darkshade25: rgba(31, 32, 65, 0.25);
+$darkshade05: rgba(31, 32, 65, 0.05);
+$purple: #BC9CFF;
+$green: #6FCF97;
+
 .color {
     background: #ffffff;
     // .color__container
-
     &__container {
         padding: 0 140px 145px;
         display: flex;
         justify-content: space-between;
         margin-bottom: 40px;
     }
-
-    // .color__block-color
-
-    &__block-color {
-    }
-
     // .color__block-title
-
     &__block-title {
         flex: 0 0 436px;
     }
@@ -31,49 +31,49 @@
         height: 70px;
         border-radius: 6px;
         margin-right: 40px;
-        background-color: #1F2041;
+        background-color: $darkshade;
     }
     &-second{
         width: 70px;
         height: 70px;
         border-radius: 6px;
         margin-right: 40px;
-        background-color: rgba(31, 32, 65, 0.75);
+        background-color: $darkshade75;
     }
     &-third{
         width: 70px;
         height: 70px;
         border-radius: 6px;
         margin-right: 40px;
-        background-color: rgba(31, 32, 65, 0.5);
+        background-color: $darkshade5;
     }
     &-fourth{
         width: 70px;
         height: 70px;
         border-radius: 6px;
         margin-right: 40px;
-        background-color: rgba(31, 32, 65, 0.25);
+        background-color: $darkshade25;
     }
     &-fifth{
         width: 70px;
         height: 70px;
         border-radius: 6px;
         margin-right: 40px;
-        background-color: rgba(31, 32, 65, 0.05);
+        background-color: $darkshade05;
     }
     &-sixth{
         width: 70px;
         height: 70px;
         border-radius: 6px;
         margin-right: 40px;
-        background-color: #BC9CFF;;
+        background-color: $purple;
     }
     &-seventh{
         width: 70px;
         height: 70px;
         border-radius: 6px;
         margin-right: 40px;
-        background-color: #6FCF97;
+        background-color: $green;
     }
     // .block-color__body
     &__body {
@@ -83,7 +83,7 @@
         font-weight: 700;
         font-size: 19px;
         line-height: calc(28  / 19 * 100%);
-        color: #1F2041;
+        color: $darkshade;
     }
 
     // .block-color__body-number
@@ -92,7 +92,7 @@
         font-weight: 400;
         font-size: 19px;
         line-height: calc(28  / 19 * 100%);
-        color: #1F2041;
+        color: $darkshade;
     }
 }
 .block-title {

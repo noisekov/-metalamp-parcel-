@@ -1,3 +1,4 @@
+@import "../../colors&type/colors&type.scss";
 .footer-mobile {
     font-weight: 400;
     font-size: 14px;
@@ -22,7 +23,7 @@
         align-items: center;
     }
     &__title {
-        color: rgba(31, 32, 65, 0.75);
+        color: $darkshade75;
         margin-bottom: 25px;
     }
     &__icon {

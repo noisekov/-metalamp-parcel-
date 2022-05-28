@@ -1,3 +1,4 @@
+@import "../../colors&type/colors&type.scss";
 .footer {
     font-weight: 400;
     font-size: 14px;
@@ -18,11 +19,11 @@
         }
         &__text {
             line-height: calc(24 / 14 * 100%);
-            color: rgba(31, 32, 65, 0.5);
+            color: $darkshade5;
             &-right {
                 margin-bottom: 20px;
                 line-height: calc(24 / 14 * 100%);
-                color: rgba(31, 32, 65, 0.5);
+                color: $darkshade5;
             }
         }
         &__block{
@@ -61,7 +62,7 @@
                     text-transform: uppercase;
                     margin-bottom: 21px;
                     & a {
-                        color: #1F2041;
+                        color: $darkshade;
                     }
                 }
                 &:last-child{
@@ -70,10 +71,10 @@
             }
         }
         &__list {
-            color: rgba(31, 32, 65, 0.5);
+            color: $darkshade5;
         }
         &__input {
-            border: 1px solid rgba(31, 32, 65, 0.25);
+            border: 1px solid $darkshade25;
             border-radius: 4px;
             padding: 8px 80px 8px 15px;
         }
@@ -101,7 +102,7 @@
         align-content: center;
         padding: 26px 0;
             &__title {
-                color: rgba(31, 32, 65, 0.75);
+                color: $darkshade75;
             }
             &__icon {
                 margin-right: 20px;
