@@ -1,5 +1,17 @@
 import AirDatepicker from 'air-datepicker'
 import 'air-datepicker/air-datepicker.css'
 
-new AirDatepicker('#data-picker');
+let apply = {
+   content: 'Применить',
+   className:'custom-button',
+   onclick: (autoClose) => {
+      return true
+   }
+}
 
+new AirDatepicker('#date-picker',{
+   range: true,
+   multipleDatesSeparator: '-',
+   inline: false,
+   buttons: [apply, 'clear']
+});

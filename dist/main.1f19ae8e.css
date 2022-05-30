@@ -223,7 +223,7 @@
 }
 .footer-up__arrow img {
   position: absolute;
-  left: -30px;
+  right: 10px;
   top: 0px;
 }
 .footer-up::after {
@@ -1180,11 +1180,10 @@ h1, h2, h3, h4, h5, h6 {
   background: #ffffff;
 }
 .form-elements__container {
-  padding: 0 140px 500px;
+  display: flex;
+  padding: 0 140px 131px;
 }
 .form-elements__text-field {
-  display: block;
-  max-width: 320px;
   margin-bottom: 20px;
 }
 .form-elements__dropdown-guest {
@@ -1193,9 +1192,12 @@ h1, h2, h3, h4, h5, h6 {
 .form-elements__masked-text-field {
   margin-bottom: 40px;
 }
-.form-elements__date-dropdown {
-  display: flex;
-  flex-direction: row;
+.form-elements_left {
+  margin-right: 126px;
+  max-width: 320px;
+}
+.form-elements_middle {
+  margin-right: 72px;
 }
 
 .text-field__header {
@@ -1204,7 +1206,6 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: space-between;
 }
 .text-field__input {
-  padding: 13px 135px 13px 15px;
   border: 1px solid rgba(31, 32, 65, 0.25);
   border-radius: 4px;
 }
@@ -1220,6 +1221,9 @@ h1, h2, h3, h4, h5, h6 {
 .text-field__input:hover:-moz-placeholder {
   color: rgba(31, 32, 65, 0.75);
 }
+.text-field__input_position {
+  padding: 13px 135px 13px 15px;
+}
 .text-field__input:focus::-webkit-input-placeholder {
   color: rgba(31, 32, 65, 0.75);
 }
@@ -1227,7 +1231,6 @@ h1, h2, h3, h4, h5, h6 {
   color: rgba(31, 32, 65, 0.75);
 }
 .text-field__input_active {
-  padding: 13px 135px 13px 15px;
   border: 1px solid rgba(31, 32, 65, 0.5);
   border-radius: 4px;
 }
@@ -1249,34 +1252,28 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
   font-size: 12px;
   line-height: 15px;
-  text-transform: uppercase;
   color: rgba(31, 32, 65, 0.5);
 }
-.text-field__input-guest {
+.text-field__body {
   position: relative;
-  width: 320px;
-  color: rgba(31, 32, 65, 0.75);
-  padding: 13px 15px;
+}
+.text-field__input-guest {
   border: 1px solid rgba(31, 32, 65, 0.25);
   border-radius: 4px;
 }
-.text-field__input-guest span {
-  position: absolute;
-  top: 8px;
-  right: 5px;
-  color: rgba(31, 32, 65, 0.5);
-}
 .text-field__input-date-dropdown {
-  position: relative;
-  width: 150px;
   color: rgba(31, 32, 65, 0.75);
-  padding: 13px 15px;
   border: 1px solid rgba(31, 32, 65, 0.25);
   border-radius: 4px;
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
+}
+.text-field__input-date-dropdown_position {
+  padding: 13px 15px;
+  width: 150px;
+  position: relative;
 }
 .text-field__input-date-dropdown span {
   position: absolute;
@@ -1285,7 +1282,6 @@ h1, h2, h3, h4, h5, h6 {
   color: rgba(31, 32, 65, 0.5);
 }
 .text-field__masked-text-field {
-  padding: 13px 135px 13px 15px;
   border: 1px solid rgba(31, 32, 65, 0.25);
   border-radius: 4px;
 }
@@ -1310,8 +1306,22 @@ h1, h2, h3, h4, h5, h6 {
   color: rgba(31, 32, 65, 0.75);
 }
 
+.date {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 5px;
+}
 .date-dropdown {
   margin-right: 20px;
+}
+
+.material-icons {
+  position: absolute;
+  top: 25%;
+  right: 5px;
+  color: rgba(31, 32, 65, 0.5);
+  z-index: 1;
+  cursor: pointer;
 }
 
 @font-face {

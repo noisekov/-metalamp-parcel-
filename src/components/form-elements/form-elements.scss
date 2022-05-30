@@ -2,11 +2,10 @@
 .form-elements {
     background: #ffffff;
     &__container {
-        padding: 0 140px 500px;
+        display: flex;
+        padding: 0 140px 131px;
     }
     &__text-field{
-        display: block;
-        max-width: 320px;
         margin-bottom: 20px;
     }
     &__dropdown-guest {
@@ -15,11 +14,15 @@
     &__masked-text-field {
         margin-bottom: 40px;
     }
-    &__date-dropdown {
-        display: flex;
-        flex-direction: row;
+    &_left {
+        margin-right: 126px;
+        max-width: 320px;
+    }
+    &_middle {
+        margin-right: 72px;
     }
 }
+
 .text-field{
     &__header{
         margin-bottom: 5px;
@@ -27,7 +30,6 @@
         justify-content: space-between;
     }
     &__input {
-        padding: 13px 135px 13px 15px;
         border: 1px solid rgba(31, 32, 65, 0.25);
         border-radius: 4px;
         &::-webkit-input-placeholder {
@@ -44,6 +46,9 @@
                 color: rgba(31, 32, 65, 0.75);
             }
         }
+        &_position {
+            padding: 13px 135px 13px 15px;
+        }
         &:focus{
             &::-webkit-input-placeholder {
                 color: rgba(31, 32, 65, 0.75);
@@ -53,7 +58,6 @@
             } 
         }
         &_active{
-            padding: 13px 135px 13px 15px;
             border: 1px solid rgba(31, 32, 65, 0.5);
             border-radius: 4px; 
             &::-webkit-input-placeholder {
@@ -75,35 +79,29 @@
             font-weight: 400;
             font-size: 12px;
             line-height: 15px;
-            text-transform: uppercase;
             color: rgba(31, 32, 65, 0.5);   
         }
     }
+    &__body {
+        position: relative; 
+    }
     &__input-guest {
-        position: relative;
-        width: 320px;
-        color:  rgba(31, 32, 65, 0.75);
-        padding: 13px 15px;
         border: 1px solid rgba(31, 32, 65, 0.25);
         border-radius: 4px;
-            & span {
-                position: absolute;
-                top: 8px;
-                right: 5px;
-                color: rgba(31, 32, 65, 0.5);
-            }
     }
     &__input-date-dropdown {
-        position: relative;
-        width: 150px;
         color:  rgba(31, 32, 65, 0.75);
-        padding: 13px 15px;
         border: 1px solid rgba(31, 32, 65, 0.25);
         border-radius: 4px;
         font-weight: 400;
         font-size: 14px;
         line-height: 18px;
         text-transform: uppercase;
+            &_position {
+                padding: 13px 15px;
+                width: 150px;
+                position: relative;
+            }
             & span {
                 position: absolute;
                 top: 8px;
@@ -112,7 +110,6 @@
             }    
     }
     &__masked-text-field {
-        padding: 13px 135px 13px 15px;
         border: 1px solid rgba(31, 32, 65, 0.25);
         border-radius: 4px;
         &::-webkit-input-placeholder {
@@ -141,6 +138,19 @@
         }
     }
 }
-.date-dropdown {
-    margin-right: 20px;
+.date { 
+    display: flex;
+    flex-direction: row; 
+    margin-bottom: 5px;
+    &-dropdown {
+        margin-right: 20px;
+    }    
+}
+.material-icons {
+    position: absolute;
+    top: 25%;
+    right: 5px;
+    color: rgba(31, 32, 65, 0.5);
+    z-index: 1;
+    cursor: pointer;
 }

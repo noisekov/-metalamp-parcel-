@@ -2531,7 +2531,19 @@ require("air-datepicker/air-datepicker.css");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-new _airDatepicker.default('#data-picker');
+var apply = {
+  content: 'Применить',
+  className: 'custom-button',
+  onclick: function onclick(autoClose) {
+    return true;
+  }
+};
+new _airDatepicker.default('#date-picker', {
+  range: true,
+  multipleDatesSeparator: '-',
+  inline: false,
+  buttons: [apply, 'clear']
+});
 },{"air-datepicker":"../node_modules/air-datepicker/index.es.js","air-datepicker/air-datepicker.css":"../node_modules/air-datepicker/air-datepicker.css"}],"main.js":[function(require,module,exports) {
 "use strict";
 
@@ -2566,7 +2578,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52655" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54398" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
