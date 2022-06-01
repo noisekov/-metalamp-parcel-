@@ -14,12 +14,21 @@
     &__masked-text-field {
         margin-bottom: 40px;
     }
+    &__date-dropdown {
+        margin-bottom: 40px;
+    }
+    &__filter-date-dropdown {
+        margin-bottom: 40px;
+    }
     &_left {
         margin-right: 126px;
         max-width: 320px;
     }
     &_middle {
         margin-right: 72px;
+    }
+    &__dropdown-default {
+        margin-bottom: 20px;
     }
 }
 
@@ -79,7 +88,7 @@
             font-weight: 400;
             font-size: 12px;
             line-height: 15px;
-            color: rgba(31, 32, 65, 0.5);   
+            color: rgba(31, 32, 65, 0.5);  
         }
     }
     &__body {
@@ -137,6 +146,52 @@
             } 
         }
     }
+    &__input-filter-date-dropdown {
+        color:  rgba(31, 32, 65, 0.75);
+        border: 1px solid rgba(31, 32, 65, 0.25);
+        border-radius: 4px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+        &_position{
+            padding: 13px 81px 13px 15px;
+        }
+    }
+    &__subscription-text-field {
+        padding: 13px 90px 13px 15px;
+        margin-bottom: 100px;
+    }
+    &__dropdown-default_position {
+        padding: 13px 90px 13px 15px;
+    }
+    &__dropdown-expanded_position {
+        padding: 13px 90px 13px 15px;
+    }
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        width: 266px;
+        border: 1px solid rgba(31, 32, 65, 0.25);
+        border-radius: 4px;
+        &-dropdown li{
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 15px;
+            text-transform: uppercase;
+            color: #1F2041;
+        }
+        &-btn_col {
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 15px;
+            text-transform: uppercase;
+            color: #1F2041;
+            & span {
+                margin: 0 8px;
+            }
+        }
+
+    }
 }
 .date { 
     display: flex;
@@ -149,8 +204,11 @@
 .material-icons {
     position: absolute;
     top: 25%;
-    right: 5px;
+    right: 1%;
     color: rgba(31, 32, 65, 0.5);
     z-index: 1;
     cursor: pointer;
+}
+.position-filter-dropdown {
+    width: 266px;
 }

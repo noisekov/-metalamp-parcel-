@@ -41,18 +41,55 @@ section.form-elements
                             .text-field__body
                                 label(for="date-picker").material-icons expand_more
                                 input.text-field__input-date-dropdown.text-field__input-date-dropdown_position(type="text" id="date-picker" placeholder="дд.мм.гг" autocomplete="off")
-        .form-elements_middle 
-            .form-elements__text-field
-                form(action="/")
+            .form-elements__filter-date-dropdown
+                form(action="")
                     .text-field__header 
-                        label(for="field").text-field__name Text field 
-                        label.text-field__name-fn default 
-                    input.text-field__input.text-field__input_position(type="text" id="field" placeholder="Email" )
+                        label.text-field__name(for="date-picker") Filter date dropdown
+                    .text-field__body.position-filter-dropdown
+                        label(for="date-picker").material-icons expand_more
+                        input.text-field__input-filter-date-dropdown.text-field__input-filter-date-dropdown_position(type="text" id="date-picker" placeholder="19 авг - 23 авг" autocomplete="off")
+            .footer-up__button
+                form(action="") 
+                    .text-field__header 
+                        label.text-field__name(for="before") Subscription text field
+                    input.footer-up__input.text-field__subscription-text-field(type="text" placeholder="Email" name="button")
+                    label.footer-up__arrow(for="before")
+                    a.footer-up__arrow(href="#") 
+                        img(src="/images/arrow_forward.svg", alt="arrow_forward") 
+            .form-elements__dropdown-default
+                form(action="")
+                    .text-field__header.position-filter-dropdown
+                        label.text-field__name(for="dropdown-default") Dropdown
+                        label.text-field__name-fn Default 
+                    .text-field__body.position-filter-dropdown
+                        label(for="dropdown-default").material-icons expand_more
+                        input.text-field__input-guest.text-field__dropdown-default_position(type="text" id="dropdown-default" placeholder="2 спальни, 2 кровати...")
+            .form-elements__dropdown-expanded
+                form(action="")
+                    .text-field__header.position-filter-dropdown
+                        label.text-field__name(for="expanded") Dropdown
+                        label.text-field__name-fn Expanded 
+                    .text-field__body.position-filter-dropdown
+                        label(for="expanded").material-icons expand_more
+                        input.text-field__input-guest.text-field__dropdown-expanded_position(type="text" id="expanded" placeholder="2 спальни, 2 кровати...")
+                    .text-field__list
+                        .text-field__list-dropdown
+                            ul 
+                                li Спальни
+                                li Кровати
+                                li Ванные комнаты 
+                        .text-field__list-btn
+                            .text-field__list-btn_col
+                                button -
+                                span 2
+                                button + 
+                            .text-field__list-btn_col
+                                button -
+                                span 2
+                                button +
+                            .text-field__list-btn_col
+                                button -
+                                span 0
+                                button +                      
+        .form-elements_middle     
         .form-elements_right
-            .form-elements__text-field
-                form(action="/")
-                    .text-field__header 
-                        label(for="field").text-field__name Text field 
-                        label.text-field__name-fn default 
-                    input.text-field__input.text-field__input_position(type="text" id="field" placeholder="Email" )
-            

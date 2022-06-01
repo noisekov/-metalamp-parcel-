@@ -76,7 +76,9 @@
         &__input {
             border: 1px solid $darkshade25;
             border-radius: 4px;
-            padding: 8px 80px 8px 15px;
+            &-position {
+                padding: 8px 80px 8px 15px;
+            }
         }
         &__arrow {
             position: relative;

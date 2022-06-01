@@ -4,7 +4,7 @@ import 'air-datepicker/air-datepicker.css'
 let apply = {
    content: 'Применить',
    className:'custom-button',
-   onclick: (autoClose) => {
+   onclick: () => {
       return true
    }
 }

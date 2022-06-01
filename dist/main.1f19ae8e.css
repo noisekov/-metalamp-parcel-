@@ -216,6 +216,8 @@
 .footer-up__input {
   border: 1px solid rgba(31, 32, 65, 0.25);
   border-radius: 4px;
+}
+.footer-up__input-position {
   padding: 8px 80px 8px 15px;
 }
 .footer-up__arrow {
@@ -325,7 +327,6 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: inherit;
 }
 
-/*--------------------*/
 .color {
   background: #ffffff;
 }
@@ -1192,12 +1193,21 @@ h1, h2, h3, h4, h5, h6 {
 .form-elements__masked-text-field {
   margin-bottom: 40px;
 }
+.form-elements__date-dropdown {
+  margin-bottom: 40px;
+}
+.form-elements__filter-date-dropdown {
+  margin-bottom: 40px;
+}
 .form-elements_left {
   margin-right: 126px;
   max-width: 320px;
 }
 .form-elements_middle {
   margin-right: 72px;
+}
+.form-elements__dropdown-default {
+  margin-bottom: 20px;
 }
 
 .text-field__header {
@@ -1305,6 +1315,51 @@ h1, h2, h3, h4, h5, h6 {
 .text-field__masked-text-field:focus:-moz-placeholder {
   color: rgba(31, 32, 65, 0.75);
 }
+.text-field__input-filter-date-dropdown {
+  color: rgba(31, 32, 65, 0.75);
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+}
+.text-field__input-filter-date-dropdown_position {
+  padding: 13px 81px 13px 15px;
+}
+.text-field__subscription-text-field {
+  padding: 13px 90px 13px 15px;
+  margin-bottom: 100px;
+}
+.text-field__dropdown-default_position {
+  padding: 13px 90px 13px 15px;
+}
+.text-field__dropdown-expanded_position {
+  padding: 13px 90px 13px 15px;
+}
+.text-field__list {
+  display: flex;
+  justify-content: space-between;
+  width: 266px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+}
+.text-field__list-dropdown li {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #1F2041;
+}
+.text-field__list-btn_col {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #1F2041;
+}
+.text-field__list-btn_col span {
+  margin: 0 8px;
+}
 
 .date {
   display: flex;
@@ -1318,10 +1373,14 @@ h1, h2, h3, h4, h5, h6 {
 .material-icons {
   position: absolute;
   top: 25%;
-  right: 5px;
+  right: 1%;
   color: rgba(31, 32, 65, 0.5);
   z-index: 1;
   cursor: pointer;
+}
+
+.position-filter-dropdown {
+  width: 266px;
 }
 
 @font-face {
