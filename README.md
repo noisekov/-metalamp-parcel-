@@ -1,2 +1,2 @@
-# -metalamp-parcel-
-In future i'll use webpack for this project
+i'll use webpack for this project in future
+
