@@ -45,7 +45,7 @@ section.form-elements
                 form(action="")
                     .text-field__header 
                         label.text-field__name(for="date-picker") Filter date dropdown
-                    .text-field__body.position-filter-dropdown
+                    .text-field__body.position-filter
                         label(for="date-picker").material-icons expand_more
                         input.text-field__input-filter-date-dropdown.text-field__input-filter-date-dropdown_position(type="text" id="date-picker" placeholder="19 авг - 23 авг" autocomplete="off")
             .footer-up__button
@@ -58,38 +58,68 @@ section.form-elements
                         img(src="/images/arrow_forward.svg", alt="arrow_forward") 
             .form-elements__dropdown-default
                 form(action="")
-                    .text-field__header.position-filter-dropdown
+                    .text-field__header.position-filter
                         label.text-field__name(for="dropdown-default") Dropdown
                         label.text-field__name-fn Default 
-                    .text-field__body.position-filter-dropdown
+                    .text-field__body.position-filter
                         label(for="dropdown-default").material-icons expand_more
-                        input.text-field__input-guest.text-field__dropdown-default_position(type="text" id="dropdown-default" placeholder="2 спальни, 2 кровати...")
-            .form-elements__dropdown-expanded
-                form(action="")
-                    .text-field__header.position-filter-dropdown
+                        input.text-field__input-dropdown-default.text-field__dropdown-default_position(type="text" id="dropdown-default" placeholder="2 спальни, 2 кровати...")
+            .form-elements__dropdown-expanded.position-filter
+                form(action="").position-filter
+                    .text-field__header
                         label.text-field__name(for="expanded") Dropdown
                         label.text-field__name-fn Expanded 
-                    .text-field__body.position-filter-dropdown
+                    .text-field__body
                         label(for="expanded").material-icons expand_more
-                        input.text-field__input-guest.text-field__dropdown-expanded_position(type="text" id="expanded" placeholder="2 спальни, 2 кровати...")
+                        input.text-field__input-dropdown-expanded.text-field__dropdown-expanded_position(type="text" id="expanded" placeholder="2 спальни, 2 кровати...")
                     .text-field__list
                         .text-field__list-dropdown
                             ul 
                                 li Спальни
                                 li Кровати
                                 li Ванные комнаты 
-                        .text-field__list-btn
-                            .text-field__list-btn_col
-                                button -
-                                span 2
-                                button + 
-                            .text-field__list-btn_col
-                                button -
-                                span 2
-                                button +
-                            .text-field__list-btn_col
-                                button -
-                                span 0
-                                button +                      
+                        .text-field__list-btn  
+                            ul  
+                                li.text-field__list-btn_col
+                                    button -
+                                    span 2
+                                    button +
+                                li.text-field__list-btn_col
+                                    button -
+                                    span 2
+                                    button +
+                                li.text-field__list-btn_col
+                                    button -
+                                    span 2
+                                    button +
+            .form-elements__expandable-checkbox
+                form(action="")
+                    .text-field__body.position-filter
+                        label.text-field__name-expandable-checkbox-list(for="Expandable checkbox list") Expandable checkbox list
+                        label(for="Expandable checkbox list").material-icons expand_more
+            .form-elements__expandable-checkbox-list
+                form(action="")
+                    .text-field__body.position-filter
+                        label.text-field__name-expandable-checkbox-list(for="Expandable checkbox list") Expandable checkbox list
+                        label(for="Expandable checkbox list").material-icons expand_less
+                    ul.text-field__expandable-checkbox-list
+                        li  
+                            input(type="checkbox" id="ch1")
+                            label(for="ch1") Завтрак
+                        li  
+                            input(type="checkbox" id="ch2")
+                            label(for="ch2") Письменный стол
+                        li 
+                            input(type="checkbox" id="ch3")
+                            label(for="ch3") Стул для кормления
+                        li  
+                            input(type="checkbox" id="ch4")
+                            label(for="ch4") Кроватка
+                        li  
+                            input(type="checkbox" id="ch5")
+                            label(for="ch5") Телевизор
+                        li  
+                            input(type="checkbox" id="ch6")
+                            label(for="ch6") Шампунь    
         .form-elements_middle     
         .form-elements_right
