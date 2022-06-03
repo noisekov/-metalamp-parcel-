@@ -151,6 +151,24 @@ section.form-elements
                             label(for="cb3") Можно пригласить гостей <br> (до 10 человек)
             .form-elements__radio-buttons
                 form(action="")
-                    .text-field__body
+                    .text-field__body.checkbox-buttons_position
                         label.text-field__name-checkbox-buttons(for="radio-buttons") Radio Buttons
+                    ul.text-field__radio-buttons
+                        li 
+                            input(type="radio" name="rb" id="rb1" checked)
+                            label(for="rb1") Мужчина 
+                        li 
+                            input(type="radio" name="rb" id="rb2")
+                            label(for="rb2") Женщина 
+            .form-elements__toggle
+                form(action="")
+                    .text-field__body.checkbox-buttons_position
+                        label.text-field__name-checkbox-buttons(for="toggle") Toggle
+                    ul.text-field__toggle
+                        li 
+                            input(type="checkbox" class="switch" id="tg1" checked)
+                            label(for="tg1") Получать спецпредложения 
+                        li 
+                            input(type="checkbox" class="switch" id="tg2")
+                            label(for="tg2") Получать спецпредложения
         .form-elements_right
