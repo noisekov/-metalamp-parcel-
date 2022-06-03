@@ -107,19 +107,50 @@ section.form-elements
                             input(type="checkbox" id="ch1")
                             label(for="ch1") Завтрак
                         li  
-                            input(type="checkbox" id="ch2")
+                            input(type="checkbox" id="ch2" checked)
                             label(for="ch2") Письменный стол
                         li 
-                            input(type="checkbox" id="ch3")
+                            input(type="checkbox" id="ch3" checked)
                             label(for="ch3") Стул для кормления
                         li  
-                            input(type="checkbox" id="ch4")
+                            input(type="checkbox" id="ch4" checked)
                             label(for="ch4") Кроватка
                         li  
                             input(type="checkbox" id="ch5")
                             label(for="ch5") Телевизор
                         li  
                             input(type="checkbox" id="ch6")
-                            label(for="ch6") Шампунь    
-        .form-elements_middle     
+                            label(for="ch6") Шампунь 
+            .form-elements__icons-block 
+                .icons-block
+                    .icons-block__img 
+                        span.material-icons.material-icons_purpure insert_emoticon
+                    .icons-block__body 
+                        p Комфорт
+                        p Шумопоглощающие стены
+                .icons-block
+                    .icons-block__img 
+                        span.material-icons.material-icons_purpure location_city
+                    .icons-block__body
+                        p Удобство
+                        p Окно в каждой из спален
+        .form-elements_middle 
+            .form-elements__checkbox-buttons
+                form(action="")
+                    .text-field__body.checkbox-buttons_position
+                        label.text-field__name-checkbox-buttons(for="checkbox-buttons") Checkbox Buttons
+                    ul.text-field__expandable-checkbox-list
+                        li  
+                            input(type="checkbox" id="cb1")
+                            label(for="cb1") Можно курить
+                        li  
+                            input(type="checkbox" id="cb2" checked)
+                            label(for="cb2") Можно с питомцами
+                        li 
+                            input(type="checkbox" id="cb3" checked)
+                            label(for="cb3") Можно пригласить гостей <br> (до 10 человек)
+            .form-elements__radio-buttons
+                form(action="")
+                    .text-field__body
+                        label.text-field__name-checkbox-buttons(for="radio-buttons") Radio Buttons
         .form-elements_right

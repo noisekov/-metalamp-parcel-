@@ -1215,6 +1215,12 @@ h1, h2, h3, h4, h5, h6 {
 .form-elements__expandable-checkbox {
   margin-bottom: 20px;
 }
+.form-elements__expandable-checkbox-list {
+  margin-bottom: 100px;
+}
+.form-elements__checkbox-buttons {
+  margin-bottom: 40px;
+}
 
 .text-field__header {
   margin-bottom: 5px;
@@ -1277,6 +1283,13 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 400%;
   text-transform: uppercase;
   color: #1F2041;
+}
+.text-field__name-checkbox-buttons {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  color: #1F2041;
+  text-transform: uppercase;
 }
 .text-field__body {
   position: relative;
@@ -1423,14 +1436,16 @@ h1, h2, h3, h4, h5, h6 {
 .text-field__expandable-checkbox-list input[type=checkbox]:checked,
 .text-field__expandable-checkbox-list input[type=checkbox]:not(:checked) {
   position: absolute;
-  left: -9999px;
+  opacity: 0;
+  visibility: hidden;
+  z-index: -1;
 }
 .text-field__expandable-checkbox-list input[type=checkbox]:checked + label,
 .text-field__expandable-checkbox-list input[type=checkbox]:not(:checked) + label {
   position: relative;
   display: inline-block;
   padding-left: 30px;
-  line-height: 20px;
+  line-height: 21px;
   cursor: pointer;
 }
 .text-field__expandable-checkbox-list input[type=checkbox]:not(:checked) + label::before {
@@ -1457,21 +1472,21 @@ h1, h2, h3, h4, h5, h6 {
 .text-field__expandable-checkbox-list input[type=checkbox]:not(:checked) + label::after {
   content: "";
   position: absolute;
-  -webkit-transition: all 0.2s ease;
-  -moz-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  transition: all 0.2s ease;
   top: 6px;
   left: 6px;
   width: 8px;
   height: 6px;
+  border-left: 2px solid #8BA4F9;
+  border-bottom: 2px solid #8BA4F9;
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
-  border-left: 2px solid #8BA4F9;
-  border-bottom: 2px solid #8BA4F9;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 .text-field__expandable-checkbox-list input[type=checkbox]:checked + label::after {
   opacity: 1;
@@ -1497,9 +1512,54 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 1;
   cursor: pointer;
 }
+.material-icons_purpure {
+  color: #8BA4F9;
+  font-size: 48px;
+  top: 0;
+  right: 0;
+  cursor: default;
+}
 
 .position-filter {
   width: 266px;
+}
+
+.icons-block {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+  position: relative;
+}
+.icons-block__img {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  margin-right: 10px;
+}
+.icons-block__body p:first-child {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+}
+.icons-block__body p:last-child {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+}
+.icons-block__body::after {
+  content: "";
+  position: absolute;
+  top: 65px;
+  left: 0;
+  width: 280px;
+  height: 1px;
+  background: rgba(31, 32, 65, 0.1);
+}
+
+.checkbox-buttons_position {
+  margin-bottom: 17px;
 }
 
 @font-face {
