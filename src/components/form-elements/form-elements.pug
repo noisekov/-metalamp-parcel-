@@ -171,4 +171,36 @@ section.form-elements
                         li 
                             input(type="checkbox" class="switch" id="tg2")
                             label(for="tg2") Получать спецпредложения
+            .form-elements__like-button
+                form(action="")
+                    .text-field__body.checkbox-buttons_position
+                        label.text-field__name-checkbox-buttons(for="like-button") Like button
+                    .text-field__like-button
+                        .text-field__like-button-block.text-field__like-button-block_position-like
+                            span.material-icons.material-icons_like favorite_border
+                            input(type="checkbox" class="like" id="lb1")
+                            label(for="lb1") 2
+                        .text-field__like-button-block.text-field__like-button-block_position-like
+                            span.material-icons.material-icons_like favorite
+                            input(type="checkbox" class="like" id="lb2" checked)
+                            label(for="lb2") 12
+            .form-elements__rate-button
+                form(action="")
+                    .text-field__body.checkbox-buttons_position-star
+                        label.text-field__name-checkbox-buttons(for="rate-button") Like button
+                    .text-field__rate-button
+                        .text-field__rate-button-block
+                            span.material-icons_star.material-icons star
+                            span.material-icons_star.material-icons star
+                            span.material-icons_star.material-icons star
+                            span.material-icons_star.material-icons star
+                            span.material-icons_star.material-icons star_border
+                            //- input(type="checkbox" class="rate" id="rb1")
+                        .text-field__rate-button-block
+                            span.material-icons_star.material-icons star
+                            span.material-icons_star.material-icons star
+                            span.material-icons_star.material-icons star
+                            span.material-icons_star.material-icons star
+                            span.material-icons_star.material-icons star
+                            //- input(type="checkbox" class="rate" id="rb1")
         .form-elements_right
