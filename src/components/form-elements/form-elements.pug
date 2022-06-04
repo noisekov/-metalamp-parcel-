@@ -3,19 +3,19 @@ section.form-elements
     .form-elements__container
         .form-elements_left
             .form-elements__text-field
-                form(action="/")
-                    .text-field__header 
+                form(action="/").position-filter320
+                    .text-field__header
                         label(for="field").text-field__name Text field 
                         label.text-field__name-fn default 
                     input.text-field__input.text-field__input_position(type="text" id="field" placeholder="Email" )
             .form-elements__text-field
-                form(action="/") 
+                form(action="/").position-filter320
                     .text-field__header  
                         label.text-field__name(for="field_active") Text field
                         label.text-field__name-fn Hover / Focus 
                     input.text-field__input_active.text-field__input_position(type="text" id="field_active" placeholder="This is pretty awesome")
             .form-elements__dropdown-guest 
-                form(action="")
+                form(action="").position-filter320
                     .text-field__header 
                         label.text-field__name(for="field-guest") Dropdown
                     .text-field__body
@@ -34,18 +34,18 @@ section.form-elements
                                 label.text-field__name(for="date-picker") Date dropdown
                             .text-field__body
                                 label(for="date-picker").material-icons expand_more
-                                input.text-field__input-date-dropdown.text-field__input-date-dropdown_position(type="text" id="date-picker" placeholder="дд.мм.гг" autocomplete="off")
+                                input.text-field__input-date-dropdown.position-filter150(type="text" id="date-picker" placeholder="дд.мм.гг" autocomplete="off")
                         .date-dropdown
                             .text-field__header 
                                 label.text-field__name(for="date-picker") Date dropdown
                             .text-field__body
                                 label(for="date-picker").material-icons expand_more
-                                input.text-field__input-date-dropdown.text-field__input-date-dropdown_position(type="text" id="date-picker" placeholder="дд.мм.гг" autocomplete="off")
+                                input.text-field__input-date-dropdown.position-filter150(type="text" id="date-picker" placeholder="дд.мм.гг" autocomplete="off")
             .form-elements__filter-date-dropdown
-                form(action="")
+                form(action="").position-filter266
                     .text-field__header 
                         label.text-field__name(for="date-picker") Filter date dropdown
-                    .text-field__body.position-filter
+                    .text-field__body
                         label(for="date-picker").material-icons expand_more
                         input.text-field__input-filter-date-dropdown.text-field__input-filter-date-dropdown_position(type="text" id="date-picker" placeholder="19 авг - 23 авг" autocomplete="off")
             .footer-up__button
@@ -57,21 +57,21 @@ section.form-elements
                     a.footer-up__arrow(href="#") 
                         img(src="/images/arrow_forward.svg", alt="arrow_forward") 
             .form-elements__dropdown-default
-                form(action="")
-                    .text-field__header.position-filter
+                form(action="").position-filter266
+                    .text-field__header
                         label.text-field__name(for="dropdown-default") Dropdown
                         label.text-field__name-fn Default 
-                    .text-field__body.position-filter
+                    .text-field__body
                         label(for="dropdown-default").material-icons expand_more
                         input.text-field__input-dropdown-default.text-field__dropdown-default_position(type="text" id="dropdown-default" placeholder="2 спальни, 2 кровати...")
-            .form-elements__dropdown-expanded.position-filter
-                form(action="").position-filter
+            .form-elements__dropdown-expanded
+                form(action="").position-filter266
                     .text-field__header
                         label.text-field__name(for="expanded") Dropdown
                         label.text-field__name-fn Expanded 
                     .text-field__body
                         label(for="expanded").material-icons expand_more
-                        input.text-field__input-dropdown-expanded.text-field__dropdown-expanded_position(type="text" id="expanded" placeholder="2 спальни, 2 кровати...")
+                        input.text-field__input-dropdown-default.text-field__dropdown-expanded_position(type="text" id="expanded" placeholder="2 спальни, 2 кровати...")
                     .text-field__list
                         .text-field__list-dropdown
                             ul 
@@ -93,13 +93,13 @@ section.form-elements
                                     span 2
                                     button +
             .form-elements__expandable-checkbox
-                form(action="")
-                    .text-field__body.position-filter
+                form(action="").position-filter266
+                    .text-field__body
                         label.text-field__name-expandable-checkbox-list(for="Expandable checkbox list") Expandable checkbox list
                         label(for="Expandable checkbox list").material-icons expand_more
             .form-elements__expandable-checkbox-list
-                form(action="")
-                    .text-field__body.position-filter
+                form(action="").position-filter266
+                    .text-field__body
                         label.text-field__name-expandable-checkbox-list(for="Expandable checkbox list") Expandable checkbox list
                         label(for="Expandable checkbox list").material-icons expand_less
                     ul.text-field__expandable-checkbox-list
@@ -203,4 +203,120 @@ section.form-elements
                             span.material-icons_star.material-icons star
                             span.material-icons_star.material-icons star
                             //- input(type="checkbox" class="rate" id="rb1")
+            .form-elements__dropdown
+                form(action="").position-filter320
+                    .text-field__header
+                        label.text-field__name(for="dropdown") Dropdown 
+                    .text-field__body
+                        label(for="dropdown").material-icons expand_more
+                        input.text-field__input-dropdown-default.text-field__input_position(type="text" id="dropdown" placeholder="Сколько гостей")
+                    .text-field__list
+                        .text-field__list-dropdown
+                            ul 
+                                li Взрослые
+                                li Дети
+                                li Младенцы
+                        .text-field__list-btn  
+                            ul  
+                                li.text-field__list-btn_col
+                                    button -
+                                    span 0
+                                    button +
+                                li.text-field__list-btn_col
+                                    button -
+                                    span 0
+                                    button +
+                                li.text-field__list-btn_col
+                                    button -
+                                    span 0
+                                    button +
+                            button Применить
+            .form-elements__rich-checkbox-buttons
+                form(action="").position-filter266
+                    .text-field__body.position-filter
+                        label.text-field__name-expandable-checkbox-list(for="Rich checkbox buttons") Rich checkbox buttons
+                    ul.text-field__expandable-checkbox-list
+                        li  
+                            input(type="checkbox" id="rc1")
+                            label(for="rc1") <span>Широкий коридор</span> <br> Ширина коридоров в номере не менее 91 см.
+                        li  
+                            input(type="checkbox" id="rc2")
+                            label(for="rc2") <span>Помощник для инвалидов</span><br> На 1 этаже вас встретит специалист  и проводит до номера.
+            .form-elements__review
+                form(action="")
+                    .review
+                        img(src="/images/avatar.svg", alt="avatar")
+                        .review__name
+                            p Мурад Сарафанов
+                            span  5 дней назад
+                    .review__body
+                        .text-field__like-button.review__block
+                            .text-field__like-button-block.text-field__like-button-block_position-like
+                                span.material-icons.material-icons_like favorite_border
+                                input(type="checkbox" class="like" id="lb1")
+                                label(for="lb1") 2
+                        p Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.
         .form-elements_right
+            .form-elements__range-slider
+                    form(action="/").position-filter266
+                        .text-field__header.range-slider_position
+                            label.text-field__name(for="range-slider") Range slider
+                            label.text-field__name-fn 5 000₽ - 10 000₽
+                        input.range-slider(type="range" min="0" max="10000" value="5000" id="range-slider")
+            .form-elements__button
+                form(action="").position-filter266 
+                    .text-field__header.range-slider_position
+                                label.text-field__name(for="button-click") Buttons
+                    .button
+                        button.button-click click me
+                        button.button-click_active click me
+                        button.button-click-sec click me
+                        button.button-click-sec_active click me
+                        button.button-click_th click me
+                        button.button-click_th_active click me
+            .form-elements__button-pay 
+                .button-pay
+                    a(href="#") Перейти к оплате
+                    span 
+            .form-elements__pagination 
+                form(action="") 
+                    .text-field__header.range-slider_position
+                        label.text-field__name(for="pagination") Pagination
+            .form-elements__dropdown
+                form(action="")
+                    .text-field__header
+                        label.text-field__name(for="dropdown") Dropdown 
+                    .text-field__body
+                        label(for="dropdown").material-icons expand_more
+                        input.text-field__input-dropdown-default.text-field__input_position(type="text" id="dropdown" placeholder="3 гостя")
+                    .text-field__list
+                        .text-field__list-dropdown
+                            ul 
+                                li Взрослые
+                                li Дети
+                                li Младенцы
+                        .text-field__list-btn  
+                            ul  
+                                li.text-field__list-btn_col
+                                    button -
+                                    span 2
+                                    button +
+                                li.text-field__list-btn_col
+                                    button -
+                                    span 1
+                                    button +
+                                li.text-field__list-btn_col
+                                    button -
+                                    span 0
+                                    button +
+                            button Применить
+            .form-elements__bullet-list
+                form(action="")
+                    .text-field__header
+                        label.text-field__name(for="bullet-list") Bullet list 
+                    .text-field__body.bullet-list
+                        ul 
+                            li Нельзя с питомцами
+                            li Без вечеринок и мероприятий
+                            li Время прибытия — после 13:00, а выезд до 12:00
+                            

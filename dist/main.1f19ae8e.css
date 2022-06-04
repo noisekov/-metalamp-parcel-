@@ -1184,6 +1184,12 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   padding: 0 140px 131px;
 }
+.form-elements_left {
+  margin-right: 126px;
+}
+.form-elements_middle {
+  margin-right: 72px;
+}
 .form-elements__text-field {
   margin-bottom: 20px;
 }
@@ -1198,13 +1204,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 .form-elements__filter-date-dropdown {
   margin-bottom: 40px;
-}
-.form-elements_left {
-  margin-right: 126px;
-  max-width: 320px;
-}
-.form-elements_middle {
-  margin-right: 72px;
 }
 .form-elements__dropdown-default {
   margin-bottom: 20px;
@@ -1229,6 +1228,27 @@ h1, h2, h3, h4, h5, h6 {
 }
 .form-elements__like-button {
   margin-bottom: 40px;
+}
+.form-elements__rate-button {
+  margin-bottom: 196px;
+}
+.form-elements__dropdown {
+  margin-bottom: 98px;
+}
+.form-elements__rich-checkbox-buttons {
+  margin-bottom: 233px;
+}
+.form-elements__range-slider {
+  margin-bottom: 40px;
+}
+.form-elements__button {
+  margin-bottom: 30px;
+}
+.form-elements__button-pay {
+  margin-bottom: 40px;
+}
+.form-elements__pagination {
+  margin-bottom: 230px;
 }
 
 .text-field__header {
@@ -1308,6 +1328,8 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 4px;
 }
 .text-field__input-date-dropdown {
+  position: relative;
+  padding: 13px 15px;
   color: rgba(31, 32, 65, 0.75);
   border: 1px solid rgba(31, 32, 65, 0.25);
   border-radius: 4px;
@@ -1315,11 +1337,6 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
-}
-.text-field__input-date-dropdown_position {
-  padding: 13px 15px;
-  width: 150px;
-  position: relative;
 }
 .text-field__input-date-dropdown span {
   position: absolute;
@@ -1375,8 +1392,24 @@ h1, h2, h3, h4, h5, h6 {
 .text-field__list {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   border: 1px solid rgba(31, 32, 65, 0.25);
   border-radius: 0 0 4px 4px;
+}
+.text-field__list-btn > button {
+  background-color: #fff;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #BC9CFF;
+  cursor: pointer;
+}
+.text-field__list-btn {
+  margin-bottom: 13px;
+}
+.text-field__list-btn li:last-child {
+  margin-bottom: 20px;
 }
 .text-field__list-dropdown li {
   font-weight: 700;
@@ -1408,11 +1441,6 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 0.38;
 }
 .text-field__input-dropdown-default {
-  color: rgba(31, 32, 65, 0.75);
-  border: 1px solid rgba(31, 32, 65, 0.25);
-  border-radius: 4px 4px 0 0;
-}
-.text-field__input-dropdown-expanded {
   color: rgba(31, 32, 65, 0.75);
   border: 1px solid rgba(31, 32, 65, 0.25);
   border-radius: 4px 4px 0 0;
@@ -1705,7 +1733,11 @@ h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
 }
 .material-icons_purpure {
-  color: #8BA4F9;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
   font-size: 48px;
   top: 0;
   right: 0;
@@ -1720,11 +1752,23 @@ h1, h2, h3, h4, h5, h6 {
 .material-icons_star {
   position: relative;
   font-size: 24px;
-  color: #8BA4F9;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
 }
 
-.position-filter {
-  width: 266px;
+.position-filter266 {
+  max-width: 266px;
+}
+
+.position-filter320 {
+  max-width: 320px;
+}
+
+.position-filter150 {
+  max-width: 150px;
 }
 
 .icons-block {
@@ -1766,6 +1810,132 @@ h1, h2, h3, h4, h5, h6 {
 }
 .checkbox-buttons_position-star {
   margin-bottom: 10px;
+}
+
+.range-slider_position {
+  margin-bottom: 20px;
+}
+
+.review {
+  display: flex;
+}
+.review img {
+  margin-top: -11px;
+  margin-left: -21px;
+}
+.review__name {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+}
+.review__name p {
+  font-weight: 700;
+}
+.review__body {
+  display: flex;
+}
+.review__body p {
+  margin-top: -6px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+}
+.review__block {
+  margin-right: 14px;
+}
+
+.range-slider {
+  width: 100%;
+  cursor: pointer;
+}
+
+.button-click {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  border-radius: 22px;
+  margin: 0 22px 30px 1px;
+  padding: 14px 21px 15px 19px;
+}
+.button-click_active {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  border-radius: 22px;
+  opacity: 0.5;
+  padding: 14px 21px 15px 19px;
+}
+.button-click-sec {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #BC9CFF;
+  border: 2px solid #BC9CFF;
+  border-radius: 22px;
+  background: #ffffff;
+  margin: 0 18px 30px 0;
+  padding: 14px 20px 15px;
+}
+.button-click-sec_active {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #BC9CFF;
+  border: 2px solid #BC9CFF;
+  border-radius: 22px;
+  background: #ffffff;
+  opacity: 0.5;
+  padding: 14px 20px 15px;
+}
+.button-click_th {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #BC9CFF;
+  background: #ffffff;
+  margin-right: 20px;
+}
+.button-click_th_active {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: rgba(31, 32, 65, 0.5);
+  background: #ffffff;
+}
+
+.button-pay a {
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  border-radius: 22px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  padding: 14px 94px 15px;
+}
+
+.bullet-list {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+}
+.bullet-list li {
+  margin-left: 21px;
+  list-style: circle;
 }
 
 @font-face {
