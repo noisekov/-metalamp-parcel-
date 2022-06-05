@@ -55,7 +55,7 @@ section.form-elements
                     input.footer-up__input.text-field__subscription-text-field(type="text" placeholder="Email" name="button")
                     label.footer-up__arrow(for="before")
                     a.footer-up__arrow(href="#") 
-                        img(src="/images/arrow_forward.svg", alt="arrow_forward") 
+                        span.material-icons.material-icons_arrow arrow_forward  
             .form-elements__dropdown-default
                 form(action="").position-filter266
                     .text-field__header
@@ -276,8 +276,8 @@ section.form-elements
                         button.button-click_th_active click me
             .form-elements__button-pay 
                 .button-pay
-                    a(href="#") Перейти к оплате
-                    span 
+                    a(href="#").button-pay__link Перейти к оплате
+                        span.material-icons.material-icons_white arrow_forward  
             .form-elements__pagination 
                 form(action="") 
                     .text-field__header.range-slider_position

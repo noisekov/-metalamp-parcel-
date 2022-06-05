@@ -63,7 +63,7 @@
         margin-bottom: 40px;
     }
     &__button {
-        margin-bottom: 30px;
+        margin-bottom: 40px;
     }
     &__button-pay {
         margin-bottom: 40px;
@@ -584,10 +584,13 @@
 .material-icons {
     position: absolute;
     top: 25%;
-    right: 1%;
+    right: 4%;
     color: rgba(31, 32, 65, 0.5);
     z-index: 1;
     cursor: pointer;
+    &:hover {
+        opacity: 0.8;
+    }
     &_purpure {
         background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
         -webkit-background-clip: text;
@@ -614,6 +617,23 @@
         background-clip: text;
         text-fill-color: transparent;
 
+    }
+    &_arrow {
+        top: -3px;
+        right: 12px;
+        color: #8BA4F9;
+        font-size: 24px;
+    }
+    &_hd {
+        top: -2px;
+        right: -23px;
+    }
+    &_white {
+        top: 20%;
+        color: #ffffff;
+        &:hover{
+            opacity: 1;
+        }
     }
 }
 .position-filter266 {
@@ -785,6 +805,12 @@
         text-transform: uppercase;
         color: #FFFFFF;
         padding: 14px 94px 15px;
+    }
+    &__link {
+        position: relative;
+        &:hover{
+            opacity: 0.8;
+        }
     }
 }
 .bullet-list {

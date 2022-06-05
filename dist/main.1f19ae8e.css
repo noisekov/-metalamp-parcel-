@@ -223,11 +223,6 @@
 .footer-up__arrow {
   position: relative;
 }
-.footer-up__arrow img {
-  position: absolute;
-  right: 10px;
-  top: 0px;
-}
 .footer-up::after {
   content: "";
   position: absolute;
@@ -485,13 +480,17 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: row;
   margin-right: 20px;
 }
-.nav-up__item {
+.nav-up li {
   margin-right: 20px;
 }
-.nav-up__item:last-child {
-  margin-right: 0;
+.nav-up li:nth-child(2) {
+  margin-right: 35px;
+}
+.nav-up li:last-child {
+  margin-right: 25px;
 }
 .nav-up__link {
+  position: relative;
   font-weight: 400;
   color: rgba(31, 32, 65, 0.5);
 }
@@ -499,11 +498,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   color: rgba(31, 32, 65, 0.75);
 }
-.nav-up__arrow {
-  position: relative;
-  top: 4px;
-  right: -5px;
-}
+
 .color {
   background: #ffffff;
 }
@@ -699,11 +694,6 @@ h1, h2, h3, h4, h5, h6 {
   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
   border-radius: 22px;
   cursor: pointer;
-}
-.nav-up__arrow {
-  position: relative;
-  top: 4px;
-  right: -5px;
 }
 .nav-up__user {
   position: relative;
@@ -1242,7 +1232,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 40px;
 }
 .form-elements__button {
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 .form-elements__button-pay {
   margin-bottom: 40px;
@@ -1727,10 +1717,13 @@ h1, h2, h3, h4, h5, h6 {
 .material-icons {
   position: absolute;
   top: 25%;
-  right: 1%;
+  right: 4%;
   color: rgba(31, 32, 65, 0.5);
   z-index: 1;
   cursor: pointer;
+}
+.material-icons:hover {
+  opacity: 0.8;
 }
 .material-icons_purpure {
   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
@@ -1757,6 +1750,23 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
+}
+.material-icons_arrow {
+  top: -3px;
+  right: 12px;
+  color: #8BA4F9;
+  font-size: 24px;
+}
+.material-icons_hd {
+  top: -2px;
+  right: -23px;
+}
+.material-icons_white {
+  top: 20%;
+  color: #ffffff;
+}
+.material-icons_white:hover {
+  opacity: 1;
 }
 
 .position-filter266 {
@@ -1925,6 +1935,12 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
   color: #FFFFFF;
   padding: 14px 94px 15px;
+}
+.button-pay__link {
+  position: relative;
+}
+.button-pay__link:hover {
+  opacity: 0.8;
 }
 
 .bullet-list {
