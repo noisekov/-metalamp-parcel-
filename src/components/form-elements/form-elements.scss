@@ -62,15 +62,38 @@
     &__range-slider{
         margin-bottom: 40px;
     }
-    &__button {
+    &__buttons {
         margin-bottom: 40px;
     }
     &__button-pay {
-        margin-bottom: 40px;
+        margin-bottom: 47px;
     }
     &__pagination {
         margin-bottom: 230px;
     }
+}
+.position-btn {
+    margin-bottom: 100px;
+}
+.position-filter266 {
+    max-width: 266px;
+}
+.position-filter255 {
+    max-width: 255px;
+}
+.position-filter320 {
+    max-width: 320px;
+}
+.position-filter150 {
+    max-width: 150px;
+}
+.position-input-area{
+    width: 266px;
+    padding: 13px 40px 13px 15px;
+}
+.position-input-large-area {
+    width: 320px;
+    padding: 13px 40px 13px 15px;
 }
 .text-field{
     &__header{
@@ -94,9 +117,6 @@
             &:-moz-placeholder {
                 color: rgba(31, 32, 65, 0.75);
             }
-        }
-        &_position {
-            padding: 13px 135px 13px 15px;
         }
         &:focus{
             &::-webkit-input-placeholder {
@@ -156,7 +176,7 @@
     }
     &__input-date-dropdown {
         position: relative;
-        padding: 13px 15px;
+        padding: 13px 30px 13px 15px;
         color:  rgba(31, 32, 65, 0.75);
         border: 1px solid rgba(31, 32, 65, 0.25);
         border-radius: 4px;
@@ -207,19 +227,6 @@
         font-weight: 400;
         font-size: 14px;
         line-height: 18px;
-        &_position{
-            padding: 13px 75px 13px 15px;
-        }
-    }
-    &__subscription-text-field {
-        padding: 13px 83px 13px 15px;
-        margin-bottom: 100px;
-    }
-    &__dropdown-default_position {
-        padding: 13px 81px 13px 15px;
-    }
-    &__dropdown-expanded_position {
-        padding: 13px 81px 13px 15px;
     }
     &__list {
         display: flex;
@@ -304,6 +311,18 @@
         }
     }
     &__expandable-checkbox-list {
+        & span {
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 18px;
+            color: rgba(31, 32, 65, 0.75);
+        }
+        & p {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 14px;
+            color: rgba(31, 32, 65, 0.5);
+        }
         & input[type="checkbox"]:checked,
          input[type="checkbox"]:not(:checked){
             position: absolute;
@@ -625,25 +644,21 @@
         font-size: 24px;
     }
     &_hd {
-        top: -2px;
+        top: -4px;
         right: -23px;
     }
     &_white {
-        top: 20%;
+        top: 23%;
         color: #ffffff;
         &:hover{
             opacity: 1;
         }
     }
-}
-.position-filter266 {
-    max-width: 266px;
-}
-.position-filter320 {
-    max-width: 320px;
-}
-.position-filter150 {
-    max-width: 150px;
+    &_pagination {
+        top: 7px;
+        left: 2px;
+        color: #ffffff;
+    }
 }
 .icons-block {
     display: flex;
@@ -819,7 +834,50 @@
     line-height: 24px;
     color: rgba(31, 32, 65, 0.75);
     & li {
-        margin-left: 21px;
-        list-style:circle;
+        margin:0 0 0 21px;
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            height: 10px;
+            width: 10px;
+            top: 7px;
+            right: 245px;
+            border-radius: 100%;
+            background: rgba(31, 32, 65, 0.25);
+        }
+    }
+}
+.pagination {
+    &__body {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 40px;
+        color: rgba(31, 32, 65, 0.5);
+        margin-bottom: 11px;
+        & button {
+            display: inline-block;
+            align-items: center;
+            text-align: center;
+            width: 40px;
+            height: 40px;
+            background: #ffffff;
+            &:first-child{
+                color: #fff;
+                background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+                border-radius: 22px;
+            }
+            &:last-child {
+                position: relative;
+                padding-top: 10px;
+                background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+                border-radius: 22px;
+            }
+        } 
+    }
+    &__count {
+        font-size: 14px;
+        line-height: 24px;
+        color: rgba(31, 32, 65, 0.75);
     }
 }

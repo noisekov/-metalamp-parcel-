@@ -26,8 +26,10 @@
             margin-right: 25px;
         }
     }
-    &__link {
+    &__item{
         position: relative;
+    }
+    &__link {
         font-weight: 400;
         color: $darkshade5;
     }
