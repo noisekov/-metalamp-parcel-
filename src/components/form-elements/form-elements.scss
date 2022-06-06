@@ -69,11 +69,11 @@
         margin-bottom: 47px;
     }
     &__pagination {
-        margin-bottom: 230px;
+        margin-bottom: 200px;
     }
-}
-.position-btn {
-    margin-bottom: 100px;
+    &__button {
+        margin-bottom: 100px;
+    }
 }
 .position-filter266 {
     max-width: 266px;
@@ -744,6 +744,15 @@
     //     border-radius: 10px;
     // }
 }
+.button-position {
+    margin: 0 23px 30px 1px;
+}
+.button-position_sec {
+    margin: 0 18px 30px 0px;
+}
+.button-position_th {
+    margin-right: 20px;
+}
 .button {
     &-click{
         font-weight: 700;
@@ -753,7 +762,6 @@
         color: #FFFFFF;
         background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
         border-radius: 22px;
-        margin: 0 22px 30px 1px;
         padding: 14px 21px 15px 19px;
         &_active {
             font-weight: 700;
@@ -775,7 +783,6 @@
             border: 2px solid #BC9CFF;
             border-radius: 22px;
             background: #ffffff;
-            margin: 0 18px 30px 0;
             padding: 14px 20px 15px;
             &_active {
                 font-weight: 700;
@@ -797,7 +804,6 @@
             text-transform: uppercase;
             color: #BC9CFF;
             background:#ffffff;
-            margin-right: 20px;
             &_active{
                 font-weight: 700;
                 font-size: 12px;
@@ -810,6 +816,7 @@
     }
 }
 .button-pay {
+    max-width: 320px;
     & a {
         background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
         border-radius: 22px;
@@ -819,9 +826,10 @@
         text-align: center;
         text-transform: uppercase;
         color: #FFFFFF;
-        padding: 14px 94px 15px;
+        padding: 14px 0px 15px;
     }
     &__link {
+        display: block;
         position: relative;
         &:hover{
             opacity: 0.8;

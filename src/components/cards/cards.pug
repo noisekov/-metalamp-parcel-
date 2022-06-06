@@ -1,0 +1,172 @@
+sectipn.cards
+    img.first-logo(src="/images/first-logo.svg", alt="first-logo")
+    .cards__container
+        .cards__container_left 
+            .find-number 
+                h1.cards-position20 Найдём номера под ваши пожелания
+                .find-number__dropdown.cards-position20
+                    form(action="")
+                        .date
+                            .date-dropdown
+                                .text-field__header 
+                                    label.text-field__name(for="date-picker") Прибытие
+                                .text-field__body
+                                    label(for="date-picker").material-icons expand_more
+                                    input.text-field__input-date-dropdown.position-filter150(type="text" id="date-picker" placeholder="дд.мм.гг" autocomplete="off")
+                            .date-dropdown
+                                .text-field__header 
+                                    label.text-field__name(for="date-picker") Выезд
+                                .text-field__body
+                                    label(for="date-picker").material-icons expand_more
+                                    input.text-field__input-date-dropdown.position-filter150(type="text" id="date-picker" placeholder="дд.мм.гг" autocomplete="off")
+                .find-number__body.cards-position30
+                    form(action="").position-filter320
+                        .text-field__header 
+                            label.text-field__name(for="field-guest") Гости
+                        .text-field__body
+                            label(for="field-guest").material-icons expand_more
+                            input.text-field__input-guest.position-input-large-area(type="text" id="field-guest" placeholder="Сколько гостей")
+                .find-number__button-pay 
+                    .button-pay
+                        a(href="#").button-pay__link Подобрать номер
+                            span.material-icons.material-icons_white arrow_forward  
+            .registration
+                h1.cards-position20 Регистрация аккаунта
+                .registration__text-field.cards-position10
+                    form(action="/").position-filter320
+                        input.text-field__input.position-input-large-area(type="text" id="field" placeholder="Имя" )
+                .registration__text-field.cards-position10
+                    form(action="/").position-filter320
+                        input.text-field__input.position-input-large-area(type="text" id="field" placeholder="Фамилия" )
+                .registration__radio-buttons.cards-position20
+                    form(action="")
+                        ul.text-field__radio-buttons
+                            li 
+                                input(type="radio" name="rb" id="rb1" checked)
+                                label(for="rb1") Мужчина 
+                            li 
+                                input(type="radio" name="rb" id="rb2")
+                                label(for="rb2") Женщина 
+                .registration__masked-text-field.cards-position20
+                    form(action="")
+                        .text-field__header 
+                            label.text-field__name(for="masked-text-field") Дата рождения
+                        input.text-field__masked-text-field.position-input-large-area(type="text" id="masked-text-field" placeholder="дд.мм.гг" ) 
+                .registration__text-field.cards-position10
+                    form(action="/").position-filter320
+                        .text-field__header
+                            label(for="field").text-field__name Данные для входа в сервис 
+                        input.text-field__input.position-input-large-area(type="text" id="field" placeholder="Email" )
+                .registration__text-field.cards-position10
+                    form(action="/").position-filter320
+                        input.text-field__input.position-input-large-area(type="text" id="field" placeholder="Пароль" )
+                .registration__toggle
+                    form(action="")
+                        ul.text-field__toggle.cards-position20
+                            li 
+                                input(type="checkbox" class="switch" id="tg1")
+                                label(for="tg1") Получать спецпредложения 
+                .registration__button-pay.cards-position30
+                    .button-pay
+                        a(href="#").button-pay__link Перейти к оплате
+                            span.material-icons.material-icons_white arrow_forward  
+                .registration__sign-in 
+                    p Уже есть аккаунт на Toxin
+                    button.button-click-sec Войти
+        .cards__container_middle 
+            .choice 
+                .find-number 
+                    .find-number__header.cards-position20
+                        .find-number__name №<span>888</span> <span>люкс</span>
+                        .find-number__title <span>9 990₽</span> в сутки
+                    .find-number__dropdown.cards-position20
+                        form(action="")
+                            .date
+                                .date-dropdown
+                                    .text-field__header 
+                                        label.text-field__name(for="date-picker") Прибытие
+                                    .text-field__body
+                                        label(for="date-picker").material-icons expand_more
+                                        input.text-field__input-date-dropdown.position-filter150(type="text" id="date-picker" placeholder="19.08.2019" autocomplete="off")
+                                .date-dropdown
+                                    .text-field__header 
+                                        label.text-field__name(for="date-picker") Выезд
+                                    .text-field__body
+                                        label(for="date-picker").material-icons expand_more
+                                        input.text-field__input-date-dropdown.position-filter150(type="text" id="date-picker" placeholder="23.08.2019" autocomplete="off")
+                    .find-number__guest.cards-position20
+                        form(action="").position-filter320
+                            .text-field__header 
+                                label.text-field__name(for="field-guest") Гости
+                            .text-field__body
+                                label(for="field-guest").material-icons expand_more
+                                input.text-field__input-guest.position-input-large-area(type="text" id="field-guest" placeholder="3 гостя")
+                    .find-number__body.cards-position30
+                        .find-number__body-block.cards-position10
+                            .find-number__body-block_left
+                                p 9 990₽ х 4 суток
+                            .find-number__body-block_right
+                                p 39 960₽
+                        .find-number__body-block.cards-position10
+                            .find-number__body-block_left
+                                p Сбор за услуги: скидка 2 179₽
+                                span i
+                            .find-number__body-block_right
+                                p 0₽
+                        .find-number__body-block 
+                            .find-number__body-block_left
+                                p Сбор за дополнительные услуги
+                                span i
+                            .find-number__body-block_right
+                                p 300₽
+                    .find-number__price.cards-position20 
+                        p Итого
+                        span 
+                        p 38 081₽
+                    .find-number__button-pay 
+                        .button-pay
+                            a(href="#").button-pay__link Забронировать
+                                span.material-icons.material-icons_white arrow_forward  
+            .entry 
+                .registration
+                    h1.cards-position20 Войти
+                    .registration__text-field.cards-position10
+                        form(action="/").position-filter320
+                            input.text-field__input.position-input-large-area(type="text" id="field" placeholder="Email" )
+                    .registration__text-field.cards-position20
+                        form(action="/").position-filter320
+                            input.text-field__input.position-input-large-area(type="text" id="field" placeholder="Пароль" )
+                    .registration__button-pay.cards-position30
+                        .button-pay
+                            a(href="#").button-pay__link Войти
+                                span.material-icons.material-icons_white arrow_forward  
+                    .registration__sign-in 
+                        p Нет аккаунта на Toxin?
+                        button.button-click-sec Создать
+        .cards__container_right 
+            .choice 
+                .find-number 
+                    h1.cards-position20 Найдём
+                    .find-number__dropdown
+                        form(action="")
+                            .date
+                                .date-dropdown
+                                    .text-field__header 
+                                        label.text-field__name(for="date-picker") Прибытие
+                                    .text-field__body
+                                        label(for="date-picker").material-icons expand_more
+                                        input.text-field__input-date-dropdown.position-filter150(type="text" id="date-picker" placeholder="дд.мм.гг" autocomplete="off")
+                                .date-dropdown
+                                    .text-field__header 
+                                        label.text-field__name(for="date-picker") Выезд
+                                    .text-field__body
+                                        label(for="date-picker").material-icons expand_more
+                                        input.text-field__input-date-dropdown.position-filter150(type="text" id="date-picker" placeholder="19.08.2019" autocomplete="off")
+                    .find-number__body
+                        form(action="").position-filter320
+                            .text-field__header 
+                                label.text-field__name(for="field-guest") Гости
+                            .text-field__body
+                                label(for="field-guest").material-icons expand_more
+                                input.text-field__input-guest.position-input-large-area(type="text" id="field-guest" placeholder="3 гостя")
+ 

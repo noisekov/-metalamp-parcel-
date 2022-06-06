@@ -5,7 +5,22 @@ $darkshade25: rgba(31, 32, 65, 0.25);
 $darkshade05: rgba(31, 32, 65, 0.05);
 $purple: #BC9CFF;
 $green: #6FCF97;
-
+h1{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: calc(29 / 24 * 100%);
+}
+h2{
+    font-weight: 700;
+    font-size: 19px;
+    line-height: calc(23 / 19 * 100%);
+}
+h3 {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: calc(15 / 12 * 100%);
+    text-transform: uppercase;
+}
 .color {
     background: #ffffff;
     // .color__container
@@ -76,7 +91,7 @@ $green: #6FCF97;
         background-color: $green;
     }
     // .block-color__body
-    &__body {
+    &__body_s {
     }
     // .block-color__body-name
     &__body-name {
@@ -85,9 +100,7 @@ $green: #6FCF97;
         line-height: calc(28  / 19 * 100%);
         color: $darkshade;
     }
-
     // .block-color__body-number
-
     &__body-number {
         font-weight: 400;
         font-size: 19px;
@@ -104,48 +117,28 @@ $green: #6FCF97;
     & span {
         color: rgba(31, 32, 65, 0.25);
         font-weight: 400;
-        display: inline-block;
+        width: 30px;
+        height: 30px;
+        text-align: right;
+        margin-right: 30px;
     }
     &:first-child span{
-        margin-right: 30px;
         font-size: 24px;
         line-height: calc(29 / 24 * 100%);
     }
     &:nth-child(2) span{
-        margin-right: 35px;
         font-size: 19px;
         line-height: calc(23 / 19 * 100%);
     }
     &:nth-child(3) span{
-        margin-right: 45px;
         font-size: 12px;
         line-height: calc(15 / 12 * 100%);
     }
     &:last-child span{
-        margin-right: 22px;
         font-size: 14px;
         line-height: calc(24 / 14 * 100%);
     }
-    & p {
-        color: #1F2041;
-    }
-    &:first-child p{
-        font-weight: 700;
-        font-size: 24px;
-        line-height: calc(29 / 24 * 100%);
-    }
-    &:nth-child(2) p{
-        font-weight: 700;
-        font-size: 19px;
-        line-height: calc(23 / 19 * 100%);
-    }
-    &:nth-child(3) p{
-        font-weight: 700;
-        font-size: 12px;
-        line-height: calc(15 / 12 * 100%);
-        text-transform: uppercase;
-    }
-    &:last-child p{
+    & p{
         font-weight: 400;
         font-size: 14px;
         line-height: calc(24 / 14 * 100%);
