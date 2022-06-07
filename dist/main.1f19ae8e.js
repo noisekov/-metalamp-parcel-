@@ -2531,6 +2531,13 @@ require("air-datepicker/air-datepicker.css");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+// import 'item-quantity-dropdown';
+// import 'item-quantity-dropdown/lib/item-quantity-dropdown.css';
+// import noUiSlider from 'nouislider';
+// import * as noUiSlider from 'nouislider';
+// import '/nouislider/dist/nouislider.css';
+//air-datapicker
+var cal1, cal2;
 var apply = {
   content: 'Применить',
   className: 'custom-button',
@@ -2538,11 +2545,29 @@ var apply = {
     return true;
   }
 };
-new _airDatepicker.default('#date-picker', {
+cal1 = new _airDatepicker.default('#date-picker', {
   range: true,
   multipleDatesSeparator: '-',
   inline: false,
   buttons: [apply, 'clear']
+}); //calendar
+
+cal2 = new _airDatepicker.default('#calendar', {
+  inline: true
+}); //dropdown
+// $(document).ready(() => {
+//    $('.iqdropdown').iqDropdown({ [options] });
+//  });
+//nuUiSlider
+
+var slider = document.getElementById('slider');
+noUiSlider.create(slider, {
+  start: [20, 80],
+  connect: true,
+  range: {
+    'min': 0,
+    'max': 100
+  }
 });
 },{"air-datepicker":"../node_modules/air-datepicker/index.es.js","air-datepicker/air-datepicker.css":"../node_modules/air-datepicker/air-datepicker.css"}],"main.js":[function(require,module,exports) {
 "use strict";
@@ -2578,7 +2603,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58100" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63850" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

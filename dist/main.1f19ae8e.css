@@ -1410,7 +1410,7 @@ h3 {
 .text-field__list-btn li:last-child {
   margin-bottom: 20px;
 }
-.text-field__list-dropdown li {
+.text-field__list-dropdown {
   font-weight: 700;
   font-size: 12px;
   line-height: 15px;
@@ -2034,6 +2034,10 @@ h3 {
 }
 .cards__container_middle {
   margin-right: 40px;
+}
+
+.calendar {
+  margin-bottom: 40.5px;
 }
 
 .cards-position10 {

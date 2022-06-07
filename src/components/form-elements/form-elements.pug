@@ -211,7 +211,7 @@ section.form-elements
                         label(for="dropdown").material-icons expand_more
                         input.text-field__input-dropdown-default.position-input-large-area(type="text" id="dropdown" placeholder="Сколько гостей")
                     .text-field__list
-                        .text-field__list-dropdown
+                        .text-field__list-dropdown.iqdropdown
                             ul 
                                 li Взрослые
                                 li Дети
@@ -255,8 +255,8 @@ section.form-elements
                         .text-field__like-button.review__block
                             .text-field__like-button-block.text-field__like-button-block_position-like
                                 span.material-icons.material-icons_like favorite_border
-                                input(type="checkbox" class="like" id="lb1")
-                                label(for="lb1") 2
+                                input(type="checkbox" class="like" id="like-review")
+                                label(for="like-review") 2
                         p Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.
         .form-elements_right
             .form-elements__range-slider
@@ -265,6 +265,7 @@ section.form-elements
                             label.text-field__name(for="range-slider") Range slider
                             label.text-field__name-fn 5 000₽ - 10 000₽
                         input.range-slider(type="range" min="0" max="100" value="30" id="range-slider")
+                        .slider 
             .form-elements__buttons
                 form(action="").position-filter266 
                     .text-field__header.range-slider_position
