@@ -659,6 +659,18 @@
         left: 2px;
         color: #ffffff;
     }
+    &_img-left {
+        transform: rotate(90deg);
+        top: 42%;
+        right: 88%;
+        color: #FFFFFF;
+    }
+    &_img-right {
+        transform: rotate(-90deg);
+        top: 42%;
+        right: 4%;
+        color: #FFFFFF;
+    }
 }
 .icons-block {
     display: flex;

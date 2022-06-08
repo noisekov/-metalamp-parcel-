@@ -2549,11 +2549,14 @@ cal1 = new _airDatepicker.default('#date-picker', {
   range: true,
   multipleDatesSeparator: '-',
   inline: false,
-  buttons: [apply, 'clear']
+  buttons: ['clear', apply]
 }); //calendar
 
 cal2 = new _airDatepicker.default('#calendar', {
-  inline: true
+  inline: true,
+  buttons: ['clear', apply],
+  range: true,
+  multipleDatesSeparator: '-'
 }); //dropdown
 // $(document).ready(() => {
 //    $('.iqdropdown').iqDropdown({ [options] });
@@ -2603,7 +2606,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63850" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53051" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

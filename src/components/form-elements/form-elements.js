@@ -18,11 +18,14 @@ cal1 = new AirDatepicker('#date-picker',{
    range: true,
    multipleDatesSeparator: '-',
    inline: false,
-   buttons: [apply, 'clear']
+   buttons: ['clear', apply]
 });
 //calendar
 cal2 = new AirDatepicker('#calendar',{
-   inline:true
+   inline:true,
+   buttons: ['clear', apply],
+   range: true,
+   multipleDatesSeparator: '-',
 });
 
 
