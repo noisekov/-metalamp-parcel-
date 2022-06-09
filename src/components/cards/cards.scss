@@ -1,4 +1,3 @@
-@import "../components/cards/air-datepicker.scss";
 .cards {
     &__container{
         display: flex;
@@ -147,6 +146,16 @@
     max-width: 270px;
     &__img {
         position: relative;
+        &-slider-bar{
+            content: "";
+            position: absolute;
+            top:90%;
+            left: 80%;
+            width: 7.5px;
+            height: 7.5px;
+            border-radius: 50%;
+            border: 1px solid #FFFFFF;
+        }
     }
     &-feedback{
         display: flex;

@@ -9,16 +9,16 @@ sectipn.cards
                         .date
                             .date-dropdown
                                 .text-field__header 
-                                    label.text-field__name(for="date-picker") Прибытие
+                                    label.text-field__name(for="date-picker-cal1") Прибытие
                                 .text-field__body
-                                    label(for="date-picker").material-icons expand_more
-                                    input.text-field__input-date-dropdown.position-filter150(type="text" id="date-picker" placeholder="дд.мм.гг" autocomplete="off")
+                                    label(for="date-picker-cal1").material-icons expand_more
+                                    input.text-field__input-date-dropdown.position-filter150(type="text" id="date-picker-cal1" placeholder="дд.мм.гг" autocomplete="off")
                             .date-dropdown
                                 .text-field__header 
-                                    label.text-field__name(for="date-picker") Выезд
+                                    label.text-field__name(for="date-picker-cal2") Выезд
                                 .text-field__body
-                                    label(for="date-picker").material-icons expand_more
-                                    input.text-field__input-date-dropdown.position-filter150(type="text" id="date-picker" placeholder="дд.мм.гг" autocomplete="off")
+                                    label(for="date-picker-cal2").material-icons expand_more
+                                    input.text-field__input-date-dropdown.position-filter150(type="text" id="date-picker-cal2" placeholder="дд.мм.гг" autocomplete="off")
                 .find-number__body.cards-position30
                     form(action="").position-filter320
                         .text-field__header 
@@ -147,8 +147,18 @@ sectipn.cards
             .calendar.cards-position40(id="calendar")
             .appartment.cards-position40
                 .appartment__img 
+                    ul 
+                        li 
+                            img(src="/images/appartment1.png", alt="appartment")
+                        li 
+                        li 
+                        li 
+                    ul 
+                        li.appartment__img-slider-bar 
+                        li.appartment__img-slider-bar 
+                        li.appartment__img-slider-bar 
+                        li.appartment__img-slider-bar 
                     span.material-icons.material-icons_img-right expand_more
-                    img(src="/images/appartment.png", alt="appartment")
                     span.material-icons.material-icons_img-left expand_more
                 .appartment__body 
                     .appartment__title 
@@ -165,7 +175,12 @@ sectipn.cards
                             .appartment-block <span>145</span> Отзывов
             .appartment 
                 .appartment__img 
-                    img(src="/images/appartment.png", alt="appartment")
+                    ul 
+                        li 
+                            img(src="/images/appartment2.png", alt="appartment")
+                        li 
+                        li 
+                        li 
                 .appartment__body 
                     .appartment__title 
                         .find-number__header.cards-position20
