@@ -4,7 +4,7 @@ import noUiSlider from 'nouislider';
 import 'nouislider/dist/nouislider.css';
 
 //air-datapicker
-let cal1, cal2, onePicker,calendar;
+let cal1, cal2, onePicker,calendarInPage;
 
 let apply = {
    content: 'Применить',
@@ -46,7 +46,7 @@ onePicker = new AirDatepicker('#one-picker',{
 });
 
 //calendar
-calendar = new AirDatepicker('#calendar',{
+calendarInPage = new AirDatepicker('#calendar',{
    inline:true,
    buttons: ['clear', apply],
    range: true,
@@ -66,15 +66,26 @@ noUiSlider.create(slider, {
 });
 
 //dropdown expandble
-const dropdownexpandable = document.querySelector(".text-field__expandable-checkbox-list-hidden")
+const dropdownExpandable = document.querySelector(".text-field__expandable-checkbox-list-hidden")
 document.addEventListener("click", expandable);
 function expandable (e) {
    if (e.target.closest(".js-display-hidden")) {
-      dropdownexpandable.classList.toggle(".active-expandble")
+      dropdownExpandable.classList.toggle(".active-expandble")
       document.querySelector(".js-material-hidden").innerHTML = "expand_less";
    }  
    if (!e.target.closest(".js-display-hidden")) {
       document.querySelector(".js-material-hidden").innerHTML = "expand_more";
    }
 }
-
+//dropdown-quest
+const dropdownQuest = document.querySelector(".text-field__block-list-hidden");
+document.addEventListener("click", quest)
+function quest (event) {
+   if (event.target.closest(".js-input-guest")){
+      dropdownQuest.classList.toggle(".active-guest")
+      document.querySelector(".js-material-hidden").innerHTML = "expand_less";
+   }
+   if (!dropdownQuest.classList(".active-guest")) {
+      document.querySelector(".js-material-hidden").innerHTML = "expand_more";
+   }
+}

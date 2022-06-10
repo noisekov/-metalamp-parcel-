@@ -78,6 +78,9 @@
 .position-mb10 {
     margin-bottom: 10px;
 }
+.position-mb17 {
+    margin-bottom: 17px;
+}
 .position-filter266 {
     max-width: 266px;
 }
@@ -171,6 +174,20 @@
     &__input-guest {
         border: 1px solid rgba(31, 32, 65, 0.25);
         border-radius: 4px;
+        cursor: pointer;
+    }
+    &__block-list-hidden {
+        display: none;
+        flex-direction: column;
+        border: 1px solid rgba(31, 32, 65, 0.25);
+        border-radius: 0 0 4px 4px;
+    }
+    &__block-list-hidden.\.active-guest{
+        display: flex;
+        position: absolute;
+        width: 320px;
+        background: #ffffff;
+        z-index: 3;
     }
     &__input-date-dropdown {
         position: relative;
@@ -310,7 +327,6 @@
     }
     &__expandable-checkbox-list-hidden {
         display: none;
-        padding-top: 10px;
         width: 266px;
         height: inherit;
         & li {
@@ -401,7 +417,6 @@
             }
     }
     &__expandable-checkbox-list {
-        padding-top: 10px;
         & li {
             font-weight: 400;
             font-size: 14px;

@@ -4800,7 +4800,7 @@ require("nouislider/dist/nouislider.css");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 //air-datapicker
-var cal1, cal2, onePicker, calendar;
+var cal1, cal2, onePicker, calendarInPage;
 var apply = {
   content: 'Применить',
   className: 'custom-button',
@@ -4841,7 +4841,7 @@ onePicker = new _airDatepicker.default('#one-picker', {
   buttons: ['clear', apply]
 }); //calendar
 
-calendar = new _airDatepicker.default('#calendar', {
+calendarInPage = new _airDatepicker.default('#calendar', {
   inline: true,
   buttons: ['clear', apply],
   range: true,
@@ -4860,16 +4860,31 @@ _nouislider.default.create(slider, {
 }); //dropdown expandble
 
 
-var dropdownexpandable = document.querySelector(".text-field__expandable-checkbox-list-hidden");
+var dropdownExpandable = document.querySelector(".text-field__expandable-checkbox-list-hidden");
 document.addEventListener("click", expandable);
 
 function expandable(e) {
   if (e.target.closest(".js-display-hidden")) {
-    dropdownexpandable.classList.toggle(".active-expandble");
+    dropdownExpandable.classList.toggle(".active-expandble");
     document.querySelector(".js-material-hidden").innerHTML = "expand_less";
   }
 
   if (!e.target.closest(".js-display-hidden")) {
+    document.querySelector(".js-material-hidden").innerHTML = "expand_more";
+  }
+} //dropdown-quest
+
+
+var dropdownQuest = document.querySelector(".text-field__block-list-hidden");
+document.addEventListener("click", quest);
+
+function quest(event) {
+  if (event.target.closest(".js-input-guest")) {
+    dropdownQuest.classList.toggle(".active-guest");
+    document.querySelector(".js-material-hidden").innerHTML = "expand_less";
+  }
+
+  if (!dropdownQuest.classList(".active-guest")) {
     document.querySelector(".js-material-hidden").innerHTML = "expand_more";
   }
 }
@@ -4907,7 +4922,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57625" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61155" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
