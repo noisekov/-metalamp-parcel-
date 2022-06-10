@@ -44,10 +44,10 @@ section.form-elements
             .form-elements__filter-date-dropdown
                 form(action="").position-filter266
                     .text-field__header 
-                        label.text-field__name(for="date-picker") Filter date dropdown
+                        label.text-field__name(for="one-picker") Filter date dropdown
                     .text-field__body
-                        label(for="date-picker").material-icons expand_more
-                        input.text-field__input-filter-date-dropdown.position-input-area(type="text" id="date-picker" placeholder="19 авг - 23 авг" autocomplete="off")
+                        label(for="one-picker").material-icons expand_more
+                        input.text-field__input-filter-date-dropdown.position-input-area(type="text" id="one-picker" placeholder="19 авг - 23 авг" autocomplete="off")
             .form-elements__button
                 form(action="")     
                     .text-field__header 
@@ -68,41 +68,37 @@ section.form-elements
                 form(action="").position-filter266
                     .text-field__header
                         label.text-field__name(for="expanded") Dropdown
-                        label.text-field__name-fn Expanded 
+                        label.text-field__name-fn Expanded
                     .text-field__body
                         label(for="expanded").material-icons expand_more
                         input.text-field__input-dropdown-default.position-input-area(type="text" id="expanded" placeholder="2 спальни, 2 кровати...")
-                    .text-field__list
-                        .text-field__list-dropdown
-                            ul 
-                                li Спальни
-                                li Кровати
-                                li Ванные комнаты 
-                        .text-field__list-btn  
-                            ul  
-                                li.text-field__list-btn_col
-                                    button -
-                                    span 2
-                                    button +
-                                li.text-field__list-btn_col
-                                    button -
-                                    span 2
-                                    button +
-                                li.text-field__list-btn_col
-                                    button -
-                                    span 2
-                                    button +
+                    .text-field__block-list
+                        .text-field__list
+                            .text-field__list-dropdown
+                                ul 
+                                    li Спальни
+                                    li Кровати
+                                    li Ванные комнаты 
+                            .text-field__list-btn  
+                                ul  
+                                    li.text-field__list-btn_col
+                                        button -
+                                        span 2
+                                        button +
+                                    li.text-field__list-btn_col
+                                        button -
+                                        span 2
+                                        button +
+                                    li.text-field__list-btn_col
+                                        button -
+                                        span 2
+                                        button +
             .form-elements__expandable-checkbox
                 form(action="").position-filter266
                     .text-field__body
-                        label.text-field__name-expandable-checkbox-list(for="Expandable checkbox list") Expandable checkbox list
-                        label(for="Expandable checkbox list").material-icons expand_more
-            .form-elements__expandable-checkbox-list
-                form(action="").position-filter266
-                    .text-field__body
-                        label.text-field__name-expandable-checkbox-list(for="Expandable checkbox list") Expandable checkbox list
-                        label(for="Expandable checkbox list").material-icons expand_less
-                    ul.text-field__expandable-checkbox-list
+                        label.text-field__name-expandable.js-display-hidden(for="Expandable checkbox list") Expandable checkbox list
+                        label(for="Expandable checkbox list").material-icons.js-display-hidden.js-material-hidden expand_more 
+                    ul.text-field__expandable-checkbox-list-hidden
                         li  
                             input(type="checkbox" id="ch1")
                             label(for="ch1") Завтрак
@@ -121,6 +117,30 @@ section.form-elements
                         li  
                             input(type="checkbox" id="ch6")
                             label(for="ch6") Шампунь 
+            .form-elements__expandable-checkbox-list
+                form(action="").position-filter266
+                    .text-field__body
+                        label.text-field__name-expandable(for="Expandable checkbox") Expandable checkbox list
+                        label(for="Expandable checkbox").material-icons expand_less
+                    ul.text-field__expandable-checkbox-list
+                        li  
+                            input(type="checkbox" id="dch1")
+                            label(for="dch1") Завтрак
+                        li  
+                            input(type="checkbox" id="dch2" checked)
+                            label(for="dch2") Письменный стол
+                        li 
+                            input(type="checkbox" id="dch3" checked)
+                            label(for="dch3") Стул для кормления
+                        li  
+                            input(type="checkbox" id="dch4" checked)
+                            label(for="dch4") Кроватка
+                        li  
+                            input(type="checkbox" id="dch5")
+                            label(for="dch5") Телевизор
+                        li  
+                            input(type="checkbox" id="dch6")
+                            label(for="dch6") Шампунь 
             .form-elements__icons-block 
                 .icons-block
                     .icons-block__img 
@@ -138,7 +158,7 @@ section.form-elements
             .form-elements__checkbox-buttons
                 form(action="")
                     .text-field__body.checkbox-buttons_position
-                        label.text-field__name-checkbox-buttons(for="checkbox-buttons") Checkbox Buttons
+                        label.text-field__name(for="checkbox-buttons") Checkbox Buttons
                     ul.text-field__expandable-checkbox-list
                         li  
                             input(type="checkbox" id="cb1")
@@ -152,7 +172,7 @@ section.form-elements
             .form-elements__radio-buttons
                 form(action="")
                     .text-field__body.checkbox-buttons_position
-                        label.text-field__name-checkbox-buttons(for="radio-buttons") Radio Buttons
+                        label.text-field__name(for="radio-buttons") Radio Buttons
                     ul.text-field__radio-buttons
                         li 
                             input(type="radio" name="rb" id="rb1" checked)
@@ -163,7 +183,7 @@ section.form-elements
             .form-elements__toggle
                 form(action="")
                     .text-field__body.checkbox-buttons_position
-                        label.text-field__name-checkbox-buttons(for="toggle") Toggle
+                        label.text-field__name(for="toggle") Toggle
                     ul.text-field__toggle
                         li 
                             input(type="checkbox" class="switch" id="tg1" checked)
@@ -174,7 +194,7 @@ section.form-elements
             .form-elements__like-button
                 form(action="")
                     .text-field__body.checkbox-buttons_position
-                        label.text-field__name-checkbox-buttons(for="like-button") Like button
+                        label.text-field__name(for="like-button") Like button
                     .text-field__like-button
                         .text-field__like-button-block.text-field__like-button-block_position-like
                             span.material-icons.material-icons_like favorite_border
@@ -187,7 +207,7 @@ section.form-elements
             .form-elements__rate-button
                 form(action="")
                     .text-field__body.checkbox-buttons_position-star
-                        label.text-field__name-checkbox-buttons(for="rate-button") Like button
+                        label.text-field__name(for="rate-button") Rate button
                     .text-field__rate-button
                         .text-field__rate-button-block
                             span.material-icons_star.material-icons star
@@ -210,31 +230,33 @@ section.form-elements
                     .text-field__body
                         label(for="dropdown").material-icons expand_more
                         input.text-field__input-dropdown-default.position-input-large-area(type="text" id="dropdown" placeholder="Сколько гостей")
-                    .text-field__list
-                        .text-field__list-dropdown.iqdropdown
-                            ul 
-                                li Взрослые
-                                li Дети
-                                li Младенцы
-                        .text-field__list-btn  
-                            ul  
-                                li.text-field__list-btn_col
-                                    button -
-                                    span 0
-                                    button +
-                                li.text-field__list-btn_col
-                                    button -
-                                    span 0
-                                    button +
-                                li.text-field__list-btn_col
-                                    button -
-                                    span 0
-                                    button +
+                    .text-field__block-list
+                        .text-field__list
+                            .text-field__list-dropdown.iqdropdown
+                                ul 
+                                    li Взрослые
+                                    li Дети
+                                    li Младенцы
+                            .text-field__list-btn  
+                                ul  
+                                    li.text-field__list-btn_col
+                                        button -
+                                        span 0
+                                        button +
+                                    li.text-field__list-btn_col
+                                        button -
+                                        span 0
+                                        button +
+                                    li.text-field__list-btn_col
+                                        button -
+                                        span 0
+                                        button +
+                        .text-field__button
                             button Применить
             .form-elements__rich-checkbox-buttons
                 form(action="").position-filter266
-                    .text-field__body.position-filter
-                        label.text-field__name-expandable-checkbox-list(for="Rich checkbox buttons") Rich checkbox buttons
+                    .text-field__body.position-filter.position-mb10
+                        label.text-field__name(for="Rich checkbox buttons") Rich checkbox buttons
                     ul.text-field__expandable-checkbox-list
                         li  
                             input(type="checkbox" id="rc1")
@@ -301,27 +323,30 @@ section.form-elements
                     .text-field__body
                         label(for="dropdown").material-icons expand_more
                         input.text-field__input-dropdown-default.position-input-large-area(type="text" id="dropdown" placeholder="3 гостя")
-                    .text-field__list
-                        .text-field__list-dropdown
-                            ul 
-                                li Взрослые
-                                li Дети
-                                li Младенцы
-                        .text-field__list-btn  
-                            ul  
-                                li.text-field__list-btn_col
-                                    button -
-                                    span 2
-                                    button +
-                                li.text-field__list-btn_col
-                                    button -
-                                    span 1
-                                    button +
-                                li.text-field__list-btn_col
-                                    button -
-                                    span 0
-                                    button +
+                    .text-field__block-list  
+                        .text-field__list
+                            .text-field__list-dropdown
+                                ul 
+                                    li Взрослые
+                                    li Дети
+                                    li Младенцы
+                            .text-field__list-btn  
+                                ul  
+                                    li.text-field__list-btn_col
+                                        button -
+                                        span 2
+                                        button +
+                                    li.text-field__list-btn_col
+                                        button -
+                                        span 1
+                                        button +
+                                    li.text-field__list-btn_col
+                                        button -
+                                        span 0
+                                        button +
+                        .text-field__button
                             button Применить
+                            button Очистить
             .form-elements__bullet-list
                 form(action="").position-filter255
                     .text-field__header

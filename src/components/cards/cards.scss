@@ -147,14 +147,23 @@
     &__img {
         position: relative;
         &-slider-bar{
-            content: "";
             position: absolute;
-            top:90%;
-            left: 80%;
-            width: 7.5px;
-            height: 7.5px;
-            border-radius: 50%;
-            border: 1px solid #FFFFFF;
+            top:85%;
+            left: 79%;
+            & ul {
+                display: flex;
+            }
+            & li {
+                width: 7.5px;
+                height: 7.5px;
+                border-radius: 50%;
+                border: 1px solid #FFFFFF;
+                margin-right: 3.75px;
+                &:first-child {
+                    border: none;
+                    background: #FFFFFF;
+                }
+            }
         }
     }
     &-feedback{

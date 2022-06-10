@@ -1234,10 +1234,14 @@ h3 {
   margin-bottom: 47px;
 }
 .form-elements__pagination {
-  margin-bottom: 200px;
+  margin-bottom: 212px;
 }
 .form-elements__button {
   margin-bottom: 100px;
+}
+
+.position-mb10 {
+  margin-bottom: 10px;
 }
 
 .position-filter266 {
@@ -1317,23 +1321,18 @@ h3 {
   line-height: 15px;
   color: rgba(31, 32, 65, 0.5);
 }
-.text-field__name-expandable-checkbox-list {
+.text-field__name-expandable {
   padding: 10px 0 0 0;
   font-weight: 700;
   font-size: 12px;
-  line-height: 400%;
+  line-height: 125%;
   text-transform: uppercase;
   color: #1F2041;
-}
-.text-field__name-checkbox-buttons {
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 15px;
-  color: #1F2041;
-  text-transform: uppercase;
+  cursor: pointer;
 }
 .text-field__body {
   position: relative;
+  display: flex;
 }
 .text-field__input-guest {
   border: 1px solid rgba(31, 32, 65, 0.25);
@@ -1388,14 +1387,13 @@ h3 {
   font-size: 14px;
   line-height: 18px;
 }
-.text-field__list {
+.text-field__block-list {
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  flex-direction: column;
   border: 1px solid rgba(31, 32, 65, 0.25);
   border-radius: 0 0 4px 4px;
 }
-.text-field__list-btn > button {
+.text-field__button button {
   background-color: #fff;
   font-weight: 700;
   font-size: 12px;
@@ -1403,12 +1401,17 @@ h3 {
   text-transform: uppercase;
   color: #BC9CFF;
   cursor: pointer;
+  padding: 7px 13px;
 }
-.text-field__list-btn {
-  margin-bottom: 13px;
+.text-field__button button:first-child {
+  float: right;
 }
-.text-field__list-btn li:last-child {
-  margin-bottom: 20px;
+.text-field__button button:nth-child(2) {
+  float: left;
+}
+.text-field__list {
+  display: flex;
+  justify-content: space-between;
 }
 .text-field__list-dropdown {
   font-weight: 700;
@@ -1418,15 +1421,16 @@ h3 {
   color: #1F2041;
 }
 .text-field__list-btn_col {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   font-weight: 700;
   font-size: 12px;
   line-height: 15px;
   text-transform: uppercase;
   color: #1F2041;
   margin: 7px;
-}
-.text-field__list-btn_col span {
-  margin: 0 10px;
+  width: 92px;
 }
 .text-field__list-btn_col button {
   width: 30px;
@@ -1455,6 +1459,107 @@ h3 {
 }
 .text-field__list-dropdown li:last-child {
   margin-bottom: 17px;
+}
+.text-field__expandable-checkbox-list-hidden.\.active-expandble {
+  display: block;
+  position: absolute;
+  background: #ffffff;
+  z-index: 3;
+}
+.text-field__expandable-checkbox-list-hidden {
+  display: none;
+  padding-top: 10px;
+  width: 266px;
+  height: inherit;
+}
+.text-field__expandable-checkbox-list-hidden li {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(31, 32, 65, 0.5);
+  margin: 0 0 10px 0px;
+}
+.text-field__expandable-checkbox-list-hidden li:first-child {
+  margin-top: 5px;
+}
+.text-field__expandable-checkbox-list-hidden li:last-child {
+  margin-bottom: 0px;
+}
+.text-field__expandable-checkbox-list-hidden span {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(31, 32, 65, 0.75);
+}
+.text-field__expandable-checkbox-list-hidden p {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: rgba(31, 32, 65, 0.5);
+}
+.text-field__expandable-checkbox-list-hidden input[type=checkbox]:checked,
+.text-field__expandable-checkbox-list-hidden input[type=checkbox]:not(:checked) {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  z-index: -1;
+}
+.text-field__expandable-checkbox-list-hidden input[type=checkbox]:checked + label,
+.text-field__expandable-checkbox-list-hidden input[type=checkbox]:not(:checked) + label {
+  position: relative;
+  display: inline-block;
+  padding-left: 30px;
+  line-height: 21px;
+  cursor: pointer;
+}
+.text-field__expandable-checkbox-list-hidden input[type=checkbox]:not(:checked) + label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+}
+.text-field__expandable-checkbox-list-hidden input[type=checkbox]:checked + label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #8BA4F9;
+  border-radius: 4px;
+}
+.text-field__expandable-checkbox-list-hidden input[type=checkbox]:checked + label::after,
+.text-field__expandable-checkbox-list-hidden input[type=checkbox]:not(:checked) + label::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 8px;
+  height: 6px;
+  border-left: 2px solid #8BA4F9;
+  border-bottom: 2px solid #8BA4F9;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.text-field__expandable-checkbox-list-hidden input[type=checkbox]:checked + label::after {
+  opacity: 1;
+}
+.text-field__expandable-checkbox-list-hidden input[type=checkbox]:not(:checked) + label::after {
+  opacity: 0;
+}
+.text-field__expandable-checkbox-list {
+  padding-top: 10px;
 }
 .text-field__expandable-checkbox-list li {
   font-weight: 400;
@@ -1766,6 +1871,7 @@ h3 {
 .material-icons_star {
   position: relative;
   font-size: 24px;
+  right: 2px;
   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -2046,6 +2152,7 @@ h3 {
 
 #slider {
   height: 6px;
+  cursor: pointer;
 }
 
 .slider-styled .noUi-handle::before,
@@ -2056,6 +2163,7 @@ h3 {
 .slider-styled .noUi-touch-area {
   border-radius: 50%;
   background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  cursor: pointer;
 }
 
 .cards__container {
@@ -2213,14 +2321,23 @@ h3 {
   position: relative;
 }
 .appartment__img-slider-bar {
-  content: "";
   position: absolute;
-  top: 90%;
-  left: 80%;
+  top: 85%;
+  left: 79%;
+}
+.appartment__img-slider-bar ul {
+  display: flex;
+}
+.appartment__img-slider-bar li {
   width: 7.5px;
   height: 7.5px;
   border-radius: 50%;
   border: 1px solid #FFFFFF;
+  margin-right: 3.75px;
+}
+.appartment__img-slider-bar li:first-child {
+  border: none;
+  background: #FFFFFF;
 }
 .appartment-feedback {
   display: flex;
@@ -2271,7 +2388,7 @@ body {
   font-size: 14px;
   font-family: "Montserrat";
   background-color: #F4F4F6;
-  color: #1f2041;
+  color: rgb(31, 32, 65);
 }
 
 .wrapper {

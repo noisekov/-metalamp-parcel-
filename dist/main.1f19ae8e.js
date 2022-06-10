@@ -4799,10 +4799,8 @@ require("nouislider/dist/nouislider.css");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// import 'item-quantity-dropdown';
-// import 'item-quantity-dropdown/lib/item-quantity-dropdown.css';
 //air-datapicker
-var cal1, cal2, calendar;
+var cal1, cal2, onePicker, calendar;
 var apply = {
   content: 'Применить',
   className: 'custom-button',
@@ -4835,6 +4833,12 @@ cal2 = new _airDatepicker.default('#date-picker-cal2', {
       maxDate: date
     });
   }
+});
+onePicker = new _airDatepicker.default('#one-picker', {
+  range: true,
+  multipleDatesSeparator: ' - ',
+  inline: false,
+  buttons: ['clear', apply]
 }); //calendar
 
 calendar = new _airDatepicker.default('#calendar', {
@@ -4842,11 +4846,7 @@ calendar = new _airDatepicker.default('#calendar', {
   buttons: ['clear', apply],
   range: true,
   multipleDatesSeparator: '-'
-}); //dropdown
-// $(document).ready(() => {
-//    $('.iqdropdown').iqDropdown({ [options] });
-//  });
-//nuUiSlider
+}); //nuUiSlider
 
 var slider = document.getElementById('slider');
 
@@ -4857,7 +4857,22 @@ _nouislider.default.create(slider, {
     'min': 0,
     'max': 100
   }
-});
+}); //dropdown expandble
+
+
+var dropdownexpandable = document.querySelector(".text-field__expandable-checkbox-list-hidden");
+document.addEventListener("click", expandable);
+
+function expandable(e) {
+  if (e.target.closest(".js-display-hidden")) {
+    dropdownexpandable.classList.toggle(".active-expandble");
+    document.querySelector(".js-material-hidden").innerHTML = "expand_less";
+  }
+
+  if (!e.target.closest(".js-display-hidden")) {
+    document.querySelector(".js-material-hidden").innerHTML = "expand_more";
+  }
+}
 },{"air-datepicker":"../node_modules/air-datepicker/index.es.js","air-datepicker/air-datepicker.css":"../node_modules/air-datepicker/air-datepicker.css","nouislider":"../node_modules/nouislider/dist/nouislider.js","nouislider/dist/nouislider.css":"../node_modules/nouislider/dist/nouislider.css"}],"main.js":[function(require,module,exports) {
 "use strict";
 
@@ -4892,7 +4907,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62721" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57625" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
