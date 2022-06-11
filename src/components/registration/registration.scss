@@ -1,0 +1,15 @@
+.registration {
+    padding: 40px 30px 30px 30px;
+    display: flex;
+    flex-direction: column;
+    max-width: 380px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    &__sign-in {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}

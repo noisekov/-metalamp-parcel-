@@ -54,5 +54,30 @@ body {
 			line-height: 24px;
 			color: rgba(31, 32, 65, 0.75);
 		}
+	}	
+}
+
+//sign-in
+.sign-in {
+	position: relative;
+	&_pos-absolute {
+		position: absolute;
+		top: 172px;
+		left: 530px;
 	}
+}
+//reg
+.reg {
+	position: relative;
+}
+.reg-absolute {
+	position: absolute;
+	top: 19px;
+	left: 530px;	
+}
+//landing
+.landing-absolute {
+	position: absolute;
+	top: 70px;
+	left: 140px;
 }

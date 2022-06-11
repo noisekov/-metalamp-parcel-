@@ -1,0 +1,57 @@
+.appartment {
+    background: #FFFFFF;
+    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+    border-radius: 4px;
+    max-width: 270px;
+    &__img {
+        position: relative;
+        &-slider-bar{
+            position: absolute;
+            top:85%;
+            left: 79%;
+            & ul {
+                display: flex;
+            }
+            & li {
+                width: 7.5px;
+                height: 7.5px;
+                border-radius: 50%;
+                border: 1px solid #FFFFFF;
+                margin-right: 3.75px;
+                &:first-child {
+                    border: none;
+                    background: #FFFFFF;
+                }
+            }
+        }
+    }
+    &-feedback{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &-block {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+        color: rgba(31, 32, 65, 0.5);
+        & span {
+            font-weight: 700;
+        }
+    }
+    &__body {
+        padding: 20px 17px 19px 20px;
+    }
+    &__title{
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            top:38px;
+            left: 0px;
+            background: rgba(31, 32, 65, 0.1);
+            height: 1px;
+            width: 230px;
+        }
+    }
+}

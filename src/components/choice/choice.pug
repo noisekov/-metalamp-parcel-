@@ -1,0 +1,53 @@
+.choice 
+    .find-number 
+        .find-number__header.cards-position20
+            .find-number__name №<span>888</span> <span>люкс</span>
+            .find-number__title <span>9 990₽</span> в сутки
+        .find-number__dropdown.cards-position20
+            form(action="")
+                .date
+                    .date-dropdown
+                        .text-field__header 
+                            label.text-field__name(for="date-picker") Прибытие
+                        .text-field__body
+                            label(for="date-picker").material-icons expand_more
+                            input.text-field__input-date-dropdown.position-filter150(type="text" id="date-picker" placeholder="19.08.2019" autocomplete="off")
+                    .date-dropdown
+                        .text-field__header 
+                            label.text-field__name(for="date-picker") Выезд
+                        .text-field__body
+                            label(for="date-picker").material-icons expand_more
+                            input.text-field__input-date-dropdown.position-filter150(type="text" id="date-picker" placeholder="23.08.2019" autocomplete="off")
+        .find-number__guest.cards-position20
+            form(action="").position-filter320
+                .text-field__header 
+                    label.text-field__name(for="field-guest") Гости
+                .text-field__body
+                    label(for="field-guest").material-icons expand_more
+                    input.text-field__input-guest.position-input-large-area(type="text" id="field-guest" placeholder="3 гостя")
+        .find-number__body.cards-position30
+            .find-number__body-block.cards-position10
+                .find-number__body-block_left
+                    p 9 990₽ х 4 суток
+                .find-number__body-block_right
+                    p 39 960₽
+            .find-number__body-block.cards-position10
+                .find-number__body-block_left
+                    p Сбор за услуги: скидка 2 179₽
+                    span(title="Вам бесплатно:)") i
+                .find-number__body-block_right
+                    p 0₽
+            .find-number__body-block 
+                .find-number__body-block_left
+                    p Сбор за дополнительные услуги
+                    span(title="Обязательный сбор") i
+                .find-number__body-block_right
+                    p 300₽
+        .find-number__price.cards-position20 
+            p Итого
+            span 
+            p 38 081₽
+        .find-number__button-pay 
+            .button-pay
+                a(href="#").button-pay__link Забронировать
+                    span.material-icons.material-icons_white arrow_forward  

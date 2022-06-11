@@ -7,6 +7,23 @@ html(lang="en")
         title Sign in
     body 
         include ../components/headers & footers/header-up/header-up.pug
-        img(src="/images/registration.jpg", alt="registration")
+        .sign-in
+            img(src="/images/registration.jpg", alt="registration")
+            .entry.sign-in_pos-absolute 
+                .registration
+                    h1.cards-position20 Войти
+                    .registration__text-field.cards-position10
+                        form(action="/").position-filter320
+                            input.text-field__input.position-input-large-area(type="text" id="field" placeholder="Email" )
+                    .registration__text-field.cards-position20
+                        form(action="/").position-filter320
+                            input.text-field__input.position-input-large-area(type="text" id="field" placeholder="Пароль" )
+                    .registration__button-pay.cards-position30
+                        .button-pay
+                            a(href="#").button-pay__link Войти
+                                span.material-icons.material-icons_white arrow_forward  
+                    .registration__sign-in 
+                        p Нет аккаунта на Toxin?
+                        button.button-click-sec Создать
         include ../components/headers & footers/footer/footer.pug
         
