@@ -4851,14 +4851,18 @@ calendarInPage = new _airDatepicker.default('#calendar', {
 var slider = document.getElementById('slider');
 
 _nouislider.default.create(slider, {
-  start: [20, 80],
+  start: [5000, 10000],
   connect: true,
   range: {
     'min': 0,
-    'max': 100
+    'max': 15000
   }
-}); //dropdown expandble
+});
 
+var valueNoSlider = [document.querySelector(".js-value-lower"), document.querySelector(".js-value-upper")];
+slider.noUiSlider.on("update", function (values, handle) {
+  valueNoSlider[handle].innerHTML = Math.round(values[handle]);
+}); //dropdown expandble
 
 var dropdownExpandable = document.querySelector(".text-field__expandable-checkbox-list-hidden");
 document.addEventListener("click", expandable);
@@ -4882,10 +4886,10 @@ function quest(event) {
   if (event.target.closest(".js-input-guest")) {
     dropdownQuest.classList.toggle(".active-guest");
     document.querySelector(".js-material-hidden").innerHTML = "expand_less";
-  }
-
-  if (!dropdownQuest.classList(".active-guest")) {
+    document.querySelector(".text-field__input-guest").style.borderRadius = "4px 4px 0 0";
+  } else {
     document.querySelector(".js-material-hidden").innerHTML = "expand_more";
+    document.querySelector(".text-field__input-guest").style.borderRadius = "4px";
   }
 }
 },{"air-datepicker":"../node_modules/air-datepicker/index.es.js","air-datepicker/air-datepicker.css":"../node_modules/air-datepicker/air-datepicker.css","nouislider":"../node_modules/nouislider/dist/nouislider.js","nouislider/dist/nouislider.css":"../node_modules/nouislider/dist/nouislider.css"}],"main.js":[function(require,module,exports) {
@@ -4922,7 +4926,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61155" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64425" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

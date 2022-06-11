@@ -23,7 +23,7 @@ section.form-elements
                         input.text-field__input-guest.position-input-large-area.js-input-guest(type="text" id="field-guest" placeholder="Сколько гостей")
                     .text-field__block-list-hidden
                         .text-field__list
-                            .text-field__list-dropdown.iqdropdown
+                            .text-field__list-dropdown
                                 ul 
                                     li Взрослые
                                     li Дети
@@ -36,7 +36,7 @@ section.form-elements
                                         button +
                                     li.text-field__list-btn_col
                                         button -
-                                        span 12
+                                        span 0
                                         button +
                                     li.text-field__list-btn_col
                                         button -
@@ -309,7 +309,10 @@ section.form-elements
                     form(action="/").position-filter266
                         .text-field__header.range-slider_position
                             label.text-field__name(for="range-slider") Range slider
-                            label.text-field__name-fn 5 000₽ - 10 000₽
+                            .text-field__body-slider
+                                label.text-field__name-fn.js-value-lower
+                                span  - 
+                                label.text-field__name-fn.js-value-upper 
                         .slider-styled(id="slider")
             .form-elements__buttons
                 form(action="").position-filter266 
