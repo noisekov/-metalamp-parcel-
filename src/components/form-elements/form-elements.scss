@@ -3,13 +3,21 @@
     background: #ffffff;
     &__container {
         display: flex;
-        padding: 0 140px 131px;
+        padding: 0 140px 100px 142px;
+    }
+    &__footer {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 140px 131px 142px;
     }
     &_left {
         margin-right: 126px;
     }
     &_middle {
         margin-right: 72px;
+    }
+    &__review {
+        flex: 0 0 710px;
     }
     &__text-field{
         margin-bottom: 20px;
@@ -35,9 +43,6 @@
     &__expandable-checkbox{
         margin-bottom: 20px;
     }
-    &__expandable-checkbox-list{
-        margin-bottom: 100px;
-    }
     &__checkbox-buttons {
         margin-bottom: 40px;
     }
@@ -55,9 +60,6 @@
     }
     &__dropdown{
         margin-bottom: 98px;
-    }
-    &__rich-checkbox-buttons{
-        margin-bottom: 233px;
     }
     &__range-slider{
         margin-bottom: 40px;
@@ -92,6 +94,12 @@
 }
 .position-filter150 {
     max-width: 150px;
+}
+.position-mr20{
+    margin-right: 20px;
+}
+.position-mr14 {
+    margin-right: 14px;
 }
 .position-input-area{
     width: 266px;
@@ -634,7 +642,6 @@
     &__like-button {
         display: flex;
         &-block {
-            margin-right: 20px;
             font-weight: 400;
             font-size: 10px;
             line-height: 12px;
@@ -843,6 +850,7 @@
         margin-left: -21px;
     }
     &__name {
+        margin-left: -10px;
         font-weight: 400;
         font-size: 14px;
         line-height: 24px;
@@ -864,17 +872,6 @@
     &__block {
         margin-right: 14px;
     }
-}
-.range-slider {
-    width: 100%;
-    cursor: pointer;
-    // &::-moz-range-thumb,
-    // ::-webkit-slider-thumb,
-    // ::-ms-thumb {
-    //     background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
-    //     border: 2px solid #FFFFFF;
-    //     border-radius: 10px;
-    // }
 }
 .button-position {
     margin: 0 23px 30px 1px;
@@ -905,6 +902,7 @@
             border-radius: 22px;
             opacity: 0.5;
             padding: 14px 21px 15px 19px;
+            cursor:not-allowed;
         }
         &-sec {
             font-weight: 700;
@@ -927,6 +925,7 @@
                 background: #ffffff;
                 opacity: 0.5;
                 padding: 14px 20px 15px;
+                cursor:not-allowed;
             }
         }
         &_th {
@@ -937,6 +936,7 @@
             color: #BC9CFF;
             background:#ffffff;
             &_active{
+                cursor:not-allowed;
                 font-weight: 700;
                 font-size: 12px;
                 line-height: 15px;

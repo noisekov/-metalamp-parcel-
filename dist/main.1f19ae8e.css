@@ -147,7 +147,7 @@ h3 {
 .footer__container {
   background-color: #ffffff;
   justify-content: space-around;
-  padding: 0 140px;
+  padding: 0 140px 0 142px;
 }
 .footer-up {
   padding: 100px 0;
@@ -1168,13 +1168,21 @@ h3 {
 }
 .form-elements__container {
   display: flex;
-  padding: 0 140px 131px;
+  padding: 0 140px 100px 142px;
+}
+.form-elements__footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 140px 131px 142px;
 }
 .form-elements_left {
   margin-right: 126px;
 }
 .form-elements_middle {
   margin-right: 72px;
+}
+.form-elements__review {
+  flex: 0 0 710px;
 }
 .form-elements__text-field {
   margin-bottom: 20px;
@@ -1200,9 +1208,6 @@ h3 {
 .form-elements__expandable-checkbox {
   margin-bottom: 20px;
 }
-.form-elements__expandable-checkbox-list {
-  margin-bottom: 100px;
-}
 .form-elements__checkbox-buttons {
   margin-bottom: 40px;
 }
@@ -1220,9 +1225,6 @@ h3 {
 }
 .form-elements__dropdown {
   margin-bottom: 98px;
-}
-.form-elements__rich-checkbox-buttons {
-  margin-bottom: 233px;
 }
 .form-elements__range-slider {
   margin-bottom: 40px;
@@ -1262,6 +1264,14 @@ h3 {
 
 .position-filter150 {
   max-width: 150px;
+}
+
+.position-mr20 {
+  margin-right: 20px;
+}
+
+.position-mr14 {
+  margin-right: 14px;
 }
 
 .position-input-area {
@@ -1788,7 +1798,6 @@ h3 {
   display: flex;
 }
 .text-field__like-button-block {
-  margin-right: 20px;
   font-weight: 400;
   font-size: 10px;
   line-height: 12px;
@@ -1980,6 +1989,7 @@ h3 {
   margin-left: -21px;
 }
 .review__name {
+  margin-left: -10px;
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
@@ -2000,11 +2010,6 @@ h3 {
 }
 .review__block {
   margin-right: 14px;
-}
-
-.range-slider {
-  width: 100%;
-  cursor: pointer;
 }
 
 .button-position {
@@ -2039,6 +2044,7 @@ h3 {
   border-radius: 22px;
   opacity: 0.5;
   padding: 14px 21px 15px 19px;
+  cursor: not-allowed;
 }
 .button-click-sec {
   font-weight: 700;
@@ -2062,6 +2068,7 @@ h3 {
   background: #ffffff;
   opacity: 0.5;
   padding: 14px 20px 15px;
+  cursor: not-allowed;
 }
 .button-click_th {
   font-weight: 700;
@@ -2072,6 +2079,7 @@ h3 {
   background: #ffffff;
 }
 .button-click_th_active {
+  cursor: not-allowed;
   font-weight: 700;
   font-size: 12px;
   line-height: 15px;
