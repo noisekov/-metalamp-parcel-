@@ -5,16 +5,23 @@ html(lang="en")
     meta(name='description' content='Краткое описание страницы в браузере.')
     meta(name='keywords' content='ключевые слова')
     meta(name='viewport' content='width=device-width, initial-scale=1')
-    title Document
+    title Ui-kit
     link(rel="stylesheet", href="styles/style.css")
     link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
   body
     .wrapper
       include components/form-elements/form-elements.pug 
-      include components/headers & footers/header-up/header-up.pug
-      include components/headers & footers/header-down/header-down.pug
+      .position40
+        img.first-logo(src="/images/first-logo.svg", alt="first-logo")
+        include components/headers & footers/header-up/header-up.pug
+      .position40
+        include components/headers & footers/header-down/header-down.pug
       include components/headers & footers/footer/footer.pug
       include components/headers & footers/footer-mobile/footer-mobile.pug
       include components/colors&type/colors&type.pug
+      img.first-logo(src="/images/first-logo.svg", alt="first-logo")
       include components/cards/cards.pug
+      include page/registration.pug
+      include page/sign-in.pug
+      include page/landing-page.pug
 script(src='./main.js')

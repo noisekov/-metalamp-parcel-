@@ -34,3 +34,25 @@ body {
 .first-logo {
 	margin: 30px 0 62px 30px;
 }
+// position teg into index.pug
+.position40 {
+	margin-bottom: 40px;
+}
+//landing-page style
+.landing-page {
+	position: relative;
+	&-block{
+		display: block;
+		text-align: right;
+		&__text {
+			width: 297px;
+			position: absolute;
+			top: 93%;
+			right: 134px;
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 24px;
+			color: rgba(31, 32, 65, 0.75);
+		}
+	}
+}
