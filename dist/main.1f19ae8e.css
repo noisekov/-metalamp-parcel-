@@ -1425,6 +1425,19 @@ h3 {
   border: 1px solid rgba(31, 32, 65, 0.25);
   border-radius: 0 0 4px 4px;
 }
+.text-field__block-list-expanded {
+  display: none;
+}
+.text-field__block-list-expanded.\.active-expanded {
+  position: absolute;
+  display: flex;
+  z-index: 5;
+  background: #ffffff;
+  width: 266px;
+  flex-direction: column;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 0 0 4px 4px;
+}
 .text-field__button button {
   background-color: #fff;
   font-weight: 700;
@@ -1479,6 +1492,7 @@ h3 {
   color: rgba(31, 32, 65, 0.75);
   border: 1px solid rgba(31, 32, 65, 0.25);
   border-radius: 4px 4px 0 0;
+  cursor: pointer;
 }
 .text-field__list-dropdown {
   margin-left: 13px;
@@ -2420,6 +2434,7 @@ body {
 .wrapper {
   margin: 0 auto;
   max-width: 1440px;
+  overflow-x: hidden;
 }
 
 .first-logo {
@@ -2431,6 +2446,8 @@ body {
 }
 
 .landing-page {
+  background: url(/landing-page.132ca506.jpg);
+  height: 100vh;
   position: relative;
 }
 .landing-page-block {
@@ -2447,30 +2464,26 @@ body {
   line-height: 24px;
   color: rgba(31, 32, 65, 0.75);
 }
-
-.sign-in {
-  position: relative;
-}
-.sign-in_pos-absolute {
-  position: absolute;
-  top: 172px;
-  left: 530px;
-}
-
-.reg {
-  position: relative;
-}
-
-.reg-absolute {
-  position: absolute;
-  top: 19px;
-  left: 530px;
-}
-
-.landing-absolute {
+.landing-page_abs {
   position: absolute;
   top: 70px;
   left: 140px;
+}
+
+.sign-in {
+  background: url(/registration.df813697.jpg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 683px;
+}
+
+.reg {
+  background: url(/registration.df813697.jpg);
+  height: 683px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .air-datepicker-cell.-day-.-other-month-,.air-datepicker-cell.-year-.-other-decade-{color:var(--adp-color-other-month)}.air-datepicker-cell.-day-.-other-month-:hover,.air-datepicker-cell.-year-.-other-decade-:hover{color:var(--adp-color-other-month-hover)}.-disabled-.-focus-.air-datepicker-cell.-day-.-other-month-,.-disabled-.-focus-.air-datepicker-cell.-year-.-other-decade-{color:var(--adp-color-other-month)}.-selected-.air-datepicker-cell.-day-.-other-month-,.-selected-.air-datepicker-cell.-year-.-other-decade-{color:#fff;background:var(--adp-background-color-selected-other-month)}.-selected-.-focus-.air-datepicker-cell.-day-.-other-month-,.-selected-.-focus-.air-datepicker-cell.-year-.-other-decade-{background:var(--adp-background-color-selected-other-month-focused)}.-in-range-.air-datepicker-cell.-day-.-other-month-,.-in-range-.air-datepicker-cell.-year-.-other-decade-{background-color:var(--adp-background-color-in-range);color:var(--adp-color)}.-in-range-.-focus-.air-datepicker-cell.-day-.-other-month-,.-in-range-.-focus-.air-datepicker-cell.-year-.-other-decade-{background-color:var(--adp-background-color-in-range-focused)}.air-datepicker-cell.-day-.-other-month-:empty,.air-datepicker-cell.-year-.-other-decade-:empty{background:none;border:none}.air-datepicker-cell{border-radius:var(--adp-cell-border-radius);box-sizing:border-box;cursor:pointer;display:flex;position:relative;align-items:center;justify-content:center;z-index:1}.air-datepicker-cell.-focus-{background:var(--adp-background-color-hover)}.air-datepicker-cell.-current-{color:var(--adp-color-current-date)}.air-datepicker-cell.-current-.-focus-{color:var(--adp-color)}.air-datepicker-cell.-current-.-in-range-{color:var(--adp-color-current-date)}.air-datepicker-cell.-disabled-{cursor:default;color:var(--adp-color-disabled)}.air-datepicker-cell.-disabled-.-focus-{color:var(--adp-color-disabled)}.air-datepicker-cell.-disabled-.-in-range-{color:var(--adp-color-disabled-in-range)}.air-datepicker-cell.-disabled-.-current-.-focus-{color:var(--adp-color-disabled)}.air-datepicker-cell.-in-range-{background:var(--adp-cell-background-color-in-range);border-radius:0}.air-datepicker-cell.-in-range-:hover{background:var(--adp-cell-background-color-in-range-hover)}.air-datepicker-cell.-range-from-{border:1px solid var(--adp-cell-border-color-in-range);background-color:var(--adp-cell-background-color-in-range);border-radius:var(--adp-cell-border-radius) 0 0 var(--adp-cell-border-radius)}.air-datepicker-cell.-range-to-{border:1px solid var(--adp-cell-border-color-in-range);background-color:var(--adp-cell-background-color-in-range);border-radius:0 var(--adp-cell-border-radius) var(--adp-cell-border-radius) 0}.air-datepicker-cell.-range-to-.-range-from-{border-radius:var(--adp-cell-border-radius)}.air-datepicker-cell.-selected-{color:#fff;border:none;background:var(--adp-cell-background-color-selected)}.air-datepicker-cell.-selected-.-current-{color:#fff;background:var(--adp-cell-background-color-selected)}.air-datepicker-cell.-selected-.-focus-{background:var(--adp-cell-background-color-selected-hover)}
 

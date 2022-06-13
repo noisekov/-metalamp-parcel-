@@ -257,6 +257,19 @@
         border: 1px solid rgba(31, 32, 65, 0.25);
         border-radius: 0 0 4px 4px;
     }
+    &__block-list-expanded {
+        display: none;
+    }
+    &__block-list-expanded.\.active-expanded {
+        position: absolute;
+        display: flex;
+        z-index: 5;
+        background: #ffffff;
+        width: 266px;
+        flex-direction: column;
+        border: 1px solid rgba(31, 32, 65, 0.25);
+        border-radius: 0 0 4px 4px;
+    }
     &__button {
         & button {
             background-color: #fff;
@@ -314,6 +327,7 @@
         color:  rgba(31, 32, 65, 0.75);
         border: 1px solid rgba(31, 32, 65, 0.25);
         border-radius: 4px 4px 0 0;
+        cursor: pointer;
     }
     &__list-dropdown {
         margin-left: 13px;

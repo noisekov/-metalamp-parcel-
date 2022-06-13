@@ -189,7 +189,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./..\\fonts\\Montserrat-Bold.eot":[["Montserrat-Bold.70d570c7.eot","fonts/Montserrat-Bold.eot"],"fonts/Montserrat-Bold.eot"],"./..\\fonts\\Montserrat-Bold.woff":[["Montserrat-Bold.73e94c2c.woff","fonts/Montserrat-Bold.woff"],"fonts/Montserrat-Bold.woff"],"./..\\fonts\\Montserrat-Bold.ttf":[["Montserrat-Bold.f3410305.ttf","fonts/Montserrat-Bold.ttf"],"fonts/Montserrat-Bold.ttf"],"./..\\fonts\\Montserrat-Bold.svg":[["Montserrat-Bold.0fff2121.svg","fonts/Montserrat-Bold.svg"],"fonts/Montserrat-Bold.svg"],"./..\\fonts\\Montserrat-Regular.eot":[["Montserrat-Regular.21b801b8.eot","fonts/Montserrat-Regular.eot"],"fonts/Montserrat-Regular.eot"],"./..\\fonts\\Montserrat-Regular.woff":[["Montserrat-Regular.1b35f2ae.woff","fonts/Montserrat-Regular.woff"],"fonts/Montserrat-Regular.woff"],"./..\\fonts\\Montserrat-Regular.ttf":[["Montserrat-Regular.44e710c1.ttf","fonts/Montserrat-Regular.ttf"],"fonts/Montserrat-Regular.ttf"],"./..\\fonts\\Montserrat-Regular.svg":[["Montserrat-Regular.6f6bdac5.svg","fonts/Montserrat-Regular.svg"],"fonts/Montserrat-Regular.svg"],"_css_loader":"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/air-datepicker/air-datepicker.js":[function(require,module,exports) {
+},{"./..\\fonts\\Montserrat-Bold.eot":[["Montserrat-Bold.70d570c7.eot","fonts/Montserrat-Bold.eot"],"fonts/Montserrat-Bold.eot"],"./..\\fonts\\Montserrat-Bold.woff":[["Montserrat-Bold.73e94c2c.woff","fonts/Montserrat-Bold.woff"],"fonts/Montserrat-Bold.woff"],"./..\\fonts\\Montserrat-Bold.ttf":[["Montserrat-Bold.f3410305.ttf","fonts/Montserrat-Bold.ttf"],"fonts/Montserrat-Bold.ttf"],"./..\\fonts\\Montserrat-Bold.svg":[["Montserrat-Bold.0fff2121.svg","fonts/Montserrat-Bold.svg"],"fonts/Montserrat-Bold.svg"],"./..\\fonts\\Montserrat-Regular.eot":[["Montserrat-Regular.21b801b8.eot","fonts/Montserrat-Regular.eot"],"fonts/Montserrat-Regular.eot"],"./..\\fonts\\Montserrat-Regular.woff":[["Montserrat-Regular.1b35f2ae.woff","fonts/Montserrat-Regular.woff"],"fonts/Montserrat-Regular.woff"],"./..\\fonts\\Montserrat-Regular.ttf":[["Montserrat-Regular.44e710c1.ttf","fonts/Montserrat-Regular.ttf"],"fonts/Montserrat-Regular.ttf"],"./..\\fonts\\Montserrat-Regular.svg":[["Montserrat-Regular.6f6bdac5.svg","fonts/Montserrat-Regular.svg"],"fonts/Montserrat-Regular.svg"],"C:\\Users\\volod\\OneDrive\\Рабочий стол\\(metalamp parcel)\\src\\images\\landing-page.jpg":[["landing-page.132ca506.jpg","images/landing-page.jpg"],"images/landing-page.jpg"],"C:\\Users\\volod\\OneDrive\\Рабочий стол\\(metalamp parcel)\\src\\images\\registration.jpg":[["registration.df813697.jpg","images/registration.jpg"],"images/registration.jpg"],"_css_loader":"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/air-datepicker/air-datepicker.js":[function(require,module,exports) {
 var define;
 function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e14) { throw _e14; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e15) { didErr = true; err = _e15; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
 
@@ -4891,7 +4891,31 @@ function quest(event) {
     document.querySelector(".js-material-hidden").innerHTML = "expand_more";
     document.querySelector(".text-field__input-guest").style.borderRadius = "4px";
   }
+} //dropdown-expanded
+
+
+var dropdownExpanded = document.querySelector(".text-field__block-list-expanded");
+document.addEventListener('click', ev);
+
+function ev(e) {
+  if (e.target.closest(".js-dropdown-expanded")) {
+    dropdownExpanded.classList.toggle(".active-expanded");
+  }
+} //dropdown-expanded-counter
+
+
+var inputDropdown = document.querySelector('#dropdown-default');
+document, addEventListener('click', button);
+
+function button(event) {
+  event.preventDefault();
+
+  if (event.onclick(".js-first-elem-plus")) {
+    document.querySelector(".js-counter").innerHTML = 1;
+  }
 }
+
+console.log(document.querySelector(".js-counter"));
 },{"air-datepicker":"../node_modules/air-datepicker/index.es.js","air-datepicker/air-datepicker.css":"../node_modules/air-datepicker/air-datepicker.css","nouislider":"../node_modules/nouislider/dist/nouislider.js","nouislider/dist/nouislider.css":"../node_modules/nouislider/dist/nouislider.css"}],"main.js":[function(require,module,exports) {
 "use strict";
 
@@ -4926,7 +4950,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57863" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50739" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

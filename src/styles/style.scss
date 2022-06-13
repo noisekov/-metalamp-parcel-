@@ -25,11 +25,12 @@ body {
     font-size: 14px;
     font-family: 'Montserrat';
     background-color: #F4F4F6;
-    color:rgba(31, 32, 65, 1); 
+    color:rgba(31, 32, 65, 1);
 }
 .wrapper {
     margin: 0 auto;
     max-width: 1440px;
+	overflow-x: hidden; 
 }
 .first-logo {
 	margin: 30px 0 62px 30px;
@@ -38,8 +39,10 @@ body {
 .position40 {
 	margin-bottom: 40px;
 }
-//landing-page style
+//landing-page
 .landing-page {
+	background: url(/images/landing-page.jpg);
+	height: 100vh;
 	position: relative;
 	&-block{
 		display: block;
@@ -55,29 +58,25 @@ body {
 			color: rgba(31, 32, 65, 0.75);
 		}
 	}	
+	&_abs{
+		position: absolute;
+		top: 70px;
+		left: 140px;
+	}
 }
-
 //sign-in
 .sign-in {
-	position: relative;
-	&_pos-absolute {
-		position: absolute;
-		top: 172px;
-		left: 530px;
-	}
+	background: url(/images/registration.jpg);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 683px;
 }
 //reg
 .reg {
-	position: relative;
-}
-.reg-absolute {
-	position: absolute;
-	top: 19px;
-	left: 530px;	
-}
-//landing
-.landing-absolute {
-	position: absolute;
-	top: 70px;
-	left: 140px;
+	background: url(/images/registration.jpg);
+	height: 683px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
