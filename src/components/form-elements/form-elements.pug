@@ -44,7 +44,6 @@ section.form-elements
                                         button +
                         .text-field__button
                             button Применить
-                            button Очистить
             .form-elements__masked-text-field
                 form(action="")
                     .text-field__header 
@@ -55,16 +54,16 @@ section.form-elements
                     .date
                         .date-dropdown
                             .text-field__header 
-                                label.text-field__name(for="date-picker") Date dropdown
+                                label.text-field__name(for="cal-two-input") Date dropdown
                             .text-field__body
-                                label(for="date-picker").material-icons expand_more
-                                input.text-field__input-date-dropdown.position-filter150(type="text" id="date-picker" placeholder="дд.мм.гг" autocomplete="off")
+                                label(for="cal-two-input").material-icons expand_more
+                                input.text-field__input-date-dropdown.position-filter150(type="text" id="cal-two-input" placeholder="дд.мм.гг" autocomplete="off")
                         .date-dropdown
                             .text-field__header 
-                                label.text-field__name(for="date-picker") Date dropdown
+                                label.text-field__name(for="cal-two-input") Date dropdown
                             .text-field__body
-                                label(for="date-picker").material-icons expand_more
-                                input.text-field__input-date-dropdown.position-filter150(type="text" id="date-picker" placeholder="19.08.2019" autocomplete="off")
+                                label(for="cal-two-input").material-icons expand_more
+                                input.text-field__input-date-dropdown.position-filter150(type="text" id="cal-two-input" placeholder="19.08.2019" autocomplete="off")
             .form-elements__filter-date-dropdown
                 form(action="").position-filter266
                     .text-field__header 
@@ -323,20 +322,7 @@ section.form-elements
                 .button-pay
                     a(href="#").button-pay__link Перейти к оплате
                         span.material-icons.material-icons_white arrow_forward  
-            .form-elements__pagination 
-                form(action="") 
-                    .text-field__header.range-slider_position
-                        label.text-field__name(for="pagination") Pagination
-                    .pagination
-                        .pagination__body 
-                            button 1
-                            button 2
-                            button 3
-                            button ...
-                            button 15
-                            button
-                                span.material-icons.material-icons_pagination arrow_forward  
-                        .pagination__count 1 – 12 из 100+ вариантов аренды
+            include ../pagination/pagination.pug
             .form-elements__dropdown
                 form(action="").position-filter320
                     .text-field__header

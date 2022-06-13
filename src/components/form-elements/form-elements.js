@@ -4,7 +4,7 @@ import noUiSlider from 'nouislider';
 import 'nouislider/dist/nouislider.css';
 
 //air-datapicker
-let cal1, cal2, onePicker,calendarInPage;
+let calInTwo, onePicker,calendarInPage;
 
 let apply = {
    content: 'Применить',
@@ -16,28 +16,14 @@ let apply = {
    }
 }
 
-cal1 = new AirDatepicker('#date-picker-cal1',{
+calInTwo = new AirDatepicker('#cal-two-input',{
    range: true,
    multipleDatesSeparator: '-',
    inline: false,
    buttons: ['clear', apply],
-   onSelect({date}) {
-      cal1.upDate({
-         minDate: date
-      })
-   }
+   selectedDates:[]
 });
-cal2 = new AirDatepicker('#date-picker-cal2',{
-   range: true,
-   multipleDatesSeparator: '-',
-   inline: false,
-   buttons: ['clear', apply],
-   onSelect({date}) {
-      cal2.upDate({
-         maxDate: date
-      })
-   }
-});
+
 onePicker = new AirDatepicker('#one-picker',{
    range: true,
    multipleDatesSeparator: ' - ',
@@ -106,13 +92,15 @@ function ev (e) {
       dropdownExpanded.classList.toggle(".active-expanded")
    }
 }
+
 //dropdown-expanded-counter
-const inputDropdown = document.querySelector('#dropdown-default');
-document,addEventListener('click', button)
-function button(event) {
-   event.preventDefault()
-   if (event.onclick(".js-first-elem-plus")){
-      document.querySelector(".js-counter").innerHTML = 1;
-   }
-}
-console.log( document.querySelector(".js-counter"));
+
+// const inputDropdown = document.querySelector('#dropdown-default');
+// document,addEventListener('click', button)
+// function button(event) {
+//    event.preventDefault()
+//    if (event.onclick(".js-first-elem-plus")){
+//       document.querySelector(".js-counter").innerHTML;
+//    }
+// }
+

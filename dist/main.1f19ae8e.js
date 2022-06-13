@@ -4800,7 +4800,7 @@ require("nouislider/dist/nouislider.css");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 //air-datapicker
-var cal1, cal2, onePicker, calendarInPage;
+var calInTwo, onePicker, calendarInPage;
 var apply = {
   content: 'Применить',
   className: 'custom-button',
@@ -4810,29 +4810,12 @@ var apply = {
     daySelect.setViewDate(date);
   }
 };
-cal1 = new _airDatepicker.default('#date-picker-cal1', {
+calInTwo = new _airDatepicker.default('#cal-two-input', {
   range: true,
   multipleDatesSeparator: '-',
   inline: false,
   buttons: ['clear', apply],
-  onSelect: function onSelect(_ref) {
-    var date = _ref.date;
-    cal1.upDate({
-      minDate: date
-    });
-  }
-});
-cal2 = new _airDatepicker.default('#date-picker-cal2', {
-  range: true,
-  multipleDatesSeparator: '-',
-  inline: false,
-  buttons: ['clear', apply],
-  onSelect: function onSelect(_ref2) {
-    var date = _ref2.date;
-    cal2.upDate({
-      maxDate: date
-    });
-  }
+  selectedDates: []
 });
 onePicker = new _airDatepicker.default('#one-picker', {
   range: true,
@@ -4902,20 +4885,14 @@ function ev(e) {
     dropdownExpanded.classList.toggle(".active-expanded");
   }
 } //dropdown-expanded-counter
-
-
-var inputDropdown = document.querySelector('#dropdown-default');
-document, addEventListener('click', button);
-
-function button(event) {
-  event.preventDefault();
-
-  if (event.onclick(".js-first-elem-plus")) {
-    document.querySelector(".js-counter").innerHTML = 1;
-  }
-}
-
-console.log(document.querySelector(".js-counter"));
+// const inputDropdown = document.querySelector('#dropdown-default');
+// document,addEventListener('click', button)
+// function button(event) {
+//    event.preventDefault()
+//    if (event.onclick(".js-first-elem-plus")){
+//       document.querySelector(".js-counter").innerHTML;
+//    }
+// }
 },{"air-datepicker":"../node_modules/air-datepicker/index.es.js","air-datepicker/air-datepicker.css":"../node_modules/air-datepicker/air-datepicker.css","nouislider":"../node_modules/nouislider/dist/nouislider.js","nouislider/dist/nouislider.css":"../node_modules/nouislider/dist/nouislider.css"}],"main.js":[function(require,module,exports) {
 "use strict";
 
@@ -4950,7 +4927,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50739" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63198" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
