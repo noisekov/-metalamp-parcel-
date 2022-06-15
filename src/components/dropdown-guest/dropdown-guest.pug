@@ -1,0 +1,30 @@
+.form-elements__dropdown-guest 
+    form(action="").position-filter320
+        .text-field__header 
+            label.text-field__name(for="field-guest") Dropdown
+        .text-field__body
+            label(for="field-guest").material-icons.js-material-hidden expand_more
+            input.text-field__input-guest.position-input-large-area.js-input-guest(type="text" id="field-guest" placeholder="Сколько гостей")
+        .text-field__block-list-hidden
+            .text-field__list
+                .text-field__list-dropdown
+                    ul 
+                        li Взрослые
+                        li Дети
+                        li Младенцы
+                .text-field__list-btn  
+                    ul  
+                        li.text-field__list-btn_col
+                            button -
+                            span 0
+                            button +
+                        li.text-field__list-btn_col
+                            button -
+                            span 0
+                            button +
+                        li.text-field__list-btn_col
+                            button -
+                            span 0
+                            button +
+            .text-field__button
+                button Применить

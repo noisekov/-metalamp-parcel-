@@ -14,36 +14,7 @@ section.form-elements
                         label.text-field__name(for="field_active") Text field
                         label.text-field__name-fn Hover / Focus 
                     input.text-field__input_active.position-input-large-area(type="text" id="field_active" placeholder="This is pretty awesome")
-            .form-elements__dropdown-guest 
-                form(action="").position-filter320
-                    .text-field__header 
-                        label.text-field__name(for="field-guest") Dropdown
-                    .text-field__body
-                        label(for="field-guest").material-icons.js-material-hidden expand_more
-                        input.text-field__input-guest.position-input-large-area.js-input-guest(type="text" id="field-guest" placeholder="Сколько гостей")
-                    .text-field__block-list-hidden
-                        .text-field__list
-                            .text-field__list-dropdown
-                                ul 
-                                    li Взрослые
-                                    li Дети
-                                    li Младенцы
-                            .text-field__list-btn  
-                                ul  
-                                    li.text-field__list-btn_col
-                                        button -
-                                        span 0
-                                        button +
-                                    li.text-field__list-btn_col
-                                        button -
-                                        span 0
-                                        button +
-                                    li.text-field__list-btn_col
-                                        button -
-                                        span 0
-                                        button +
-                        .text-field__button
-                            button Применить
+            include ../dropdown-guest/dropdown-guest.pug
             .form-elements__masked-text-field
                 form(action="")
                     .text-field__header 
@@ -137,30 +108,7 @@ section.form-elements
                                         button -
                                         span 2
                                         button +
-            .form-elements__expandable-checkbox
-                form(action="").position-filter266
-                    .text-field__body.position-mb17
-                        label.text-field__name-expandable.js-display-hidden(for="Expandable checkbox list") Expandable checkbox list
-                        label(for="Expandable checkbox list").material-icons.js-display-hidden.js-material-hidden expand_more 
-                    ul.text-field__expandable-checkbox-list-hidden
-                        li  
-                            input(type="checkbox" id="ch1")
-                            label(for="ch1") Завтрак
-                        li  
-                            input(type="checkbox" id="ch2" checked)
-                            label(for="ch2") Письменный стол
-                        li 
-                            input(type="checkbox" id="ch3" checked)
-                            label(for="ch3") Стул для кормления
-                        li  
-                            input(type="checkbox" id="ch4" checked)
-                            label(for="ch4") Кроватка
-                        li  
-                            input(type="checkbox" id="ch5")
-                            label(for="ch5") Телевизор
-                        li  
-                            input(type="checkbox" id="ch6")
-                            label(for="ch6") Шампунь 
+            include ../expandable-checkbox/expandable-checkbox.pug
             .form-elements__expandable-checkbox-list
                 form(action="").position-filter266
                     .text-field__body.position-mb17

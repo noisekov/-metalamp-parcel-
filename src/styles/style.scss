@@ -7,10 +7,12 @@
 @import "../components/form-elements/form-elements.scss";
 @import "../components/cards/cards.scss";
 @import "../components/pagination/pagination.scss";
-@import "air-datapicker.scss";
+@import "../components/air-datepicker/air-datepicker.scss";
 @import "../components/range-slider/range-slider.scss";
 @import "../components/toggle/toggle.scss";
 @import "../components/like-button/like-button.scss";
+@import "../components/dropdown-guest/dropdown-guest.scss";
+@import "../components/expandable-checkbox/expandable-checkbox.scss";
 @font-face {
 	font-family: 'Montserrat';
 	src: url('../fonts/Montserrat-Bold.eot');
