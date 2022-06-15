@@ -1,0 +1,26 @@
+.form-elements__range-slider{
+    margin-bottom: 40px;
+}
+//style slider
+#slider .noUi-handle{
+    width: 12px;
+    height: 12px;
+    border: 2px solid #FFFFFF;
+    border-radius: 50%;
+    top: -5px;
+    left: 260px;
+}
+#slider {
+    height: 6px;
+    cursor: pointer;
+}
+.slider-styled .noUi-handle::before,
+.slider-styled .noUi-handle::after {
+    display: none;
+}
+.slider-styled .noUi-touch-area {
+    border-radius: 50%;
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+    cursor: pointer;
+}
+//--------------------//

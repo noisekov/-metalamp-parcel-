@@ -15,7 +15,6 @@
     }
     &__name {
         font-weight: 700;
-        font-size: 14px;
         line-height: 17px;
         color: #1F2041;
         & span:first-child {
@@ -30,20 +29,16 @@
         }
     }
     &__title {
-        font-weight: 400;
         font-size: 12px;
         line-height: 18px;
         color: rgba(31, 32, 65, 0.5);
         & span {
             font-weight: 700;
-            font-size: 14px;
             line-height: 18px;
             color: rgba(31, 32, 65, 0.5);
         }
     }
     &__body {      
-        font-weight: 400;
-        font-size: 14px;
         line-height: 24px;
         color: rgba(31, 32, 65, 0.75);
         &-block{

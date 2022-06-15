@@ -2522,7 +2522,93 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/nouislider/dist/nouislider.js":[function(require,module,exports) {
+},{"_css_loader":"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/form-elements/form-elements.js":[function(require,module,exports) {
+"use strict";
+
+var _airDatepicker = _interopRequireDefault(require("air-datepicker"));
+
+require("air-datepicker/air-datepicker.css");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+//air-datapicker
+var calInTwo, onePicker, calendarInPage;
+var apply = {
+  content: 'Применить',
+  className: 'custom-button',
+  onclick: function onclick(daySelect) {// let date = newDate('1995-07-17');
+    // daySelect.selectDate(date);
+    // daySelect.setViewDate(date);
+  }
+};
+calInTwo = new _airDatepicker.default('#cal-two-input', {
+  range: true,
+  multipleDatesSeparator: '-',
+  inline: false,
+  buttons: ['clear', apply],
+  selectedDates: []
+});
+onePicker = new _airDatepicker.default('#one-picker', {
+  range: true,
+  multipleDatesSeparator: ' - ',
+  inline: false,
+  buttons: ['clear', apply]
+}); //calendar
+
+calendarInPage = new _airDatepicker.default('#calendar', {
+  inline: true,
+  buttons: ['clear', apply],
+  range: true,
+  multipleDatesSeparator: '-'
+}); //dropdown expandble
+
+var dropdownExpandable = document.querySelector(".text-field__expandable-checkbox-list-hidden");
+document.addEventListener("click", expandable);
+
+function expandable(e) {
+  if (e.target.closest(".js-display-hidden")) {
+    dropdownExpandable.classList.toggle(".active-expandble");
+    document.querySelector(".js-material-hidden").innerHTML = "expand_less";
+  }
+
+  if (!e.target.closest(".js-display-hidden")) {
+    document.querySelector(".js-material-hidden").innerHTML = "expand_more";
+  }
+} //dropdown-quest
+
+
+var dropdownQuest = document.querySelector(".text-field__block-list-hidden");
+document.addEventListener("click", quest);
+
+function quest(event) {
+  if (event.target.closest(".js-input-guest")) {
+    dropdownQuest.classList.toggle(".active-guest");
+    document.querySelector(".js-material-hidden").innerHTML = "expand_less";
+    document.querySelector(".text-field__input-guest").style.borderRadius = "4px 4px 0 0";
+  } else {
+    document.querySelector(".js-material-hidden").innerHTML = "expand_more";
+    document.querySelector(".text-field__input-guest").style.borderRadius = "4px";
+  }
+} //dropdown-expanded
+
+
+var dropdownExpanded = document.querySelector(".text-field__block-list-expanded");
+document.addEventListener('click', ev);
+
+function ev(e) {
+  if (e.target.closest(".js-dropdown-expanded")) {
+    dropdownExpanded.classList.toggle(".active-expanded");
+  }
+} //dropdown-expanded-counter
+// const inputDropdown = document.querySelector('#dropdown-default');
+// document,addEventListener('click', button)
+// function button(event) {
+//    event.preventDefault()
+//    if (event.onclick(".js-first-elem-plus")){
+//       document.querySelector(".js-counter").innerHTML;
+//    }
+// }
+},{"air-datepicker":"../node_modules/air-datepicker/index.es.js","air-datepicker/air-datepicker.css":"../node_modules/air-datepicker/air-datepicker.css"}],"../node_modules/nouislider/dist/nouislider.js":[function(require,module,exports) {
 var define;
 var global = arguments[3];
 (function (global, factory) {
@@ -4786,12 +4872,8 @@ var global = arguments[3];
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
       
-},{"_css_loader":"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/form-elements/form-elements.js":[function(require,module,exports) {
+},{"_css_loader":"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/range-slider/range-slider.js":[function(require,module,exports) {
 "use strict";
-
-var _airDatepicker = _interopRequireDefault(require("air-datepicker"));
-
-require("air-datepicker/air-datepicker.css");
 
 var _nouislider = _interopRequireDefault(require("nouislider"));
 
@@ -4799,38 +4881,7 @@ require("nouislider/dist/nouislider.css");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-//air-datapicker
-var calInTwo, onePicker, calendarInPage;
-var apply = {
-  content: 'Применить',
-  className: 'custom-button',
-  onclick: function onclick(daySelect) {
-    var date = newDate('1995-07-17');
-    daySelect.selectDate(date);
-    daySelect.setViewDate(date);
-  }
-};
-calInTwo = new _airDatepicker.default('#cal-two-input', {
-  range: true,
-  multipleDatesSeparator: '-',
-  inline: false,
-  buttons: ['clear', apply],
-  selectedDates: []
-});
-onePicker = new _airDatepicker.default('#one-picker', {
-  range: true,
-  multipleDatesSeparator: ' - ',
-  inline: false,
-  buttons: ['clear', apply]
-}); //calendar
-
-calendarInPage = new _airDatepicker.default('#calendar', {
-  inline: true,
-  buttons: ['clear', apply],
-  range: true,
-  multipleDatesSeparator: '-'
-}); //nuUiSlider
-
+//nuUiSlider
 var slider = document.getElementById('slider');
 
 _nouislider.default.create(slider, {
@@ -4845,61 +4896,16 @@ _nouislider.default.create(slider, {
 var valueNoSlider = [document.querySelector(".js-value-lower"), document.querySelector(".js-value-upper")];
 slider.noUiSlider.on("update", function (values, handle) {
   valueNoSlider[handle].innerHTML = Math.round(values[handle]);
-}); //dropdown expandble
-
-var dropdownExpandable = document.querySelector(".text-field__expandable-checkbox-list-hidden");
-document.addEventListener("click", expandable);
-
-function expandable(e) {
-  if (e.target.closest(".js-display-hidden")) {
-    dropdownExpandable.classList.toggle(".active-expandble");
-    document.querySelector(".js-material-hidden").innerHTML = "expand_less";
-  }
-
-  if (!e.target.closest(".js-display-hidden")) {
-    document.querySelector(".js-material-hidden").innerHTML = "expand_more";
-  }
-} //dropdown-quest
-
-
-var dropdownQuest = document.querySelector(".text-field__block-list-hidden");
-document.addEventListener("click", quest);
-
-function quest(event) {
-  if (event.target.closest(".js-input-guest")) {
-    dropdownQuest.classList.toggle(".active-guest");
-    document.querySelector(".js-material-hidden").innerHTML = "expand_less";
-    document.querySelector(".text-field__input-guest").style.borderRadius = "4px 4px 0 0";
-  } else {
-    document.querySelector(".js-material-hidden").innerHTML = "expand_more";
-    document.querySelector(".text-field__input-guest").style.borderRadius = "4px";
-  }
-} //dropdown-expanded
-
-
-var dropdownExpanded = document.querySelector(".text-field__block-list-expanded");
-document.addEventListener('click', ev);
-
-function ev(e) {
-  if (e.target.closest(".js-dropdown-expanded")) {
-    dropdownExpanded.classList.toggle(".active-expanded");
-  }
-} //dropdown-expanded-counter
-// const inputDropdown = document.querySelector('#dropdown-default');
-// document,addEventListener('click', button)
-// function button(event) {
-//    event.preventDefault()
-//    if (event.onclick(".js-first-elem-plus")){
-//       document.querySelector(".js-counter").innerHTML;
-//    }
-// }
-},{"air-datepicker":"../node_modules/air-datepicker/index.es.js","air-datepicker/air-datepicker.css":"../node_modules/air-datepicker/air-datepicker.css","nouislider":"../node_modules/nouislider/dist/nouislider.js","nouislider/dist/nouislider.css":"../node_modules/nouislider/dist/nouislider.css"}],"main.js":[function(require,module,exports) {
+});
+},{"nouislider":"../node_modules/nouislider/dist/nouislider.js","nouislider/dist/nouislider.css":"../node_modules/nouislider/dist/nouislider.css"}],"main.js":[function(require,module,exports) {
 "use strict";
 
 require("./styles/style.scss");
 
 require("./components/form-elements/form-elements");
-},{"./styles/style.scss":"styles/style.scss","./components/form-elements/form-elements":"components/form-elements/form-elements.js"}],"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+
+require("./components/range-slider/range-slider");
+},{"./styles/style.scss":"styles/style.scss","./components/form-elements/form-elements":"components/form-elements/form-elements.js","./components/range-slider/range-slider":"components/range-slider/range-slider.js"}],"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -4927,7 +4933,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64719" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60503" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

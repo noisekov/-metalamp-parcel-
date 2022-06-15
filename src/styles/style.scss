@@ -8,6 +8,9 @@
 @import "../components/cards/cards.scss";
 @import "../components/pagination/pagination.scss";
 @import "air-datapicker.scss";
+@import "../components/range-slider/range-slider.scss";
+@import "../components/toggle/toggle.scss";
+@import "../components/like-button/like-button.scss";
 @font-face {
 	font-family: 'Montserrat';
 	src: url('../fonts/Montserrat-Bold.eot');
@@ -22,12 +25,15 @@
 	font-weight: 400;
 	font-style: normal;
 }
+@mixin mb($mb) {
+	margin-bottom: ($mb);
+}
 html,
 body {
-    font-size: 14px;
     font-family: 'Montserrat';
     background-color: #F4F4F6;
     color:rgba(31, 32, 65, 1);
+	font-weight: 400;
 }
 .wrapper {
     margin: 0 auto;
@@ -38,7 +44,7 @@ body {
 	margin: 30px 0 62px 30px;
 }
 // position teg into index.pug
-.position40 {
+.marBtm40 {
 	margin-bottom: 40px;
 }
 //landing-page
@@ -54,8 +60,6 @@ body {
 			position: absolute;
 			top: 93%;
 			right: 134px;
-			font-weight: 400;
-			font-size: 14px;
 			line-height: 24px;
 			color: rgba(31, 32, 65, 0.75);
 		}

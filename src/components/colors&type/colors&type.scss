@@ -103,7 +103,6 @@ h3 {
     }
     // .block-color__body-number
     &__body-number {
-        font-weight: 400;
         font-size: 19px;
         line-height: calc(28  / 19 * 100%);
         color: $darkshade;
@@ -117,7 +116,6 @@ h3 {
     }
     & span {
         color: rgba(31, 32, 65, 0.25);
-        font-weight: 400;
         width: 30px;
         height: 30px;
         text-align: right;
@@ -136,12 +134,9 @@ h3 {
         line-height: calc(15 / 12 * 100%);
     }
     &:last-child span{
-        font-size: 14px;
         line-height: calc(24 / 14 * 100%);
     }
     & p{
-        font-weight: 400;
-        font-size: 14px;
         line-height: calc(24 / 14 * 100%);
         color: rgba(31, 32, 65, 0.75);
     }

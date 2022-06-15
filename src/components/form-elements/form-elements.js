@@ -1,7 +1,5 @@
 import AirDatepicker from 'air-datepicker';
 import 'air-datepicker/air-datepicker.css';
-import noUiSlider from 'nouislider';
-import 'nouislider/dist/nouislider.css';
 
 //air-datapicker
 let calInTwo, onePicker,calendarInPage;
@@ -10,9 +8,9 @@ let apply = {
    content: 'Применить',
    className:'custom-button',
    onclick: (daySelect) => {
-      let date = newDate('1995-07-17');
-      daySelect.selectDate(date);
-      daySelect.setViewDate(date);
+      // let date = newDate('1995-07-17');
+      // daySelect.selectDate(date);
+      // daySelect.setViewDate(date);
    }
 }
 
@@ -38,25 +36,6 @@ calendarInPage = new AirDatepicker('#calendar',{
    range: true,
    multipleDatesSeparator: '-',
 });
-
-//nuUiSlider
-let slider = document.getElementById('slider');
-
-noUiSlider.create(slider, {
-    start: [5000, 10000],
-    connect: true,
-    range: {
-        'min': 0,
-        'max': 15000
-    }
-});
-let valueNoSlider = [
-   document.querySelector(".js-value-lower"),
-   document.querySelector(".js-value-upper")
-]
-slider.noUiSlider.on("update", function(values, handle){
-   valueNoSlider[handle].innerHTML = Math.round(values[handle]);
-})
 
 //dropdown expandble
 const dropdownExpandable = document.querySelector(".text-field__expandable-checkbox-list-hidden")

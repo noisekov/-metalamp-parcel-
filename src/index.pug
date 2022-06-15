@@ -13,16 +13,16 @@ html(lang="en")
       include components/form-elements/form-elements.pug 
       img.first-logo(src="/images/first-logo.svg", alt="first-logo")
       include components/cards/cards.pug
-      .position40
+      .marBtm40
         img.first-logo(src="/images/first-logo.svg", alt="first-logo")
         include components/headers & footers/header-up/header-up.pug
-      .position40
+      .marBtm40
         include components/headers & footers/header-down/header-down.pug
       include components/headers & footers/footer/footer.pug
       include components/headers & footers/footer-mobile/footer-mobile.pug
       include components/colors&type/colors&type.pug
-      //- include page/landing-page.pug
-      //- include page/registration.pug
-      //- include page/search-room.pug
-      //- include page/sign-in.pug
+      include page/landing-page.pug
+      include page/registration.pug
+      include page/search-room.pug
+      include page/sign-in.pug
 script(src='./main.js')

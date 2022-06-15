@@ -3,7 +3,6 @@
 }
 .pagination {
     &__body {
-        font-weight: 400;
         font-size: 12px;
         line-height: 40px;
         color: rgba(31, 32, 65, 0.5);
@@ -35,7 +34,6 @@
         } 
     }
     &__count {
-        font-size: 14px;
         line-height: 24px;
         color: rgba(31, 32, 65, 0.75);
     }

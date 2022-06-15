@@ -211,30 +211,8 @@ section.form-elements
                         li 
                             input(type="radio" name="rb" id="rb2")
                             label(for="rb2") Женщина 
-            .form-elements__toggle
-                form(action="")
-                    .text-field__body.checkbox-buttons_position
-                        label.text-field__name(for="toggle") Toggle
-                    ul.text-field__toggle
-                        li 
-                            input(type="checkbox" class="switch" id="tg1" checked)
-                            label(for="tg1") Получать спецпредложения 
-                        li 
-                            input(type="checkbox" class="switch" id="tg2")
-                            label(for="tg2") Получать спецпредложения
-            .form-elements__like-button
-                form(action="")
-                    .text-field__body.checkbox-buttons_position
-                        label.text-field__name(for="like-button") Like button
-                    .text-field__like-button
-                        .text-field__like-button-block.text-field__like-button-block_position-like.position-mr20
-                            span.material-icons.material-icons_like favorite_border
-                            input(type="checkbox" class="like" id="lb1")
-                            label(for="lb1") 2
-                        .text-field__like-button-block.text-field__like-button-block_position-like.position-mr20
-                            span.material-icons.material-icons_like favorite
-                            input(type="checkbox" class="like" id="lb2" checked)
-                            label(for="lb2") 12
+            include ../toggle/toggle.pug
+            include ../like-button/like-button.pug
             .form-elements__rate-button
                 form(action="")
                     .text-field__body.checkbox-buttons_position-star
@@ -298,15 +276,7 @@ section.form-elements
                             label(for="rc2") <span>Помощник для инвалидов</span><br> 
                                 p На 1 этаже вас встретит специалист  и проводит до номера.
         .form-elements_right
-            .form-elements__range-slider
-                    form(action="/").position-filter266
-                        .text-field__header.range-slider_position
-                            label.text-field__name(for="range-slider") Range slider
-                            .text-field__body-slider
-                                label.text-field__name-fn.js-value-lower
-                                span  - 
-                                label.text-field__name-fn.js-value-upper 
-                        .slider-styled(id="slider")
+            include ../range-slider/range-slider.pug
             .form-elements__buttons
                 form(action="").position-filter266 
                     .text-field__header.range-slider_position
