@@ -31,9 +31,6 @@
     &__filter-date-dropdown {
         margin-bottom: 40px;
     }
-    &__dropdown-default {
-        margin-bottom: 20px;
-    }
     &__dropdown-expanded {
         margin-bottom: 40px;
     }
@@ -46,14 +43,35 @@
     &__rate-button {
         margin-bottom: 196px;
     }
+    &__pagination {
+        margin-bottom: 212px;
+    }
     &__dropdown{
         margin-bottom: 98px;
+    }
+    &__like-button {
+        margin-bottom: 40px;
     }
     &__buttons {
         margin-bottom: 40px;
     }
+    &__range-slider{
+        margin-bottom: 40px;
+    }
+    &__toggle {
+        margin-bottom: 40px;
+    }
     &__button-pay {
         margin-bottom: 47px;
+    }
+    &__dropdown-default {
+        margin-bottom: 20px;
+    }
+    &__dropdown-guest {
+        margin-bottom: 20px;
+    }
+    &__expandable-checkbox{
+        margin-bottom: 20px;
     }
     &__button {
         margin-bottom: 100px;
@@ -132,7 +150,6 @@
                 color: rgba(31, 32, 65, 0.75);
             }
         }
-        //input
     }
     &__name {
         font-weight: 700;
@@ -201,19 +218,6 @@
         border-radius: 4px;
         line-height: 18px;
     }
-    &__block-list-expanded {
-        display: none;
-    }
-    &__block-list-expanded.\.active-expanded {
-        position: absolute;
-        display: flex;
-        z-index: 5;
-        background: #ffffff;
-        width: 266px;
-        flex-direction: column;
-        border: 1px solid rgba(31, 32, 65, 0.25);
-        border-radius: 0 0 4px 4px;
-    }
     &__button {
         & button {
             background-color: #fff;
@@ -231,12 +235,6 @@
         & button:nth-child(2) {
             float: left;
         }
-    }
-    &__input-dropdown-default {
-        color:  rgba(31, 32, 65, 0.75);
-        border: 1px solid rgba(31, 32, 65, 0.25);
-        border-radius: 4px 4px 0 0;
-        cursor: pointer;
     }
     &__list-dropdown {
         margin-left: 13px;

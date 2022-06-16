@@ -190,15 +190,7 @@ var reloadCSS = require('_css_loader');
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
 },{"./..\\fonts\\Montserrat-Bold.eot":[["Montserrat-Bold.70d570c7.eot","fonts/Montserrat-Bold.eot"],"fonts/Montserrat-Bold.eot"],"./..\\fonts\\Montserrat-Bold.woff":[["Montserrat-Bold.73e94c2c.woff","fonts/Montserrat-Bold.woff"],"fonts/Montserrat-Bold.woff"],"./..\\fonts\\Montserrat-Bold.ttf":[["Montserrat-Bold.f3410305.ttf","fonts/Montserrat-Bold.ttf"],"fonts/Montserrat-Bold.ttf"],"./..\\fonts\\Montserrat-Bold.svg":[["Montserrat-Bold.0fff2121.svg","fonts/Montserrat-Bold.svg"],"fonts/Montserrat-Bold.svg"],"./..\\fonts\\Montserrat-Regular.eot":[["Montserrat-Regular.21b801b8.eot","fonts/Montserrat-Regular.eot"],"fonts/Montserrat-Regular.eot"],"./..\\fonts\\Montserrat-Regular.woff":[["Montserrat-Regular.1b35f2ae.woff","fonts/Montserrat-Regular.woff"],"fonts/Montserrat-Regular.woff"],"./..\\fonts\\Montserrat-Regular.ttf":[["Montserrat-Regular.44e710c1.ttf","fonts/Montserrat-Regular.ttf"],"fonts/Montserrat-Regular.ttf"],"./..\\fonts\\Montserrat-Regular.svg":[["Montserrat-Regular.6f6bdac5.svg","fonts/Montserrat-Regular.svg"],"fonts/Montserrat-Regular.svg"],"C:\\Users\\volod\\OneDrive\\Рабочий стол\\(metalamp parcel)\\src\\images\\landing-page.jpg":[["landing-page.132ca506.jpg","images/landing-page.jpg"],"images/landing-page.jpg"],"C:\\Users\\volod\\OneDrive\\Рабочий стол\\(metalamp parcel)\\src\\images\\registration.jpg":[["registration.df813697.jpg","images/registration.jpg"],"images/registration.jpg"],"_css_loader":"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/form-elements/form-elements.js":[function(require,module,exports) {
-//dropdown-expanded
-var dropdownExpanded = document.querySelector(".text-field__block-list-expanded");
-document.addEventListener('click', ev);
-
-function ev(e) {
-  if (e.target.closest(".js-dropdown-expanded")) {
-    dropdownExpanded.classList.toggle(".active-expanded");
-  }
-} //dropdown-expanded-counter
+//dropdown-expanded-counter
 // const inputDropdown = document.querySelector('#dropdown-default');
 // document,addEventListener('click', button)
 // function button(event) {
@@ -4897,6 +4889,16 @@ function expandable(e) {
     document.querySelector(".js-material-hidden").innerHTML = "expand_more";
   }
 }
+},{}],"components/dropdown-default/dropdown-default.js":[function(require,module,exports) {
+//dropdown-expanded
+var dropdownExpanded = document.querySelector(".text-field__block-list-expanded");
+document.addEventListener('click', ev);
+
+function ev(e) {
+  if (e.target.closest(".js-dropdown-expanded")) {
+    dropdownExpanded.classList.toggle(".active-expanded");
+  }
+}
 },{}],"main.js":[function(require,module,exports) {
 "use strict";
 
@@ -4911,7 +4913,9 @@ require("./components/dropdown-guest/dropdown-guest");
 require("./components/air-datepicker/air-datepicker");
 
 require("./components/expandable-checkbox/expandable-checkbox");
-},{"./styles/style.scss":"styles/style.scss","./components/form-elements/form-elements":"components/form-elements/form-elements.js","./components/range-slider/range-slider":"components/range-slider/range-slider.js","./components/dropdown-guest/dropdown-guest":"components/dropdown-guest/dropdown-guest.js","./components/air-datepicker/air-datepicker":"components/air-datepicker/air-datepicker.js","./components/expandable-checkbox/expandable-checkbox":"components/expandable-checkbox/expandable-checkbox.js"}],"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+
+require("./components/dropdown-default/dropdown-default");
+},{"./styles/style.scss":"styles/style.scss","./components/form-elements/form-elements":"components/form-elements/form-elements.js","./components/range-slider/range-slider":"components/range-slider/range-slider.js","./components/dropdown-guest/dropdown-guest":"components/dropdown-guest/dropdown-guest.js","./components/air-datepicker/air-datepicker":"components/air-datepicker/air-datepicker.js","./components/expandable-checkbox/expandable-checkbox":"components/expandable-checkbox/expandable-checkbox.js","./components/dropdown-default/dropdown-default":"components/dropdown-default/dropdown-default.js"}],"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -4939,7 +4943,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60503" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50675" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -1,4 +1,4 @@
-section.form-elements
+.form-elements
     img.first-logo(src="/images/first-logo.svg", alt="first-logo")
     .form-elements__container
         .form-elements_left
@@ -14,7 +14,8 @@ section.form-elements
                         label.text-field__name(for="field_active") Text field
                         label.text-field__name-fn Hover / Focus 
                     input.text-field__input_active.position-input-large-area(type="text" id="field_active" placeholder="This is pretty awesome")
-            include ../dropdown-guest/dropdown-guest.pug
+            .form-elements__dropdown-guest
+                include ../dropdown-guest/dropdown-guest.pug
             .form-elements__masked-text-field
                 form(action="")
                     .text-field__header 
@@ -51,34 +52,7 @@ section.form-elements
                     a.footer-up__arrow(href="#") 
                         span.material-icons.material-icons_arrow arrow_forward  
             .form-elements__dropdown-default
-                form(action="").position-filter266
-                    .text-field__header
-                        label.text-field__name(for="dropdown-default") Dropdown
-                        label.text-field__name-fn Default 
-                    .text-field__body
-                        label(for="dropdown-default").material-icons expand_more
-                        input.text-field__input-dropdown-default.position-input-area.js-dropdown-expanded(type="text" id="dropdown-default" autocomplete="off" placeholder="2 спальни, 2 кровати...")
-                    .text-field__block-list-expanded
-                        .text-field__list
-                            .text-field__list-dropdown
-                                ul 
-                                    li Спальни
-                                    li Кровати
-                                    li Ванные комнаты 
-                            .text-field__list-btn
-                                ul
-                                    li.text-field__list-btn_col
-                                        button.js-first-elem-min -
-                                        span.js-counter 2
-                                        button.js-first-elem-plus +
-                                    li.text-field__list-btn_col
-                                        button.js-second-elem-min -
-                                        span 2
-                                        button.js-second-elem-plus +
-                                    li.text-field__list-btn_col
-                                        button.js-third-elem-min -
-                                        span 2
-                                        button.js-third-elem-plus +
+                include ../dropdown-default/dropdown-default.pug
             .form-elements__dropdown-expanded
                 form(action="").position-filter266
                     .text-field__header
@@ -108,7 +82,8 @@ section.form-elements
                                         button -
                                         span 2
                                         button +
-            include ../expandable-checkbox/expandable-checkbox.pug
+            .form-elements__expandable-checkbox
+                include ../expandable-checkbox/expandable-checkbox.pug
             .form-elements__expandable-checkbox-list
                 form(action="").position-filter266
                     .text-field__body.position-mb17
@@ -159,8 +134,10 @@ section.form-elements
                         li 
                             input(type="radio" name="rb" id="rb2")
                             label(for="rb2") Женщина 
-            include ../toggle/toggle.pug
-            include ../like-button/like-button.pug
+            .form-elements__toggle
+                include ../toggle/toggle.pug
+            .form-elements__like-button
+                include ../like-button/like-button.pug
             .form-elements__rate-button
                 form(action="")
                     .text-field__body.checkbox-buttons_position-star
@@ -224,7 +201,8 @@ section.form-elements
                             label(for="rc2") <span>Помощник для инвалидов</span><br> 
                                 p На 1 этаже вас встретит специалист  и проводит до номера.
         .form-elements_right
-            include ../range-slider/range-slider.pug
+            .form-elements__range-slider
+                include ../range-slider/range-slider.pug
             .form-elements__buttons
                 form(action="").position-filter266 
                     .text-field__header.range-slider_position
@@ -240,7 +218,8 @@ section.form-elements
                 .button-pay
                     a(href="#").button-pay__link Перейти к оплате
                         span.material-icons.material-icons_white arrow_forward  
-            include ../pagination/pagination.pug
+            .form-elements__pagination 
+                include ../pagination/pagination.pug
             .form-elements__dropdown
                 form(action="").position-filter320
                     .text-field__header

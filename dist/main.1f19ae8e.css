@@ -1163,9 +1163,6 @@ h3 {
 .form-elements__filter-date-dropdown {
   margin-bottom: 40px;
 }
-.form-elements__dropdown-default {
-  margin-bottom: 20px;
-}
 .form-elements__dropdown-expanded {
   margin-bottom: 40px;
 }
@@ -1178,14 +1175,35 @@ h3 {
 .form-elements__rate-button {
   margin-bottom: 196px;
 }
+.form-elements__pagination {
+  margin-bottom: 212px;
+}
 .form-elements__dropdown {
   margin-bottom: 98px;
+}
+.form-elements__like-button {
+  margin-bottom: 40px;
 }
 .form-elements__buttons {
   margin-bottom: 40px;
 }
+.form-elements__range-slider {
+  margin-bottom: 40px;
+}
+.form-elements__toggle {
+  margin-bottom: 40px;
+}
 .form-elements__button-pay {
   margin-bottom: 47px;
+}
+.form-elements__dropdown-default {
+  margin-bottom: 20px;
+}
+.form-elements__dropdown-guest {
+  margin-bottom: 20px;
+}
+.form-elements__expandable-checkbox {
+  margin-bottom: 20px;
 }
 .form-elements__button {
   margin-bottom: 100px;
@@ -1332,19 +1350,6 @@ h3 {
   border-radius: 4px;
   line-height: 18px;
 }
-.text-field__block-list-expanded {
-  display: none;
-}
-.text-field__block-list-expanded.\.active-expanded {
-  position: absolute;
-  display: flex;
-  z-index: 5;
-  background: #ffffff;
-  width: 266px;
-  flex-direction: column;
-  border: 1px solid rgba(31, 32, 65, 0.25);
-  border-radius: 0 0 4px 4px;
-}
 .text-field__button button {
   background-color: #fff;
   font-weight: 700;
@@ -1360,12 +1365,6 @@ h3 {
 }
 .text-field__button button:nth-child(2) {
   float: left;
-}
-.text-field__input-dropdown-default {
-  color: rgba(31, 32, 65, 0.75);
-  border: 1px solid rgba(31, 32, 65, 0.25);
-  border-radius: 4px 4px 0 0;
-  cursor: pointer;
 }
 .text-field__list-dropdown {
   margin-left: 13px;
@@ -1986,10 +1985,6 @@ h3 {
 
 .cards-position40 {
   margin-bottom: 40px;
-}
-
-.form-elements__pagination {
-  margin-bottom: 212px;
 }
 
 .pagination__body {
@@ -2841,10 +2836,6 @@ h3 {
   transition: opacity var(--adp-overlay-transition-duration) var(--adp-overlay-transition-ease), height 0s, width 0s;
 }
 
-.form-elements__range-slider {
-  margin-bottom: 40px;
-}
-
 .range-slider_position {
   margin-bottom: 20px;
 }
@@ -2872,10 +2863,6 @@ h3 {
   border-radius: 50%;
   background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
   cursor: pointer;
-}
-
-.form-elements__toggle {
-  margin-bottom: 40px;
 }
 
 .text-field__toggle li {
@@ -2945,10 +2932,6 @@ h3 {
   transition: all 0.2s ease;
 }
 
-.form-elements__like-button {
-  margin-bottom: 40px;
-}
-
 .text-field__like-button {
   display: flex;
 }
@@ -2998,10 +2981,6 @@ h3 {
 .text-field__like-button input.like[type=checkbox]:checked + label::before_position-like {
   position: relative;
 }
-.form-elements__dropdown-guest {
-  margin-bottom: 20px;
-}
-
 .text-field__input-guest {
   border: 1px solid rgba(31, 32, 65, 0.25);
   border-radius: 4px;
@@ -3061,8 +3040,24 @@ h3 {
   opacity: 0.38;
 }
 
-.form-elements__expandable-checkbox {
-  margin-bottom: 20px;
+.text-field__input-dropdown-default {
+  color: rgba(31, 32, 65, 0.75);
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px 4px 0 0;
+  cursor: pointer;
+}
+.text-field__block-list-expanded {
+  display: none;
+}
+.text-field__block-list-expanded.\.active-expanded {
+  position: absolute;
+  display: flex;
+  z-index: 5;
+  background: #ffffff;
+  width: 266px;
+  flex-direction: column;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 0 0 4px 4px;
 }
 
 .text-field__name-expandable {

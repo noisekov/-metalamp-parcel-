@@ -1,0 +1,28 @@
+form(action="").position-filter266
+    .text-field__header
+        label.text-field__name(for="dropdown-default") Dropdown
+        label.text-field__name-fn Default 
+    .text-field__body
+        label(for="dropdown-default").material-icons expand_more
+        input.text-field__input-dropdown-default.position-input-area.js-dropdown-expanded(type="text" id="dropdown-default" autocomplete="off" placeholder="2 спальни, 2 кровати...")
+    .text-field__block-list-expanded
+        .text-field__list
+            .text-field__list-dropdown
+                ul 
+                    li Спальни
+                    li Кровати
+                    li Ванные комнаты 
+            .text-field__list-btn
+                ul
+                    li.text-field__list-btn_col
+                        button.js-first-elem-min -
+                        span.js-counter 2
+                        button.js-first-elem-plus +
+                    li.text-field__list-btn_col
+                        button.js-second-elem-min -
+                        span 2
+                        button.js-second-elem-plus +
+                    li.text-field__list-btn_col
+                        button.js-third-elem-min -
+                        span 2
+                        button.js-third-elem-plus +
