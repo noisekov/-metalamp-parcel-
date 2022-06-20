@@ -4,7 +4,11 @@ form(action="").position-filter266
         label.text-field__name-fn Default 
     .text-field__body
         label(for="dropdown-default").material-icons expand_more
-        input.text-field__input-dropdown-default.position-input-area.js-dropdown-expanded(type="text" id="dropdown-default" autocomplete="off" placeholder="2 спальни, 2 кровати...")
+        input#dropdown-default.text-field__input-dropdown-default.position-input-area.js-dropdown-expanded(
+            type="text"
+            autocomplete="off" 
+            placeholder="2 спальни, 2 кровати..."
+            )
     .text-field__block-list-expanded
         .text-field__list
             .text-field__list-dropdown

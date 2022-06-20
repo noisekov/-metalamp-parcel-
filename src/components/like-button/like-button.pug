@@ -4,9 +4,14 @@ form(action="")
     .text-field__like-button
         .text-field__like-button-block.position-mr20
             span.material-icons.material-icons_like favorite_border
-            input(type="checkbox" class="like" id="lb1")
+            input#lb1.like(
+                type="checkbox"
+                )
             label(for="lb1") 2
         .text-field__like-button-block.position-mr20
             span.material-icons.material-icons_like favorite
-            input(type="checkbox" class="like" id="lb2" checked)
+            input#lb2.like(
+                type="checkbox"
+                checked
+                )
             label(for="lb2") 12

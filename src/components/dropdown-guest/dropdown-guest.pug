@@ -4,7 +4,10 @@
             label.text-field__name(for="field-guest") Dropdown
         .text-field__body
             label(for="field-guest").material-icons.js-material-hidden expand_more
-            input.text-field__input-guest.position-input-large-area.js-input-guest(type="text" id="field-guest" placeholder="Сколько гостей")
+            input#field-guest.text-field__input-guest.position-input-large-area.js-input-guest(
+                type="text" 
+                placeholder="Сколько гостей"
+                )
         .text-field__block-list-hidden
             .text-field__list
                 .text-field__list-dropdown

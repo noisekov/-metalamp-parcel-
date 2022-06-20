@@ -3,8 +3,13 @@ form(action="")
         label.text-field__name(for="toggle") Toggle
     ul.text-field__toggle
         li 
-            input(type="checkbox" class="switch" id="tg1" checked)
+            input#tg1.switch(
+                type="checkbox" 
+                checked
+                )
             label(for="tg1") Получать спецпредложения 
         li 
-            input(type="checkbox" class="switch" id="tg2")
+            input#tg2.switch(
+                type="checkbox"
+                )
             label(for="tg2") Получать спецпредложения

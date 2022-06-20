@@ -2,37 +2,61 @@
     h1.cards-position20 Регистрация аккаунта
     .registration__text-field.cards-position10
         form(action="/").position-filter320
-            input.text-field__input.position-input-large-area(type="text" id="field" placeholder="Имя" )
+            input#field.text-field__input.position-input-large-area(
+                type="text"
+                placeholder="Имя" 
+                )
     .registration__text-field.cards-position10
         form(action="/").position-filter320
-            input.text-field__input.position-input-large-area(type="text" id="field" placeholder="Фамилия" )
+            input#field.text-field__input.position-input-large-area(
+                type="text"
+                placeholder="Фамилия"
+                )
     .registration__radio-buttons.cards-position20
         form(action="")
             ul.text-field__radio-buttons
                 li 
-                    input(type="radio" name="reg" id="reg1" checked)
+                    input#reg1(
+                        type="radio" 
+                        name="reg"
+                        checked
+                        )
                     label(for="reg1") Мужчина 
                 li 
-                    input(type="radio" name="reg" id="reg2")
+                    input#reg2(
+                        type="radio"
+                        name="reg"
+                        )
                     label(for="reg2") Женщина 
     .registration__masked-text-field.cards-position20
         form(action="")
             .text-field__header 
                 label.text-field__name(for="masked-text-field") Дата рождения
-            input.text-field__masked-text-field.position-input-large-area(type="text" id="masked-text-field" placeholder="дд.мм.гг" ) 
+            input#masked-text-field.text-field__masked-text-field.position-input-large-area(
+                type="text"
+                placeholder="дд.мм.гг"
+                ) 
     .registration__text-field.cards-position10
         form(action="/").position-filter320
             .text-field__header
                 label(for="field").text-field__name Данные для входа в сервис 
-            input.text-field__input.position-input-large-area(type="text" id="field" placeholder="Email" )
+            input#field.text-field__input.position-input-large-area(
+                type="text"
+                placeholder="Email"
+                )
     .registration__text-field.cards-position10
         form(action="/").position-filter320
-            input.text-field__input.position-input-large-area(type="text" id="field" placeholder="Пароль" )
+            input#field.text-field__input.position-input-large-area(
+                type="text"
+                placeholder="Пароль"
+                )
     .registration__toggle
         form(action="")
             ul.text-field__toggle.cards-position20
                 li 
-                    input(type="checkbox" class="switch" id="reg-sw")
+                    input#reg-sw.switch(
+                        type="checkbox"
+                        )
                     label(for="reg-sw") Получать спецпредложения 
     .registration__button-pay.cards-position30
         .button-pay
