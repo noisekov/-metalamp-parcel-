@@ -52,9 +52,10 @@ body {
 }
 //landing-page
 .landing-page {
-	background: url(/images/landing-page.jpg);
-	height: 100vh;
+	background: url(/images/landing-page.jpg) no-repeat;
 	position: relative;
+	height: 900px;
+	display: block;
 	&-block{
 		display: block;
 		text-align: right;
@@ -75,7 +76,7 @@ body {
 }
 //sign-in
 .sign-in {
-	background: url(/images/registration.jpg);
+	background: url(/images/registration.jpg) no-repeat;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -83,7 +84,7 @@ body {
 }
 //reg
 .reg {
-	background: url(/images/registration.jpg);
+	background: url(/images/registration.jpg) no-repeat;
 	height: 683px;
 	display: flex;
 	justify-content: center;
