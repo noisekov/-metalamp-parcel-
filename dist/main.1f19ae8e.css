@@ -655,6 +655,7 @@ h3 {
 }
 .nav-up__button-entry {
   border: 2px solid #BC9CFF;
+  margin-right: 20px;
   border-radius: 22px;
   padding: 7px 20px 8px;
   font-weight: 700;
@@ -663,7 +664,6 @@ h3 {
   text-transform: uppercase;
   background-color: #ffffff;
   color: #BC9CFF;
-  margin: 0 20px 0 0;
   cursor: pointer;
 }
 .nav-up__button-registration {

@@ -2,11 +2,8 @@
   "name": "new-project",
   "version": "1.0.0",
   "description": "",
-  "homepage": "https://noisekov.github.io/-metalamp-parcel-",
   "main": "index.js",
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "parcel src/index.pug --open",
     "build": "parcel build src/index.pug -d docs --public-url ./",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,7 +12,9 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "cssnano": "^5.1.12",
     "gh-pages": "^4.0.0",
+    "postcss": "^8.4.14",
     "pug": "^3.0.2",
     "sass": "^1.52.3"
   },
