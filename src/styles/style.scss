@@ -52,7 +52,7 @@ body {
 }
 //landing-page
 .landing-page {
-	background: url(/images/landing-page.jpg) no-repeat;
+	background: url(../images/landing-page.jpg) no-repeat;
 	position: relative;
 	height: 900px;
 	display: block;
@@ -76,7 +76,7 @@ body {
 }
 //sign-in
 .sign-in {
-	background: url(/images/registration.jpg) no-repeat;
+	background: url(../images/registration.jpg) no-repeat;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -84,7 +84,7 @@ body {
 }
 //reg
 .reg {
-	background: url(/images/registration.jpg) no-repeat;
+	background: url(../images/registration.jpg) no-repeat;
 	height: 683px;
 	display: flex;
 	justify-content: center;

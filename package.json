@@ -2,8 +2,10 @@
   "name": "new-project",
   "version": "1.0.0",
   "description": "",
+  "homepage": "https://noisekov.github.io/-metalamp-parcel-",
   "main": "index.js",
   "scripts": {
+    "deploy": "gh-pages -d dist",
     "start": "parcel src/index.pug --open",
     "build": "parcel build src/index.pug -d docs --public-url ./",
     "test": "echo \"Error: no test specified\" && exit 1"
