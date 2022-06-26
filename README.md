@@ -1,6 +1,6 @@
 How to start
 
-npm i 
+npm i <br>
 npm run start
 
 i'll use webpack for this project in future
