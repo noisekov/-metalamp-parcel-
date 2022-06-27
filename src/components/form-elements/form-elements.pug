@@ -88,6 +88,7 @@
                         input#expanded.text-field__input-dropdown-default.position-input-area(
                             type="text"
                             placeholder="2 спальни, 2 кровати..."
+                            autocomplete="off"
                             )
                     .text-field__block-list
                         .text-field__list
@@ -216,6 +217,7 @@
                         input#dropdown.text-field__input-dropdown-default.position-input-large-area(
                             type="text"
                             placeholder="Сколько гостей"
+                            autocomplete='off'
                             )
                     .text-field__block-list
                         .text-field__list
@@ -282,6 +284,7 @@
                         input#dropdown.text-field__input-dropdown-default.position-input-large-area(
                             type="text"
                             placeholder="3 гостя"
+                            autocomplete='off'
                             )
                     .text-field__block-list  
                         .text-field__list
@@ -339,10 +342,8 @@
                     span  5 дней назад
             .review__body
                 .text-field__like-button.review__block
-                    .text-field__like-button-block.text-field__like-button-block_position-like.position-mr14
+                    .text-field__like-button-block.text-field__like-button-block_position-like.position-mr14#js-like-color
                         span.material-icons.material-icons_like favorite_border
-                        input#like-review.like(
-                            type="checkbox"
-                            )
+                        input#like-review.like(type="checkbox")
                         label(for="like-review") 2
                 p Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.
