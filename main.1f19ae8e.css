@@ -1173,7 +1173,7 @@ h3 {
   margin-bottom: 37px;
 }
 .form-elements__rate-button {
-  margin-bottom: 196px;
+  margin-bottom: 199px;
 }
 .form-elements__pagination {
   margin-bottom: 212px;
@@ -1515,13 +1515,6 @@ h3 {
 .text-field__radio-buttons input[type=radio]:not(:checked) + label::after {
   opacity: 0;
 }
-.text-field__rate-button {
-  display: flex;
-  flex-direction: row;
-}
-.text-field__rate-button-block {
-  margin-right: 20px;
-}
 
 .date {
   display: flex;
@@ -1560,15 +1553,12 @@ h3 {
   font-size: 10px;
   z-index: 1;
 }
-.material-icons_star {
-  position: relative;
-  font-size: 24px;
-  right: 2px;
-  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
+.material-icons_like-color {
+  top: 5px;
+  left: 5px;
+  font-size: 10px;
+  z-index: 1;
+  color: #BC9CFF;
 }
 .material-icons_arrow {
   top: -3px;
@@ -1636,9 +1626,6 @@ h3 {
 
 .checkbox-buttons_position {
   margin-bottom: 17px;
-}
-.checkbox-buttons_position-star {
-  margin-bottom: 10px;
 }
 
 .review {
@@ -2948,7 +2935,14 @@ h3 {
   visibility: hidden;
   z-index: -1;
 }
-.text-field__like-button input.like[type=checkbox]:checked + label,
+.text-field__like-button input.like[type=checkbox]:checked + label {
+  position: relative;
+  display: inline-block;
+  padding-left: 22px;
+  color: #BC9CFF;
+  line-height: 21px;
+  cursor: pointer;
+}
 .text-field__like-button input.like[type=checkbox]:not(:checked) + label {
   position: relative;
   display: inline-block;
@@ -2981,6 +2975,7 @@ h3 {
 .text-field__like-button input.like[type=checkbox]:checked + label::before_position-like {
   position: relative;
 }
+
 .text-field__input-guest {
   border: 1px solid rgba(31, 32, 65, 0.25);
   border-radius: 4px;
@@ -3163,17 +3158,81 @@ h3 {
   opacity: 0;
 }
 
+.position-star {
+  margin-bottom: 16px;
+}
+
+.rate-button__body {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+.rate-button__group {
+  position: relative;
+  width: 100px;
+  height: 19px;
+  margin-right: 20px;
+  background-size: 20px auto;
+  background-repeat: repeat-x;
+}
+.rate-button__input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+.rate-button__input:checked + .rate-button__star, .rate-button__input:hover + .rate-button__star {
+  background-image: url(/star.bd8406fa.svg);
+}
+.rate-button__star {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 19px;
+  width: 19px;
+  background-image: url(/star_border.ae40f44b.svg);
+  background-repeat: repeat-x;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+.rate-button__star:nth-of-type(1) {
+  z-index: 5;
+  width: 20px;
+}
+.rate-button__star:nth-of-type(2) {
+  z-index: 4;
+  width: 40px;
+}
+.rate-button__star:nth-of-type(3) {
+  z-index: 3;
+  width: 60px;
+}
+.rate-button__star:nth-of-type(4) {
+  z-index: 2;
+  width: 80px;
+}
+.rate-button__star:nth-of-type(5) {
+  width: 100px;
+  z-index: 1;
+}
+.rate-button__star:hover ~ .rate-button__star {
+  background-image: url(/star_border.ae40f44b.svg);
+}
+
 @font-face {
   font-family: "Montserrat";
-  src: url("Montserrat-Bold.70d570c7.eot");
-  src: local("☺"), url("Montserrat-Bold.73e94c2c.woff") format("woff"), url("Montserrat-Bold.f3410305.ttf") format("truetype"), url("Montserrat-Bold.0fff2121.svg") format("svg");
+  src: url("/Montserrat-Bold.70d570c7.eot");
+  src: local("☺"), url("/Montserrat-Bold.73e94c2c.woff") format("woff"), url("/Montserrat-Bold.f3410305.ttf") format("truetype"), url("/Montserrat-Bold.0fff2121.svg") format("svg");
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
   font-family: "Montserrat";
-  src: url("Montserrat-Regular.21b801b8.eot");
-  src: local("☺"), url("Montserrat-Regular.1b35f2ae.woff") format("woff"), url("Montserrat-Regular.44e710c1.ttf") format("truetype"), url("Montserrat-Regular.6f6bdac5.svg") format("svg");
+  src: url("/Montserrat-Regular.21b801b8.eot");
+  src: local("☺"), url("/Montserrat-Regular.1b35f2ae.woff") format("woff"), url("/Montserrat-Regular.44e710c1.ttf") format("truetype"), url("/Montserrat-Regular.6f6bdac5.svg") format("svg");
   font-weight: 400;
   font-style: normal;
 }
