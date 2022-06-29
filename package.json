@@ -23,8 +23,11 @@
   "dependencies": {
     "add": "^2.0.6",
     "air-datepicker": "^3.2.0",
+    "canvas": "^2.9.3",
     "item-quantity-dropdown": "^2.1.0",
     "jquery": "^3.6.0",
-    "nouislider": "^15.6.0"
+    "jsdom": "^20.0.0",
+    "nouislider": "^15.6.0",
+    "paginationjs": "^2.1.5"
   }
 }

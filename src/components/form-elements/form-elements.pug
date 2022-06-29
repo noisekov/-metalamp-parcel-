@@ -123,22 +123,13 @@
                             input#dch1(type="checkbox")
                             label(for="dch1") Завтрак
                         li  
-                            input#dch2(
-                                type="checkbox"
-                                checked
-                                )
+                            input#dch2(type="checkbox" checked)
                             label(for="dch2") Письменный стол
                         li 
-                            input#dch3(
-                                type="checkbox"
-                                checked
-                                )
+                            input#dch3(type="checkbox" checked)
                             label(for="dch3") Стул для кормления
                         li  
-                            input#dch4(
-                                type="checkbox"
-                                checked
-                                )
+                            input#dch4(type="checkbox" checked)
                             label(for="dch4") Кроватка
                         li  
                             input#dch5(type="checkbox")
@@ -156,16 +147,10 @@
                             input#cb1(type="checkbox")
                             label(for="cb1") Можно курить
                         li  
-                            input#cb2(
-                                type="checkbox"
-                                checked
-                                )
+                            input#cb2(type="checkbox" checked)
                             label(for="cb2") Можно с питомцами
                         li 
-                            input#cb3(
-                                type="checkbox"
-                                checked
-                                )
+                            input#cb3(type="checkbox" checked)
                             label(for="cb3") Можно пригласить гостей <br> (до 10 человек)
             .form-elements__radio-buttons
                 form(action="")
@@ -173,41 +158,17 @@
                         label.text-field__name(for="radio-buttons") Radio Buttons
                     ul.text-field__radio-buttons
                         li 
-                            input#rb1(
-                                type="radio"
-                                name="rb"
-                                checked
-                                )
+                            input#rb1(type="radio" name="rb" checked)
                             label(for="rb1") Мужчина 
                         li 
-                            input#rb2(
-                                type="radio"
-                                name="rb"
-                                )
+                            input#rb2(type="radio" name="rb")
                             label(for="rb2") Женщина 
             .form-elements__toggle
                 include ../toggle/toggle.pug
             .form-elements__like-button
                 include ../like-button/like-button.pug
             .form-elements__rate-button
-                form(action="")
-                    .text-field__body.checkbox-buttons_position-star
-                        label.text-field__name(for="rate-button") Rate button
-                    .text-field__rate-button
-                        .text-field__rate-button-block
-                            span.material-icons_star.material-icons star
-                            span.material-icons_star.material-icons star
-                            span.material-icons_star.material-icons star
-                            span.material-icons_star.material-icons star
-                            span.material-icons_star.material-icons star_border
-                            //- input(type="checkbox" class="rate" id="rb1")
-                        .text-field__rate-button-block
-                            span.material-icons_star.material-icons star
-                            span.material-icons_star.material-icons star
-                            span.material-icons_star.material-icons star
-                            span.material-icons_star.material-icons star
-                            span.material-icons_star.material-icons star
-                            //- input(type="checkbox" class="rate" id="rb1")
+                include ../rate-button/rate-button.pug
             .form-elements__dropdown
                 form(action="").position-filter320
                     .text-field__header

@@ -7,5 +7,5 @@ import './components/expandable-checkbox/expandable-checkbox';
 import './components/dropdown-default/dropdown-default';
 import './components/like-button/like-button';
 
-import 'item-quantity-dropdown';
-import 'item-quantity-dropdown/lib/item-quantity-dropdown.css';
+import jquery from "jquery";
+export default (window.$ = window.jQuery = jquery);

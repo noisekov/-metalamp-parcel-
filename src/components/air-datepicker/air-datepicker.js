@@ -21,6 +21,21 @@ calInTwo = new AirDatepicker('#cal-two-input',{
    buttons: ['clear', apply],
    selectedDates:[]
 });
+calInTwo = new AirDatepicker('#cal-two-input-find-number',{
+   range: true,
+   multipleDatesSeparator: '-',
+   inline: false,
+   buttons: ['clear', apply],
+   selectedDates:[]
+});
+calInTwo = new AirDatepicker('#cal-two-input-choice',{
+   range: true,
+   multipleDatesSeparator: '-',
+   inline: false,
+   buttons: ['clear', apply],
+   selectedDates:[]
+});
+
 
 onePicker = new AirDatepicker('#one-picker',{
    range: true,

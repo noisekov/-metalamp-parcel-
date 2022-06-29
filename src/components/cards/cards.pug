@@ -28,12 +28,27 @@
                             .find-number__name №<span>840</span> <span></span>
                             .find-number__title <span>9 990₽</span> в сутки
                         .appartment-feedback
-                            .appartment__rate-button-block
-                                span.material-icons_star.material-icons star
-                                span.material-icons_star.material-icons star
-                                span.material-icons_star.material-icons star
-                                span.material-icons_star.material-icons star
-                                span.material-icons_star.border.material-icons star_border
+                            fieldset
+                                .rate-button__group
+                                    input.rate-button__input(type="radio" name="star-third" value="1" id="star-app-second-1")
+                                    label.rate-button__star(for="star-app-second-1" aria-label="the worst") 
+                                        //- span.material-icons_star.material-icons star
+
+                                    input.rate-button__input(type="radio" name="star-third" value="2" id="star-app-second-2")
+                                    label.rate-button__star(for="star-app-second-2" aria-label="bad") 
+                                        //- span.material-icons_star.material-icons star
+
+                                    input.rate-button__input(type="radio" name="star-third" value="3" id="star-app-second-3")
+                                    label.rate-button__star(for="star-app-second-3" aria-label="normal") 
+                                        //- span.material-icons_star.material-icons star  
+
+                                    input.rate-button__input(type="radio" name="star-third" value="4" id="star-app-second-4" checked)
+                                    label.rate-button__star(for="star-app-second-4" aria-label="good") 
+                                        //- span.material-icons_star.material-icons star
+
+                                    input.rate-button__input(type="radio" name="star-third" value="5" id="star-app-second-5" )
+                                    label.rate-button__star(for="star-app-second-5" aria-label="perfect") 
+                                        //- span.material-icons_star.material-icons star
                             .appartment-block <span>65</span> Отзывов
             
                     

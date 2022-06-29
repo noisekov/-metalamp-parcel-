@@ -41,7 +41,7 @@
         margin-bottom: 37px;
     }
     &__rate-button {
-        margin-bottom: 196px;
+        margin-bottom: 199px;
     }
     &__pagination {
         margin-bottom: 212px;
@@ -389,13 +389,6 @@
         }
     }
     //text-field
-    &__rate-button{
-        display: flex;
-        flex-direction: row;
-        &-block {
-            margin-right: 20px;
-        }
-    }
 }
 .date { 
     display: flex;
@@ -438,16 +431,6 @@
         font-size: 10px;
         z-index: 1;
         color: #BC9CFF;
-    }
-    &_star {
-        position: relative;
-        font-size: 24px;
-        right: 2px;
-        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        text-fill-color: transparent;
     }
     &_arrow {
         top: -3px;
@@ -516,9 +499,6 @@
 }
 .checkbox-buttons_position{
     margin-bottom: 17px;
-    &-star {
-        margin-bottom: 10px;
-    }
 }
 .review {
     display: flex;

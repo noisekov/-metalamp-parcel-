@@ -19,10 +19,25 @@
                 .find-number__name №<span>888</span> <span>люкс</span>
                 .find-number__title <span>9 990₽</span> в сутки
             .appartment-feedback
-                .appartment__rate-button-block
-                    span.material-icons_star.material-icons star
-                    span.material-icons_star.material-icons star
-                    span.material-icons_star.material-icons star
-                    span.material-icons_star.material-icons star
-                    span.material-icons_star.material-icons star
+                fieldset
+                    .rate-button__group
+                        input.rate-button__input(type="radio" name="star-second" value="1" id="star-app-1")
+                        label.rate-button__star(for="star-app-1" aria-label="the worst") 
+                            //- span.material-icons_star.material-icons star
+
+                        input.rate-button__input(type="radio" name="star-second" value="2" id="star-app-2")
+                        label.rate-button__star(for="star-app-2" aria-label="bad") 
+                            //- span.material-icons_star.material-icons star
+
+                        input.rate-button__input(type="radio" name="star-second" value="3" id="star-app-3")
+                        label.rate-button__star(for="star-app-3" aria-label="normal") 
+                            //- span.material-icons_star.material-icons star  
+
+                        input.rate-button__input(type="radio" name="star-second" value="4" id="star-app-4" )
+                        label.rate-button__star(for="star-app-4" aria-label="good") 
+                            //- span.material-icons_star.material-icons star
+
+                        input.rate-button__input(type="radio" name="star-second" value="5" id="star-app-5" checked)
+                        label.rate-button__star(for="star-app-5" aria-label="perfect") 
+                            //- span.material-icons_star.material-icons star
                 .appartment-block <span>145</span> Отзывов
