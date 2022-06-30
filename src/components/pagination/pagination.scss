@@ -4,31 +4,34 @@
         line-height: 40px;
         color: rgba(31, 32, 65, 0.5);
         margin-bottom: 11px;
-        & button {
-            display: inline-block;
-            align-items: center;
-            text-align: center;
+    } 
+    &__button {
+        display: inline-block;
+        align-items: center;
+        text-align: center;
+        width: 40px;
+        height: 40px;
+        background: #ffffff;
+        &_active {
+            color: #fff;
             width: 40px;
             height: 40px;
-            background: #ffffff;
-            &:first-child{
-                display: none;
-                position: relative;
-                border-radius: 22px;
-                top: -4px;
-            }
-            &:nth-child(2) {
-                color: #fff;
-                background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-                border-radius: 22px;
-            }
-            &:last-child {
-                position: relative;
-                padding-top: 10px;
-                background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
-                border-radius: 22px;
-            }
-        } 
+            background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+            border-radius: 22px;
+        }
+        &:first-child{
+            display: none;
+            position: relative;
+            border-radius: 22px;
+            background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+            top: -4px;
+        }
+        &:last-child {
+            position: relative;
+            padding-top: 10px;
+            background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+            border-radius: 22px;
+        }
     }
     &__count {
         line-height: 24px;
@@ -40,12 +43,12 @@
 }
 .material-icons_pagination-right {
     top: 7px;
-    left: 2px;
+    left: 8px;
     color: #ffffff;
 }
 .material-icons_pagination-left {
     top: 7px;
-    left: 2px;
+    left: 8px;
     color: #ffffff;
     transform:rotate(180deg)
 }
