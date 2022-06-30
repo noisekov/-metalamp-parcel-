@@ -1,25 +1,27 @@
 .appartment.cards-position40
-    .appartment__img 
+    .appartment__photo
         ul 
-            li: img(src="images/appartment1.png", alt="appartment")
-            li 
-            li 
-            li 
-        .appartment__img-slider-bar 
+            li.appartment__img: img(src="images/appartment1.png", alt="appartment")
+            li.appartment__img: img(src="images/appartment2.png", alt="appartment2") 
+            li.appartment__img: img(src="images/appartment1.png", alt="appartment") 
+            li.appartment__img: img(src="images/appartment2.png", alt="appartment2") 
+        .appartment__slider-bar 
             ul 
-                li 
-                li 
-                li 
-                li 
-        span.material-icons.material-icons_img-right expand_more
-        span.material-icons.material-icons_img-left expand_more
+                li.appartment__slider-bar-dots
+                li.appartment__slider-bar-dots 
+                li.appartment__slider-bar-dots
+                li.appartment__slider-bar-dots
+        button#js-slide-left 
+            span.material-icons.material-icons_img-left expand_more
+        button#js-slide-right 
+            span.material-icons.material-icons_img-right expand_more
     .appartment__body 
         .appartment__title 
             .find-number__header.cards-position20
                 .find-number__name №<span>888</span> <span>люкс</span>
                 .find-number__title <span>9 990₽</span> в сутки
             .appartment-feedback
-                fieldset
+                fieldset    
                     .rate-button__group
                         input.rate-button__input(type="radio" name="star-second" value="1" id="star-app-1")
                         label.rate-button__star(for="star-app-1" aria-label="the worst") 

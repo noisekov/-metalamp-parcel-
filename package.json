@@ -28,6 +28,7 @@
     "jquery": "^3.6.0",
     "jsdom": "^20.0.0",
     "nouislider": "^15.6.0",
-    "paginationjs": "^2.1.5"
+    "paginationjs": "^2.1.5",
+    "slick-carousel": "^1.8.1"
   }
 }

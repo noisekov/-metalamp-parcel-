@@ -6,6 +6,9 @@ import './components/air-datepicker/air-datepicker';
 import './components/expandable-checkbox/expandable-checkbox';
 import './components/dropdown-default/dropdown-default';
 import './components/like-button/like-button';
+import './components/cards/cards';
+import './components/appartment/appartment';
 
-import jquery from "jquery";
-export default (window.$ = window.jQuery = jquery);
+import $ from "jquery";
+export default (window.$ = window.jQuery = $);
+

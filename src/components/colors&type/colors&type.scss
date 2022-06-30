@@ -42,57 +42,54 @@ h3 {
     &:last-child{
         margin-bottom: 0;
     }
-    &-first{
+    &__dark-shade-100{
         width: 70px;
         height: 70px;
         border-radius: 6px;
         margin-right: 40px;
         background-color: $darkshade;
     }
-    &-second{
+    &__dark-shade-75{
         width: 70px;
         height: 70px;
         border-radius: 6px;
         margin-right: 40px;
         background-color: $darkshade75;
     }
-    &-third{
+    &__dark-shade-50{
         width: 70px;
         height: 70px;
         border-radius: 6px;
         margin-right: 40px;
         background-color: $darkshade5;
     }
-    &-fourth{
+    &__dark-shade-25{
         width: 70px;
         height: 70px;
         border-radius: 6px;
         margin-right: 40px;
         background-color: $darkshade25;
     }
-    &-fifth{
+    &__dark-shade-5{
         width: 70px;
         height: 70px;
         border-radius: 6px;
         margin-right: 40px;
         background-color: $darkshade05;
     }
-    &-sixth{
+    &__purple{
         width: 70px;
         height: 70px;
         border-radius: 6px;
         margin-right: 40px;
         background-color: $purple;
     }
-    &-seventh{
+    &__green{
         width: 70px;
         height: 70px;
         border-radius: 6px;
         margin-right: 40px;
         background-color: $green;
-    }
-    // .block-color__body
-    &__body_s {
     }
     // .block-color__body-name
     &__body-name {
