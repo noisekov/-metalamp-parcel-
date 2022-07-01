@@ -2518,6 +2518,7 @@ btnMinus.addEventListener('click', function (e) {
   if (parseInt(countValue.innerHTML) - 1 >= 0) {
     count = parseInt(countValue.innerHTML) - 1;
     countValue.innerHTML = count;
+    textInput.value = count + ' Взрослых';
   } else {
     textInput.value = "";
   }
@@ -2525,19 +2526,16 @@ btnMinus.addEventListener('click', function (e) {
   if (count === 0) {
     textInput.value = "";
   }
-
-  textInput.value = count + ' Взрослых';
 });
 btnPlus.addEventListener('click', function (e) {
   e.preventDefault();
   count = parseInt(countValue.innerHTML) + 1;
   countValue.innerHTML = count;
+  textInput.value = count + ' Взрослых';
 
   if (coun === 0) {
     textInput.value = "";
   }
-
-  textInput.value = count + ' Взрослых';
 }); //----------------
 
 var btnMinusChild = document.querySelector("#btnMinusChild");
@@ -4982,18 +4980,45 @@ function ev(e) {
   }
 }
 },{}],"components/like-button/like-button.js":[function(require,module,exports) {
+//VERSION WITHOUT MATERIAL ICONS EASY VERSION
+// const btnLike = document.querySelectorAll(".like-button");
+// const valueLike = document.querySelector(".like-button__value");
+// let result;
+// document.addEventListener("click", heart)
+// function  heart(e) {
+//     if (e.target.closest("#js-like-button")){
+//         e.preventDefault();
+//         for (let i = 0; i < btnLike.length; i ++){
+//             btnLike[i].classList.toggle(".like-button_active")
+//         }
+//         result = +valueLike.innerHTML;
+//         result++;
+//         valueLike.innerHTML=""
+//         valueLike.innerHTML = result
+//     }  
+// }
+//VERSION WITH MATERIAL ICONS HARD VERSION:D
 var btnLike = document.querySelector("#js-like-color");
 var likeImg = document.querySelector('.material-icons_like');
-var likeLabel = document.querySelector("#js-like-count");
-btnLike.addEventListener("click", function heart(e) {
-  if (e.target.closest("#js-like-color")) {
+var likeLabel = document.querySelector(".js-like-count");
+var result;
+btnLike.addEventListener("click", function () {
+  if (likeImg.textContent == "favorite_border") {
     likeImg.classList.remove('material-icons_like');
     likeImg.classList.add('material-icons_like-color');
     likeImg.innerHTML = "favorite";
+    result = +likeLabel.innerHTML;
+    result++;
+    likeLabel.innerHTML = "";
+    likeLabel.innerHTML = result;
   } else {
-    likeImg.classList.remove('material-icons_like');
-    likeImg.classList.add('material-icons_like-color');
+    likeImg.classList.add('material-icons_like');
+    likeImg.classList.remove('material-icons_like-color');
     likeImg.innerHTML = "favorite_border";
+    result = +likeLabel.innerHTML;
+    result--;
+    likeLabel.innerHTML = "";
+    likeLabel.innerHTML = result;
   }
 });
 },{}],"components/cards/cards.js":[function(require,module,exports) {
@@ -5007,19 +5032,19 @@ var slidePhoto = document.querySelectorAll(".appartment__img");
 
 function showSlideLeft(e) {
   if (e.target.closest("#js-slide-left")) {
-    for (var c = 0; c < slidePhoto.length; c++) {
-      slidePhoto[c].style.left -= parseInt(271) + 'px';
+    for (var i = 0; i < slidePhoto.length; i++) {
+      slidePhoto[i].style.left -= parseInt(271) + 'px';
     }
   }
 }
 
-function showSlideRight(e) {
-  if (e.target.closest("#js-slide-right")) {
+function showSlideRight(ev) {
+  if (ev.target.closest("#js-slide-right")) {
     for (var i = 0; i < slidePhoto.length; i++) {
       slidePhoto[i].style.right += parseInt(271) + 'px';
     }
   }
-} //Поздравляю твой первый гавнослайдер :D который показал что-то
+}
 },{}],"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/node_modules/process/browser.js":[function(require,module,exports) {
 
 // shim for using process in browser
@@ -16178,7 +16203,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61975" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50693" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
