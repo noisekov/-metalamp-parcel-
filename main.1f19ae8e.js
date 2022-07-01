@@ -2505,7 +2505,72 @@ function guest(event) {
     document.querySelector(".js-material-hidden").innerHTML = "expand_more";
     document.querySelector(".text-field__input-guest").style.borderRadius = "4px";
   }
-}
+} //counter
+
+
+var btnMinus = document.querySelector("#btnMinus");
+var btnPlus = document.querySelector("#btnPlus");
+var countValue = document.querySelector("#countValue");
+var count;
+btnMinus.addEventListener('click', function (e) {
+  e.preventDefault();
+
+  if (parseInt(countValue.innerHTML) - 1 >= 0) {
+    count = parseInt(countValue.innerHTML) - 1;
+    countValue.innerHTML = count;
+  } else {
+    textInput.value = "";
+  }
+
+  if (count === 0) {
+    textInput.value = "";
+  }
+
+  textInput.value = count + ' Взрослых';
+});
+btnPlus.addEventListener('click', function (e) {
+  e.preventDefault();
+  count = parseInt(countValue.innerHTML) + 1;
+  countValue.innerHTML = count;
+
+  if (coun === 0) {
+    textInput.value = "";
+  }
+
+  textInput.value = count + ' Взрослых';
+}); //----------------
+
+var btnMinusChild = document.querySelector("#btnMinusChild");
+var btnPlusChild = document.querySelector("#btnPlusChild");
+var countValueChild = document.querySelector("#countValueChild");
+var coun;
+btnMinusChild.addEventListener('click', function (e) {
+  e.preventDefault();
+
+  if (parseInt(countValueChild.innerHTML) - 1 >= 0) {
+    coun = parseInt(countValueChild.innerHTML) - 1;
+    countValueChild.innerHTML = coun;
+    textInput.value = coun + ' Детей';
+  } else {
+    textInput.value = "";
+  }
+
+  if (coun === 0) {
+    textInput.value = "";
+  }
+});
+btnPlusChild.addEventListener('click', function (e) {
+  e.preventDefault();
+  coun = parseInt(countValueChild.innerHTML) + 1;
+  countValueChild.innerHTML = coun;
+  textInput.value = coun + ' Детей';
+
+  if (coun === 0) {
+    textInput.value = "";
+  }
+}); //-----------
+
+var textInput = document.querySelector(".text-field__input-guest");
 },{}],"../node_modules/air-datepicker/air-datepicker.js":[function(require,module,exports) {
 var define;
 function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e14) { throw _e14; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e15) { didErr = true; err = _e15; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
@@ -4919,15 +4984,42 @@ function ev(e) {
 },{}],"components/like-button/like-button.js":[function(require,module,exports) {
 var btnLike = document.querySelector("#js-like-color");
 var likeImg = document.querySelector('.material-icons_like');
-document.addEventListener("click", heart);
-
-function heart(e) {
-  if (e.target.closest('#js-like-color')) {
+var likeLabel = document.querySelector("#js-like-count");
+btnLike.addEventListener("click", function heart(e) {
+  if (e.target.closest("#js-like-color")) {
     likeImg.classList.remove('material-icons_like');
     likeImg.classList.add('material-icons_like-color');
     likeImg.innerHTML = "favorite";
+  } else {
+    likeImg.classList.remove('material-icons_like');
+    likeImg.classList.add('material-icons_like-color');
+    likeImg.innerHTML = "favorite_border";
+  }
+});
+},{}],"components/cards/cards.js":[function(require,module,exports) {
+
+},{}],"components/appartment/appartment.js":[function(require,module,exports) {
+document.addEventListener('click', showSlideLeft);
+document.addEventListener('click', showSlideRight);
+var slideLeft = document.querySelector("#js-slide-left");
+var slideRight = document.querySelector("#js-slide-right");
+var slidePhoto = document.querySelectorAll(".appartment__img");
+
+function showSlideLeft(e) {
+  if (e.target.closest("#js-slide-left")) {
+    for (var c = 0; c < slidePhoto.length; c++) {
+      slidePhoto[c].style.left -= parseInt(271) + 'px';
+    }
   }
 }
+
+function showSlideRight(e) {
+  if (e.target.closest("#js-slide-right")) {
+    for (var i = 0; i < slidePhoto.length; i++) {
+      slidePhoto[i].style.right += parseInt(271) + 'px';
+    }
+  }
+} //Поздравляю твой первый гавнослайдер :D который показал что-то
 },{}],"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/node_modules/process/browser.js":[function(require,module,exports) {
 
 // shim for using process in browser
@@ -16047,6 +16139,10 @@ require("./components/dropdown-default/dropdown-default");
 
 require("./components/like-button/like-button");
 
+require("./components/cards/cards");
+
+require("./components/appartment/appartment");
+
 var _jquery = _interopRequireDefault(require("jquery"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -16054,7 +16150,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var _default = window.$ = window.jQuery = _jquery.default;
 
 exports.default = _default;
-},{"./styles/style.scss":"styles/style.scss","./components/form-elements/form-elements":"components/form-elements/form-elements.js","./components/range-slider/range-slider":"components/range-slider/range-slider.js","./components/dropdown-guest/dropdown-guest":"components/dropdown-guest/dropdown-guest.js","./components/air-datepicker/air-datepicker":"components/air-datepicker/air-datepicker.js","./components/expandable-checkbox/expandable-checkbox":"components/expandable-checkbox/expandable-checkbox.js","./components/dropdown-default/dropdown-default":"components/dropdown-default/dropdown-default.js","./components/like-button/like-button":"components/like-button/like-button.js","jquery":"../node_modules/jquery/dist/jquery.js"}],"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./styles/style.scss":"styles/style.scss","./components/form-elements/form-elements":"components/form-elements/form-elements.js","./components/range-slider/range-slider":"components/range-slider/range-slider.js","./components/dropdown-guest/dropdown-guest":"components/dropdown-guest/dropdown-guest.js","./components/air-datepicker/air-datepicker":"components/air-datepicker/air-datepicker.js","./components/expandable-checkbox/expandable-checkbox":"components/expandable-checkbox/expandable-checkbox.js","./components/dropdown-default/dropdown-default":"components/dropdown-default/dropdown-default.js","./components/like-button/like-button":"components/like-button/like-button.js","./components/cards/cards":"components/cards/cards.js","./components/appartment/appartment":"components/appartment/appartment.js","jquery":"../node_modules/jquery/dist/jquery.js"}],"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -16082,7 +16178,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65115" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61975" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
