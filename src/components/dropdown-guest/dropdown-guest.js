@@ -24,22 +24,23 @@ btnMinus.addEventListener('click', function (e){
    if (parseInt(countValue.innerHTML)- 1 >= 0){
       count = parseInt(countValue.innerHTML) - 1;
       countValue.innerHTML = count;
+      textInput.value = count + ' Взрослых'
    } else {
       textInput.value = ""
    }
    if (count === 0){
       textInput.value = ""
    }
-   textInput.value = count + ' Взрослых'
+   
 })
 btnPlus.addEventListener('click', function (e){
    e.preventDefault();
    count = parseInt(countValue.innerHTML) + 1;
    countValue.innerHTML = count;
+   textInput.value = count + ' Взрослых'
    if (coun === 0){
       textInput.value = ""
    }
-   textInput.value = count + ' Взрослых'
 })
 //----------------
 const btnMinusChild = document.querySelector("#btnMinusChild");

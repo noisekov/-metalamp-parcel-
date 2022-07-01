@@ -6,28 +6,98 @@
         color: rgba(31, 32, 65, 0.25);
         position: relative; 
     }
-}
-.like-button {
-    display: inline-block;
-    padding-left: 14px;
-    color: rgba(31, 32, 65, 0.25);
-    cursor: pointer;
-    width: 40px;
-    height: 20px;
-    background: inherit;
-    border: 1px solid rgba(31, 32, 65, 0.25);
-    border-radius: 10px;
-    background: url(/images/favorite_border.svg) 6px 5.5px no-repeat;
-    &.\.like-button_active {
+    & input.like[type="checkbox"]:checked,
+    input.like[type="checkbox"]:not(:checked){
+       position: absolute;
+       opacity: 0;
+       visibility: hidden;
+       z-index: -1;
+   }
+   & input.like[type="checkbox"]:checked + label{
+        position: relative;
+        padding-left: 22px;
+        line-height: 20px;
         display: inline-block;
-        padding-left: 14px;
-        color: #8BA4F9;
+        color: rgba(31, 32, 65, 0.25);
         cursor: pointer;
         width: 40px;
         height: 20px;
-        background: inherit;
+        color: #BC9CFF;
+        border-radius: 10px;
+    }
+    input.like[type="checkbox"]:not(:checked) + label{
+        position: relative;
+        display: inline-block;
+        padding-left: 22px;
+        width: 40px;
+        height: 20px;
+        line-height: 20px;
+        border-radius: 10px;
+        cursor: pointer;
+   }
+   & input.like[type="checkbox"]:not(:checked) + label::before{
+       content: "";
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 40px;
+       height: 20px;
+       border: 1px solid rgba(31, 32, 65, 0.25);
+       border-radius: 10px;
+       z-index: 2;
+   }
+   & input.like[type="checkbox"]:checked + label::before{    
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 40px;
+        height: 20px;
         border: 1px solid #8BA4F9;
         border-radius: 10px;
-        background: url(/images/favorite.svg) 6px 5.5px no-repeat;
-    }
+        z-index: 2;
+        &_position-like{
+            position: relative;
+        }
+   }
 }
+.material-icons_like {
+    top: 5px;
+    left: 5px;
+    font-size: 10px;
+    z-index: 1;
+}
+.material-icons_like-color {
+    top: 5px;
+    left: 5px;
+    font-size: 10px;
+    z-index: 1;
+    color: #BC9CFF;
+}
+
+
+//VERSION WITHOUT MATERIAL ICONS - EASY VERSION
+// .like-button {
+//     display: inline-block;
+//     padding-left: 14px;
+//     color: rgba(31, 32, 65, 0.25);
+//     cursor: pointer;
+//     width: 40px;
+//     height: 20px;
+//     background: inherit;
+//     border: 1px solid rgba(31, 32, 65, 0.25);
+//     border-radius: 10px;
+//     background: url(/images/favorite_border.svg) 6px 5.5px no-repeat;
+//     &.\.like-button_active {
+//         display: inline-block;
+//         padding-left: 14px;
+//         color: #8BA4F9;
+//         cursor: pointer;
+//         width: 40px;
+//         height: 20px;
+//         background: inherit;
+//         border: 1px solid #8BA4F9;
+//         border-radius: 10px;
+//         background: url(/images/favorite.svg) 6px 5.5px no-repeat;
+//     }
+// }

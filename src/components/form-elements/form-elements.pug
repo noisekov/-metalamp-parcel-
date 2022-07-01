@@ -6,7 +6,7 @@
                 form(action="/").position-filter320
                     .text-field__header
                         label.text-field__name(for="field") Text field 
-                        label.text-field__name-fn default 
+                        span.text-field__name-fn default 
                     input#field.text-field__input.position-input-large-area(
                         type="text" 
                         placeholder="Email" 
@@ -15,7 +15,7 @@
                 form(action="/").position-filter320
                     .text-field__header  
                         label.text-field__name(for="field_active") Text field
-                        label.text-field__name-fn Hover / Focus 
+                        span.text-field__name-fn Hover / Focus 
                     input#field_active.text-field__input_active.position-input-large-area(
                         type="text" 
                         placeholder="This is pretty awesome"
@@ -304,6 +304,12 @@
             .review__body
                 .text-field__like-button.review__block
                     .text-field__like-button-block.text-field__like-button-block_position-like.position-mr14#js-like-color
-                        button#js-like-button.like-button 
-                            span.like-button__value 12
+                        //- button#js-like-button.like-button 
+                        //-     span.like-button__value 12
+                        span.material-icons.material-icons_like favorite
+                        input#lb3.like(
+                            type="checkbox"
+                            checked
+                            )
+                        label(for="lb3") 12 
                 p Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.
