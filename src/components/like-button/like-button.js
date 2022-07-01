@@ -20,17 +20,25 @@
 //VERSION WITH MATERIAL ICONS HARD VERSION:D
 const btnLike = document.querySelector("#js-like-color");
 const likeImg = document.querySelector('.material-icons_like');
-const likeLabel = document.querySelector("#js-like-count");
-
+const likeLabel = document.querySelector(".js-like-count");
+let result;
 btnLike.addEventListener("click", function(){
     if (likeImg.textContent == "favorite_border"){
         likeImg.classList.remove('material-icons_like')
         likeImg.classList.add('material-icons_like-color')
         likeImg.innerHTML = "favorite";
+        result = +likeLabel.innerHTML;
+        result++;
+        likeLabel.innerHTML=""
+        likeLabel.innerHTML = result
     } else {
         likeImg.classList.add('material-icons_like')
         likeImg.classList.remove('material-icons_like-color')
         likeImg.innerHTML = "favorite_border";
+        result = +likeLabel.innerHTML;
+        result--;
+        likeLabel.innerHTML=""
+        likeLabel.innerHTML = result
     }
 })
 
