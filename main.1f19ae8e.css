@@ -3258,7 +3258,7 @@ body {
 
 .wrapper {
   margin: 0 auto;
-  min-width: 1440px;
+  width: 1440px;
 }
 
 .first-logo {
