@@ -18,27 +18,50 @@
 
 
 //VERSION WITH MATERIAL ICONS HARD VERSION:D
-const btnLike = document.querySelector("#js-like-color");
-const likeImg = document.querySelector('.material-icons_like');
-const likeLabel = document.querySelector(".js-like-count");
-let result;
-btnLike.addEventListener("click", function(){
-    if (likeImg.textContent == "favorite_border"){
-        likeImg.classList.remove('material-icons_like')
-        likeImg.classList.add('material-icons_like-color')
-        likeImg.innerHTML = "favorite";
-        result = +likeLabel.innerHTML;
-        result++;
-        likeLabel.innerHTML=""
-        likeLabel.innerHTML = result
-    } else {
-        likeImg.classList.add('material-icons_like')
-        likeImg.classList.remove('material-icons_like-color')
-        likeImg.innerHTML = "favorite_border";
-        result = +likeLabel.innerHTML;
-        result--;
-        likeLabel.innerHTML=""
-        likeLabel.innerHTML = result
-    }
+const btnsLike = document.querySelectorAll("#js-like-color");
+const likeImg = document.querySelectorAll('.material-icons_like');
+const likeLabel = document.querySelectorAll(".js-like-count");
+
+btnsLike.forEach(function(btn, i){
+    btn.addEventListener("click", function(){
+        let resultLikeCount;
+        if (likeImg[i].textContent == "favorite_border"){
+            likeImg[i].classList.remove('material-icons_like');
+            likeImg[i].classList.add('material-icons_like-color');
+            likeImg[i].innerHTML = "favorite";
+            resultLikeCount = +likeLabel[i].innerHTML;
+            resultLikeCount++;
+        } else {
+            likeImg[i].classList.add('material-icons_like');
+            likeImg[i].classList.remove('material-icons_like-color');
+            likeImg[i].innerHTML = "favorite_border";
+            resultLikeCount = +likeLabel[i].innerHTML;
+            resultLikeCount--;  
+        }
+        likeLabel[i].innerHTML="";
+        likeLabel[i].innerHTML = resultLikeCount;
+    })
 })
 
+//ES5
+// for (let i = 0; i < btnsLike.length; i++ ){
+//     btnsLike[i].addEventListener("click", function(){
+//         if (likeImg[i].textContent == "favorite_border"){
+//             likeImg[i].classList.remove('material-icons_like');
+//             likeImg[i].classList.add('material-icons_like-color');
+//             likeImg[i].innerHTML = "favorite";
+//             resultLikeCount = +likeLabel[i].innerHTML;
+//             resultLikeCount++;
+//             likeLabel[i].innerHTML="";
+//             likeLabel[i].innerHTML = resultLikeCount;
+//         } else {
+//             likeImg[i].classList.add('material-icons_like');
+//             likeImg[i].classList.remove('material-icons_like-color');
+//             likeImg[i].innerHTML = "favorite_border";
+//             resultLikeCount = +likeLabel[i].innerHTML;
+//             resultLikeCount--;
+//             likeLabel[i].innerHTML="";
+//             likeLabel[i].innerHTML = resultLikeCount;   
+//         }
+//     })
+// }
