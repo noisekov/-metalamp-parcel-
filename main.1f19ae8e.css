@@ -2926,6 +2926,7 @@ h3 {
   line-height: 12px;
   color: rgba(31, 32, 65, 0.25);
   position: relative;
+  user-select: none;
 }
 .text-field__like-button input.like[type=checkbox]:checked,
 .text-field__like-button input.like[type=checkbox]:not(:checked) {
