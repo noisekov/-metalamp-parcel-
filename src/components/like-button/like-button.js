@@ -22,7 +22,7 @@ const btnsLike = document.querySelectorAll("#js-like-color");
 const likeImg = document.querySelectorAll('.material-icons_like');
 const likeLabel = document.querySelectorAll(".js-like-count");
 
-btnsLike.forEach(function(btn, i){
+btnsLike.forEach((btn, i) =>{
     btn.addEventListener("click", function(){
         let resultLikeCount;
         if (likeImg[i].textContent == "favorite_border"){

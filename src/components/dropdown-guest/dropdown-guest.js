@@ -1,6 +1,7 @@
 //dropdown-guest
 const dropdownGuest = document.querySelectorAll(".text-field__block-list-hidden");
 document.addEventListener("click", guest)
+
 function guest (event) {
    if (event.target.closest(".js-input-guest")){
       for (let i=0; i < dropdownGuest.length; i++) {
@@ -13,6 +14,7 @@ function guest (event) {
       document.querySelector(".text-field__input-guest").style.borderRadius = "4px";
    }
 }
+
 //counter
 const btnMinus = document.querySelector("#btnMinus");
 const btnPlus = document.querySelector("#btnPlus");
