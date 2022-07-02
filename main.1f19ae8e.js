@@ -4998,29 +4998,52 @@ function ev(e) {
 //     }  
 // }
 //VERSION WITH MATERIAL ICONS HARD VERSION:D
-var btnLike = document.querySelector("#js-like-color");
-var likeImg = document.querySelector('.material-icons_like');
-var likeLabel = document.querySelector(".js-like-count");
-var result;
-btnLike.addEventListener("click", function () {
-  if (likeImg.textContent == "favorite_border") {
-    likeImg.classList.remove('material-icons_like');
-    likeImg.classList.add('material-icons_like-color');
-    likeImg.innerHTML = "favorite";
-    result = +likeLabel.innerHTML;
-    result++;
-    likeLabel.innerHTML = "";
-    likeLabel.innerHTML = result;
-  } else {
-    likeImg.classList.add('material-icons_like');
-    likeImg.classList.remove('material-icons_like-color');
-    likeImg.innerHTML = "favorite_border";
-    result = +likeLabel.innerHTML;
-    result--;
-    likeLabel.innerHTML = "";
-    likeLabel.innerHTML = result;
-  }
-});
+var btnsLike = document.querySelectorAll("#js-like-color");
+var likeImg = document.querySelectorAll('.material-icons_like');
+var likeLabel = document.querySelectorAll(".js-like-count");
+btnsLike.forEach(function (btn, i) {
+  btn.addEventListener("click", function () {
+    var resultLikeCount;
+
+    if (likeImg[i].textContent == "favorite_border") {
+      likeImg[i].classList.remove('material-icons_like');
+      likeImg[i].classList.add('material-icons_like-color');
+      likeImg[i].innerHTML = "favorite";
+      resultLikeCount = +likeLabel[i].innerHTML;
+      resultLikeCount++;
+    } else {
+      likeImg[i].classList.add('material-icons_like');
+      likeImg[i].classList.remove('material-icons_like-color');
+      likeImg[i].innerHTML = "favorite_border";
+      resultLikeCount = +likeLabel[i].innerHTML;
+      resultLikeCount--;
+    }
+
+    likeLabel[i].innerHTML = "";
+    likeLabel[i].innerHTML = resultLikeCount;
+  });
+}); //ES5
+// for (let i = 0; i < btnsLike.length; i++ ){
+//     btnsLike[i].addEventListener("click", function(){
+//         if (likeImg[i].textContent == "favorite_border"){
+//             likeImg[i].classList.remove('material-icons_like');
+//             likeImg[i].classList.add('material-icons_like-color');
+//             likeImg[i].innerHTML = "favorite";
+//             resultLikeCount = +likeLabel[i].innerHTML;
+//             resultLikeCount++;
+//             likeLabel[i].innerHTML="";
+//             likeLabel[i].innerHTML = resultLikeCount;
+//         } else {
+//             likeImg[i].classList.add('material-icons_like');
+//             likeImg[i].classList.remove('material-icons_like-color');
+//             likeImg[i].innerHTML = "favorite_border";
+//             resultLikeCount = +likeLabel[i].innerHTML;
+//             resultLikeCount--;
+//             likeLabel[i].innerHTML="";
+//             likeLabel[i].innerHTML = resultLikeCount;   
+//         }
+//     })
+// }
 },{}],"components/cards/cards.js":[function(require,module,exports) {
 
 },{}],"components/appartment/appartment.js":[function(require,module,exports) {
@@ -5033,7 +5056,7 @@ var slidePhoto = document.querySelectorAll(".appartment__img");
 function showSlideLeft(e) {
   if (e.target.closest("#js-slide-left")) {
     for (var i = 0; i < slidePhoto.length; i++) {
-      slidePhoto[i].style.left -= parseInt(271) + 'px';
+      slidePhoto[i].style.left -= +271 + 'px';
     }
   }
 }
@@ -5041,7 +5064,7 @@ function showSlideLeft(e) {
 function showSlideRight(ev) {
   if (ev.target.closest("#js-slide-right")) {
     for (var i = 0; i < slidePhoto.length; i++) {
-      slidePhoto[i].style.right += parseInt(271) + 'px';
+      slidePhoto[i].style.right += +271 + 'px';
     }
   }
 }
@@ -16203,7 +16226,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50693" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50283" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

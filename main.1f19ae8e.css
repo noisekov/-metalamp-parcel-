@@ -3204,7 +3204,7 @@ h3 {
   clip: rect(0 0 0 0);
 }
 .rate-button__input:checked + .rate-button__star, .rate-button__input:hover + .rate-button__star {
-  background-image: url(star.bd8406fa.svg);
+  background-image: url(/star.bd8406fa.svg);
 }
 .rate-button__star {
   position: absolute;
@@ -3212,7 +3212,7 @@ h3 {
   left: 0;
   height: 19px;
   width: 19px;
-  background-image: url(star_border.ae40f44b.svg);
+  background-image: url(/star_border.ae40f44b.svg);
   background-repeat: repeat-x;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -3240,20 +3240,20 @@ h3 {
   z-index: 1;
 }
 .rate-button__star:hover ~ .rate-button__star {
-  background-image: url(star_border.ae40f44b.svg);
+  background-image: url(/star_border.ae40f44b.svg);
 }
 
 @font-face {
   font-family: "Montserrat";
   src: url("/Montserrat-Bold.70d570c7.eot");
-  src: local("☺"), url("Montserrat-Bold.73e94c2c.woff") format("woff"), url("Montserrat-Bold.f3410305.ttf") format("truetype"), url("Montserrat-Bold.0fff2121.svg") format("svg");
+  src: local("☺"), url("/Montserrat-Bold.73e94c2c.woff") format("woff"), url("/Montserrat-Bold.f3410305.ttf") format("truetype"), url("/Montserrat-Bold.0fff2121.svg") format("svg");
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
   font-family: "Montserrat";
   src: url("/Montserrat-Regular.21b801b8.eot");
-  src: local("☺"), url("Montserrat-Regular.1b35f2ae.woff") format("woff"), url("Montserrat-Regular.44e710c1.ttf") format("truetype"), url("Montserrat-Regular.6f6bdac5.svg") format("svg");
+  src: local("☺"), url("/Montserrat-Regular.1b35f2ae.woff") format("woff"), url("/Montserrat-Regular.44e710c1.ttf") format("truetype"), url("/Montserrat-Regular.6f6bdac5.svg") format("svg");
   font-weight: 400;
   font-style: normal;
 }
@@ -3279,7 +3279,7 @@ body {
 }
 
 .landing-page {
-  background: url(landing-page.132ca506.jpg) no-repeat;
+  background: url(/landing-page.132ca506.jpg) no-repeat;
   position: relative;
   height: 900px;
   display: block;
@@ -3303,7 +3303,7 @@ body {
 }
 
 .sign-in {
-  background: url(registration.df813697.jpg) no-repeat;
+  background: url(/registration.df813697.jpg) no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -3311,7 +3311,7 @@ body {
 }
 
 .reg {
-  background: url(registration.df813697.jpg) no-repeat;
+  background: url(/registration.df813697.jpg) no-repeat;
   height: 683px;
   display: flex;
   justify-content: center;
