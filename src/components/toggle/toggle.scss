@@ -2,22 +2,22 @@
     & li {
         margin-bottom: 14px;
     }
-    & input.switch[type="checkbox"]:checked,
-     input.switch[type="checkbox"]:not(:checked){
+    & .switch:checked,
+     .switch:not(:checked){
         position: absolute;
         opacity: 0;
         visibility: hidden;
         z-index: -1;
     }
-    & input.switch[type="checkbox"]:checked + label,
-     input.switch[type="checkbox"]:not(:checked) + label{
+    & .switch:checked + label,
+     .switch:not(:checked) + label{
         position: relative;
         display: inline-block;
         padding-left: 50px;
         line-height: 21px;
         cursor: pointer;
     }
-    & input.switch[type="checkbox"]:not(:checked) + label::before{
+    & .switch:not(:checked) + label::before{
         content: "";
         position: absolute;
         top: 0;
@@ -27,7 +27,7 @@
         border: 1px solid rgba(31, 32, 65, 0.25);
         border-radius: 10px;
     }
-    & input.switch[type="checkbox"]:checked + label::before{    
+    & .switch:checked + label::before{    
         content: "";
         position: absolute;
         top: 0;
@@ -37,7 +37,7 @@
         border: 1px solid #8BA4F9;
         border-radius: 10px;
     }
-    & input.switch[type="checkbox"]:not(:checked) + label::after{
+    & .switch:not(:checked) + label::after{
         content: "";
         position: absolute;
         top: 3px;
@@ -51,7 +51,7 @@
         -o-transition: all 0.2s ease;
         transition: all 0.2s ease;
     }  
-    & input.switch[type="checkbox"]:checked + label::after{
+    & .switch:checked + label::after{
         content: "";
         position: absolute;
         top: 3px;

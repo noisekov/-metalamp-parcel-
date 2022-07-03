@@ -1,19 +1,33 @@
 //dropdown-guest
 const dropdownGuest = document.querySelectorAll(".text-field__block-list-hidden");
-document.addEventListener("click", guest)
+const dropImg = document.querySelectorAll("#js-dropdown-hidden")
+const drop = document.querySelectorAll("#js-input-guest")
+const styleField = document.querySelectorAll(".text-field__input-guest")
 
-function guest (event) {
-   if (event.target.closest(".js-input-guest")){
-      for (let i=0; i < dropdownGuest.length; i++) {
-         dropdownGuest[i].classList.toggle(".active-guest")
+drop.forEach((btn, i) => {
+   btn.addEventListener("click",function (e) {
+      if (e.currentTarget == btn){
+         dropdownGuest[i].classList.toggle(".active-guest");
+         dropImg[i].classList.toggle(".material-icons_rotate");
+         styleField[i].classList.toggle(".active-guest");
       }
-      document.querySelector(".js-material-hidden").innerHTML = "expand_less";
-      document.querySelector(".text-field__input-guest").style.borderRadius = "4px 4px 0 0";
-   } else  {
-      document.querySelector(".js-material-hidden").innerHTML = "expand_more";
-      document.querySelector(".text-field__input-guest").style.borderRadius = "4px";
-   }
-}
+   })
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //counter
 const btnMinus = document.querySelector("#btnMinus");

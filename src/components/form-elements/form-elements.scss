@@ -437,6 +437,10 @@
         }
     }
 }
+.material-icons.\.material-icons_rotate{
+    transform: rotate(180deg);
+    transition: all ease 0.5s;
+}
 .icons-block {
     display: flex;
     align-items: center;
