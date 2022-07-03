@@ -5,34 +5,53 @@ const drop = document.querySelectorAll("#js-input-guest")
 const styleField = document.querySelectorAll(".text-field__input-guest")
 
 drop.forEach((btn, i) => {
-   btn.addEventListener("click",function (e) {
-      if (e.currentTarget == btn){
-         dropdownGuest[i].classList.toggle(".active-guest");
-         dropImg[i].classList.toggle(".material-icons_rotate");
-         styleField[i].classList.toggle(".active-guest");
-      }
+   btn.addEventListener("click",function () {
+      dropdownGuest[i].classList.toggle(".active-guest");
+      dropImg[i].classList.toggle(".material-icons_rotate");
+      styleField[i].classList.toggle(".active-guest");
+   })
+})
+dropdownGuest.forEach(item => {
+   item.addEventListener("click", function(e){
+      e.stopPropagation()
    })
 })
 
+//Remove style dropdown if click to window missing
 
+// document.addEventListener("click" , function (){
+//    dropdownGuest.forEach(item =>{
+//       item.classList.remove(".active-guest");
+//       })
+//    dropImg.forEach(dropImg => {
+//       dropImg.classList.remove(".material-icons_rotate");
+//    })
+//    styleField.forEach(styleField => {
+//       styleField.classList.remove(".active-guest");
+//    })
+// })
 
-
-
-
-
-
-
-
-
-
-
-
-
+// if keydown ESC dropdown OFF
+document.addEventListener("keydown" , function (e){
+   if (e.key === "Tab" || e.key === "Escape"){
+      dropdownGuest.forEach(item =>{
+         item.classList.remove(".active-guest");
+         })
+      dropImg.forEach(dropImg => {
+         dropImg.classList.remove(".material-icons_rotate");
+      })
+      styleField.forEach(styleField => {
+         styleField.classList.remove(".active-guest");
+      })
+   }
+})
 
 //counter
 const btnMinus = document.querySelector("#btnMinus");
 const btnPlus = document.querySelector("#btnPlus");
 const countValue = document.querySelector("#countValue");
+
+const textInput = document.querySelector(".text-field__input-guest");
 
 let count;
 btnMinus.addEventListener('click', function (e){
@@ -40,7 +59,7 @@ btnMinus.addEventListener('click', function (e){
    if (parseInt(countValue.innerHTML)- 1 >= 0){
       count = parseInt(countValue.innerHTML) - 1;
       countValue.innerHTML = count;
-      textInput.value = count + ' Взрослых'
+      textInput.value = count + ' Гость'
    } else {
       textInput.value = ""
    }
@@ -53,7 +72,7 @@ btnPlus.addEventListener('click', function (e){
    e.preventDefault();
    count = parseInt(countValue.innerHTML) + 1;
    countValue.innerHTML = count;
-   textInput.value = count + ' Взрослых'
+   textInput.value = count + ' Гость'
    if (coun === 0){
       textInput.value = ""
    }
@@ -69,10 +88,10 @@ btnMinusChild.addEventListener('click', function (e){
    if (parseInt(countValueChild.innerHTML)- 1 >= 0){
       coun = parseInt(countValueChild.innerHTML) - 1;
       countValueChild.innerHTML = coun;
-      textInput.value =  coun + ' Детей'
+      textInput.value =  coun + ' Гость'
    } else {
       textInput.value = ""
-   }
+   }  
    if (coun === 0){
       textInput.value = ""
    }
@@ -81,10 +100,9 @@ btnPlusChild.addEventListener('click', function (e){
    e.preventDefault();
    coun = parseInt(countValueChild.innerHTML) + 1;
    countValueChild.innerHTML = coun;
-   textInput.value =  coun + ' Детей'
+   textInput.value =  coun + ' Гость'
    if (coun === 0){
       textInput.value = ""
    }
 })
 //-----------
-const textInput = document.querySelector(".text-field__input-guest");
