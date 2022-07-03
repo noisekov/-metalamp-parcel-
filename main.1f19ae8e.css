@@ -1566,6 +1566,11 @@ h3 {
   opacity: 1;
 }
 
+.material-icons.\.material-icons_rotate {
+  transform: rotate(180deg);
+  transition: all ease 0.5s;
+}
+
 .icons-block {
   display: flex;
   align-items: center;
@@ -1755,7 +1760,7 @@ h3 {
 }
 
 .find-number {
-  padding: 40px 30px 30px 30px;
+  padding: 40px 28px 30px 30px;
   margin-bottom: 40px;
   display: flex;
   flex-direction: column;
@@ -2854,22 +2859,22 @@ h3 {
 .text-field__toggle li {
   margin-bottom: 14px;
 }
-.text-field__toggle input.switch[type=checkbox]:checked,
-.text-field__toggle input.switch[type=checkbox]:not(:checked) {
+.text-field__toggle .switch:checked,
+.text-field__toggle .switch:not(:checked) {
   position: absolute;
   opacity: 0;
   visibility: hidden;
   z-index: -1;
 }
-.text-field__toggle input.switch[type=checkbox]:checked + label,
-.text-field__toggle input.switch[type=checkbox]:not(:checked) + label {
+.text-field__toggle .switch:checked + label,
+.text-field__toggle .switch:not(:checked) + label {
   position: relative;
   display: inline-block;
   padding-left: 50px;
   line-height: 21px;
   cursor: pointer;
 }
-.text-field__toggle input.switch[type=checkbox]:not(:checked) + label::before {
+.text-field__toggle .switch:not(:checked) + label::before {
   content: "";
   position: absolute;
   top: 0;
@@ -2879,7 +2884,7 @@ h3 {
   border: 1px solid rgba(31, 32, 65, 0.25);
   border-radius: 10px;
 }
-.text-field__toggle input.switch[type=checkbox]:checked + label::before {
+.text-field__toggle .switch:checked + label::before {
   content: "";
   position: absolute;
   top: 0;
@@ -2889,7 +2894,7 @@ h3 {
   border: 1px solid #8BA4F9;
   border-radius: 10px;
 }
-.text-field__toggle input.switch[type=checkbox]:not(:checked) + label::after {
+.text-field__toggle .switch:not(:checked) + label::after {
   content: "";
   position: absolute;
   top: 3px;
@@ -2903,7 +2908,7 @@ h3 {
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
-.text-field__toggle input.switch[type=checkbox]:checked + label::after {
+.text-field__toggle .switch:checked + label::after {
   content: "";
   position: absolute;
   top: 3px;
@@ -2928,14 +2933,14 @@ h3 {
   position: relative;
   user-select: none;
 }
-.text-field__like-button input.like[type=checkbox]:checked,
-.text-field__like-button input.like[type=checkbox]:not(:checked) {
+.text-field__like-button input.like:checked,
+.text-field__like-button input.like:not(:checked) {
   position: absolute;
   opacity: 0;
   visibility: hidden;
   z-index: -1;
 }
-.text-field__like-button input.like[type=checkbox]:checked + label {
+.text-field__like-button input.like:checked + label {
   position: relative;
   padding-left: 22px;
   line-height: 20px;
@@ -2947,7 +2952,7 @@ h3 {
   color: #BC9CFF;
   border-radius: 10px;
 }
-.text-field__like-button input.like[type=checkbox]:not(:checked) + label {
+.text-field__like-button input.like:not(:checked) + label {
   position: relative;
   display: inline-block;
   padding-left: 22px;
@@ -2957,7 +2962,7 @@ h3 {
   border-radius: 10px;
   cursor: pointer;
 }
-.text-field__like-button input.like[type=checkbox]:not(:checked) + label::before {
+.text-field__like-button input.like:not(:checked) + label::before {
   content: "";
   position: absolute;
   top: 0;
@@ -2968,7 +2973,7 @@ h3 {
   border-radius: 10px;
   z-index: 2;
 }
-.text-field__like-button input.like[type=checkbox]:checked + label::before {
+.text-field__like-button input.like:checked + label::before {
   content: "";
   position: absolute;
   top: 0;
@@ -2979,7 +2984,7 @@ h3 {
   border-radius: 10px;
   z-index: 2;
 }
-.text-field__like-button input.like[type=checkbox]:checked + label::before_position-like {
+.text-field__like-button input.like:checked + label::before_position-like {
   position: relative;
 }
 
@@ -3001,6 +3006,11 @@ h3 {
 .text-field__input-guest {
   border: 1px solid rgba(31, 32, 65, 0.25);
   border-radius: 4px;
+  cursor: pointer;
+}
+.text-field__input-guest.\.active-guest {
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px 4px 0 0;
   cursor: pointer;
 }
 .text-field__block-list-hidden {
@@ -3205,7 +3215,7 @@ h3 {
   clip: rect(0 0 0 0);
 }
 .rate-button__input:checked + .rate-button__star, .rate-button__input:hover + .rate-button__star {
-  background-image: url(star.bd8406fa.svg);
+  background-image: url(/star.bd8406fa.svg);
 }
 .rate-button__star {
   position: absolute;
@@ -3213,7 +3223,7 @@ h3 {
   left: 0;
   height: 19px;
   width: 19px;
-  background-image: url(star_border.ae40f44b.svg);
+  background-image: url(/star_border.ae40f44b.svg);
   background-repeat: repeat-x;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -3241,20 +3251,20 @@ h3 {
   z-index: 1;
 }
 .rate-button__star:hover ~ .rate-button__star {
-  background-image: url(star_border.ae40f44b.svg);
+  background-image: url(/star_border.ae40f44b.svg);
 }
 
 @font-face {
   font-family: "Montserrat";
-  src: url("Montserrat-Bold.70d570c7.eot");
-  src: local("☺"), url("Montserrat-Bold.73e94c2c.woff") format("woff"), url("Montserrat-Bold.f3410305.ttf") format("truetype"), url("Montserrat-Bold.0fff2121.svg") format("svg");
+  src: url("/Montserrat-Bold.70d570c7.eot");
+  src: local("☺"), url("/Montserrat-Bold.73e94c2c.woff") format("woff"), url("/Montserrat-Bold.f3410305.ttf") format("truetype"), url("/Montserrat-Bold.0fff2121.svg") format("svg");
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
   font-family: "Montserrat";
-  src: url("Montserrat-Regular.21b801b8.eot");
-  src: local("☺"), url("Montserrat-Regular.1b35f2ae.woff") format("woff"), url("Montserrat-Regular.44e710c1.ttf") format("truetype"), url("Montserrat-Regular.6f6bdac5.svg") format("svg");
+  src: url("/Montserrat-Regular.21b801b8.eot");
+  src: local("☺"), url("/Montserrat-Regular.1b35f2ae.woff") format("woff"), url("/Montserrat-Regular.44e710c1.ttf") format("truetype"), url("/Montserrat-Regular.6f6bdac5.svg") format("svg");
   font-weight: 400;
   font-style: normal;
 }
@@ -3304,7 +3314,7 @@ body {
 }
 
 .sign-in {
-  background: url(registration.df813697.jpg) no-repeat;
+  background: url(/registration.df813697.jpg) no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -3312,7 +3322,7 @@ body {
 }
 
 .reg {
-  background: url(registration.df813697.jpg) no-repeat;
+  background: url(/registration.df813697.jpg) no-repeat;
   height: 683px;
   display: flex;
   justify-content: center;
