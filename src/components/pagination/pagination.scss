@@ -4,16 +4,27 @@
         line-height: 40px;
         color: rgba(31, 32, 65, 0.5);
         margin-bottom: 11px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    } 
+    &__body li{
+        cursor: pointer;
     } 
     &__button {
-        display: inline-block;
+        display: inline-flex;
         align-items: center;
+        justify-content: center;
         text-align: center;
         width: 40px;
         height: 40px;
         background: #ffffff;
         &_active {
             color: #fff;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
             width: 40px;
             height: 40px;
             background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);

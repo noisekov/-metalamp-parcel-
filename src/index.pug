@@ -11,21 +11,23 @@ html(lang="en")
     link(rel="icon", href="images/ico.ico")
   body
     .wrapper    
-      include components/form-elements/form-elements.pug 
-      img.first-logo(src="images/first-logo.svg", alt="first-logo")
-      include components/cards/cards.pug
+      include components/form-elements/form-elements.pug
+      .marBtm40 
+        img.first-logo(src="images/first-logo.svg", alt="first-logo")
+        include components/cards/cards.pug
       .marBtm40
         img.first-logo(src="images/first-logo.svg", alt="first-logo")
         include components/headers & footers/header-up/header-up.pug
       .marBtm40
         include components/headers & footers/header-down/header-down.pug
-      include components/headers & footers/footer/footer.pug
-      include components/headers & footers/footer-mobile/footer-mobile.pug
-      include components/colors&type/colors&type.pug
+        include components/headers & footers/footer/footer.pug
+        include components/headers & footers/footer-mobile/footer-mobile.pug
+        include components/colors&type/colors&type.pug
       //- include page/landing-page.pug
       //- include page/registration.pug
       //- include page/search-room.pug
       //- include page/sign-in.pug
+      //- include page/room-details.pug
     script(src='main.js')
 
 
