@@ -32,21 +32,12 @@ appartDots.forEach(e => {
             this.classList.add("current");
             appartImg.forEach(e => {
                 e.classList.remove("current");
-                if(this == appartDots[0]){
-                    appartImg[0].classList.add("current")
-                }
-                if(this == appartDots[1]){
-                    appartImg[1].classList.add("current")
-                }
-                if(this == appartDots[2]){
-                    appartImg[2].classList.add("current")
-                }
-                if(this == appartDots[3]){
-                    appartImg[3].classList.add("current")
+                for (let i = 0; i < appartImg.length; i++){
+                    if(this == appartDots[i]){
+                        appartImg[i].classList.add("current")
+                    }
                 }
             })
-
         }
     })
 });
-
