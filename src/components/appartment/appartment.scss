@@ -6,29 +6,26 @@
     overflow-x: hidden;
     &__photo {
         position: relative;
-        & ul {
-            display: flex;
-        }
     }
-    &__img {
-        position: relative;
+    &__img{
+        display: none;
+        &.current{
+            display: block;
+        }
     }
     &__slider-bar{
         position: absolute;
         top:80%;
         left: 79%;
-        & ul {
-            display: flex;
-        }
         &-dots {
             width: 7.5px;
             height: 7.5px;
             border-radius: 50%;
+            background-color: transparent;
             border: 1px solid #FFFFFF;
-            margin-right: 3.75px;
-            &:first-child {
-                border: none;
-                background: #FFFFFF;
+            margin-right: 4px;
+            &.current{
+                background-color: #FFFFFF;
             }
         }
     }

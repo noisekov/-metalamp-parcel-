@@ -1,16 +1,15 @@
 .appartment.cards-position40
     .appartment__photo
         ul 
-            li.appartment__img: img(src="images/appartment1.png", alt="appartment")
+            li.appartment__img.current: img(src="images/appartment1.png", alt="appartment")
             li.appartment__img: img(src="images/appartment2.png", alt="appartment2") 
-            li.appartment__img: img(src="images/appartment1.png", alt="appartment") 
-            li.appartment__img: img(src="images/appartment2.png", alt="appartment2") 
+            li.appartment__img: img(src="images/appartment3.jpg", alt="appartment") 
+            li.appartment__img: img(src="images/appartment4.jpg", alt="appartment2") 
         .appartment__slider-bar 
-            ul 
-                li.appartment__slider-bar-dots
-                li.appartment__slider-bar-dots 
-                li.appartment__slider-bar-dots
-                li.appartment__slider-bar-dots
+            button.appartment__slider-bar-dots.current
+            button.appartment__slider-bar-dots
+            button.appartment__slider-bar-dots
+            button.appartment__slider-bar-dots
         button#js-slide-left 
             span.material-icons.material-icons_img-left expand_more
         button#js-slide-right 
