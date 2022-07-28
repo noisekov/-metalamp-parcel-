@@ -1,22 +1,25 @@
 .entry 
     .registration
         h1.cards-position20 Войти
-        .registration__text-field.cards-position10
-            form(action="/").position-filter320
+        form(action="/" method="POST").position-filter320
+            .registration__text-field.cards-position10
                 input#field.text-field__input.position-input-large-area(
                     type="text"
-                    placeholder="Email" 
+                    placeholder="Email"
+                    autocomplete="off"
+                    required
                     )
-        .registration__text-field.cards-position20
-            form(action="/").position-filter320
+            .registration__text-field.cards-position20
                 input#field.text-field__input.position-input-large-area(
-                    type="text"
-                     placeholder="Пароль" 
-                     )
-        .registration__button-pay.cards-position30
-            .button-pay
-                a(href="#").button-pay__link Войти
-                    span.material-icons.material-icons_white arrow_forward  
+                    type="password"
+                    placeholder="Пароль"
+                    autocomplete="off"
+                    required
+                    )
+            .registration__button-pay.cards-position30
+                .button-pay
+                    button(type="sumbit").button-pay__link  Войти
+                        span.material-icons.material-icons_white arrow_forward  
         .registration__sign-in 
             p Нет аккаунта на Toxin?
             button.button-click-sec Создать

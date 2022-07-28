@@ -596,6 +596,18 @@
         color: #FFFFFF;
         padding: 14px 0px 15px;
     }
+    & button {
+        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+        border-radius: 22px;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 15px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        padding: 14px 0px 15px;
+        width: 100%;
+    }
     &__link {
         display: block;
         position: relative;
@@ -603,6 +615,7 @@
             opacity: 0.8;
         }
     }
+    
 }
 .bullet-list {
     font-weight: 400;

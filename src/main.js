@@ -8,6 +8,7 @@ import './components/dropdown-default/dropdown-default';
 import './components/like-button/like-button';
 import './components/cards/cards';
 import './components/appartment/appartment';
+import './components/entry/entry';
 
 import $ from "jquery";
 export default (window.$ = window.jQuery = $);
