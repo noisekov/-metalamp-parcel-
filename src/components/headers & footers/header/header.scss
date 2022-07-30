@@ -3,7 +3,7 @@ header{
     background-color: #ffffff;
     padding: 26px 0;
 }
-.header-up {
+.header {
     display: flex;
     align-items: center;
     justify-content:space-between;
@@ -11,27 +11,35 @@ header{
         display: flex;
     }
 }
-.nav-up {
+.nav {
     display: flex;
     align-items: center;
     flex-direction: row;
     margin-right: 40px;
     &__item {
         margin-right:20px;
+        &:nth-child(2){
+            margin-right: 30px;
+        }
         &:last-child {
-            margin-right: 0;
+            margin-right: 10px;
         }
     }
     &__link {
         color: $darkshade5;
+        position: relative;
     }
     &__style {
         font-weight: 700;
         color: $darkshade75;
     }
+    &__button {
+        width: 303px;
+        display: flex;
+        justify-content: space-between;
+    }
     &__button-entry {
         border: 2px solid $purple;
-        margin-right: 20px;
         border-radius: 22px;
         padding: 7px 20px 8px;
         font-weight: 700;
