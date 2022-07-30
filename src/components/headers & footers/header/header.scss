@@ -11,6 +11,11 @@ header{
         display: flex;
     }
 }
+@media (max-width:900px) {
+    .header__nav{
+        display: none;
+    }
+}
 .nav {
     display: flex;
     align-items: center;
@@ -78,8 +83,90 @@ header{
         }
     }
 }
-
-
+.header__burger {
+    display: none;
+    // visibility: hidden;
+    // opacity: 0;
+    width: 40px;
+    height: 36px;
+    cursor: pointer;
+    perspective: 200px;
+    & span {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 5px;
+        border-radius: 4px;
+        background-color: $purple;
+        transition: all 0.5s ease;
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        top: 15px;
+        left: 0;
+        width: 100%;
+        height: 5px;
+        border-radius: 4px;
+        background-color: $purple;
+        transition: all 0.5s ease;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        top: 30px;
+        left: 0;
+        width: 100%;
+        height: 5px;
+        border-radius: 4px;
+        background-color: $purple;
+        transition: all 0.5s ease;
+    }
+}
+@media (max-width:900px) {
+    .header__burger {
+        // opacity: 1;
+        // visibility: visible;
+        display: block;
+        // transition: all 0.5s ease;
+        // transform: rotateY(360deg);
+    }
+}
+.header__burger.active {
+    width: 40px;
+    height: 36px;
+    position: relative;
+    cursor: pointer;
+    & span {
+        content: "";
+        position: absolute;
+        top: 15px;
+        left: 0;
+        width: 100%;
+        height: 5px;
+        border-radius: 4px;
+        background-color: $purple;
+        transform: rotate(-45deg);
+        transition: all 0.5s ease;
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        top: 15px;
+        left: 0;
+        width: 100%;
+        height: 5px;
+        border-radius: 4px;
+        background-color: $purple;
+        transform: rotate(45deg);
+        transition: all 0.5s ease;
+    }
+    &::before {
+        display: none;
+    }
+}
 
 
 

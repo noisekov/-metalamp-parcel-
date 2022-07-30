@@ -9,6 +9,7 @@ import './components/like-button/like-button';
 import './components/cards/cards';
 import './components/appartment/appartment';
 import './components/entry/entry';
+import './components/headers & footers/header/header';
 
 import $ from "jquery";
 export default (window.$ = window.jQuery = $);

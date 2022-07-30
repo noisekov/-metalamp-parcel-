@@ -1,12 +1,7 @@
 @import "../../colors&type/colors&type.scss";
 .footer {
     line-height: calc(17 / 14 * 100%);
-    margin: 0 0 40px 0;
-    &__container{
-        background-color: #ffffff;
-        justify-content: space-around;
-        padding: 0 140px 0 142px;
-    }
+    background-color: #ffffff;
     &-up {
         padding: 100px 0;
         display: flex;
@@ -18,16 +13,16 @@
         &__text {
             line-height: calc(24 / 14 * 100%);
             color: $darkshade5;
-            &-right {
-                margin-bottom: 20px;
-                line-height: calc(24 / 14 * 100%);
-                color: $darkshade5;
-            }
+        }
+        &__subtitle {
+            margin-bottom: 20px;
+            line-height: calc(24 / 14 * 100%);
+            color: $darkshade5;
         }
         &__block{
             display: flex;
             flex-direction: column;
-            flex: 0 0 260px;
+            flex: 0 1 260px;
             margin-right: 40px;
         }
         &__nav {
@@ -36,18 +31,22 @@
             justify-content: space-between;
             & ul {
                 &:first-child {
-                    flex: 0 0 143px;
-                    margin-right: 57px;
+                    flex: 0 1 160px;
                 } 
                 &:nth-child(2){
-                    flex: 0 0 108px;
-                    margin-right: 92px;
+                    flex: 0 1 150px;
+                }
+                &:last-child{
+                    flex: 0 1 150px;
                 } 
-                &:nth-child(3){
-                    flex: 0 0 149px;
-                    margin-right: 51px;
-                } 
-             }
+            }
+            & li {
+                margin-right: 10px;
+                margin-bottom: 20px;
+                &:last-child{
+                    margin-bottom: 0;
+                }
+            }
         }
         &__title {
             font-weight: 700 ;
@@ -62,23 +61,16 @@
         &__item { 
             display: flex;
             flex-direction: column;
-            & li {
-                margin-bottom: 20px;
-                
-                &:last-child{
-                    margin-bottom: 0;
-                }
-            }
+            flex: 0 1 260px;
         }
         &__list {
             color: $darkshade5;
         }
         &__input {
+            width: 100%;
             border: 1px solid $darkshade25;
             border-radius: 4px;
-            &-position {
-                padding: 8px 80px 8px 15px;
-            }
+            padding: 8px 15px;
         }
         &__arrow {
             position: relative;

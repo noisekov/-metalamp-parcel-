@@ -4,11 +4,13 @@
     &__container {
         display: flex;
         padding: 0 140px 100px 142px;
+        flex-wrap: wrap;
     }
     &__footer {
         display: flex;
         justify-content: space-between;
         padding: 0 140px 131px 142px;
+        flex-wrap: wrap;
     }
     &_left {
         margin-right: 126px;
