@@ -1,12 +1,12 @@
 @import "../../colors&type/colors&type.scss";
+header{
+    background-color: #ffffff;
+    padding: 26px 0;
+}
 .header-up {
-    &__container {
-        background-color: #ffffff;
-        padding: 26px 140px;
-        display: flex;
-        align-items: center;
-        justify-content:space-between;
-    }
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
     &__nav {
         display: flex;
     }

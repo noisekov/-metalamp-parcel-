@@ -1,67 +1,49 @@
 .registration
     h1.cards-position20 Регистрация аккаунта
-    .registration__text-field.cards-position10
-        form(action="/").position-filter320
-            input#field.text-field__input.position-input-large-area(
-                type="text"
-                placeholder="Имя" 
+    form(action="/").position-filter320
+        input#field.text-field__input.cards-position10.position-input-large-area(
+            type="text"
+            placeholder="Имя" 
+            )
+        input#field.text-field__input.cards-position10.position-input-large-area(
+            type="text"
+            placeholder="Фамилия"
+            )
+        ul.text-field__radio-buttons.cards-position20
+            li 
+                input#reg1(
+                    type="radio" 
+                    name="reg"
+                    checked
+                    )
+                label(for="reg1") Мужчина 
+            li 
+                input#reg2(
+                    type="radio"
+                    name="reg"
+                    )
+                label(for="reg2") Женщина 
+        label.text-field__header.text-field__name(for="masked-text-field") Дата рождения
+        input#masked-text-field.cards-position20.text-field__masked-text-field.position-input-large-area(
+            type="text"
+            placeholder="дд.мм.гг"
+            ) 
+        label(for="field").text-field__header.text-field__name Данные для входа в сервис 
+        input#field.text-field__input.cards-position10.position-input-large-area(
+            type="text"
+            placeholder="Email"
+            )
+        input#field.text-field__input.cards-position10.position-input-large-area(
+            type="text"
+            placeholder="Пароль"
+            )
+        .text-field__toggle.cards-position20
+            input#reg-sw.switch(
+                type="checkbox"
                 )
-    .registration__text-field.cards-position10
-        form(action="/").position-filter320
-            input#field.text-field__input.position-input-large-area(
-                type="text"
-                placeholder="Фамилия"
-                )
-    .registration__radio-buttons.cards-position20
-        form(action="")
-            ul.text-field__radio-buttons
-                li 
-                    input#reg1(
-                        type="radio" 
-                        name="reg"
-                        checked
-                        )
-                    label(for="reg1") Мужчина 
-                li 
-                    input#reg2(
-                        type="radio"
-                        name="reg"
-                        )
-                    label(for="reg2") Женщина 
-    .registration__masked-text-field.cards-position20
-        form(action="")
-            .text-field__header 
-                label.text-field__name(for="masked-text-field") Дата рождения
-            input#masked-text-field.text-field__masked-text-field.position-input-large-area(
-                type="text"
-                placeholder="дд.мм.гг"
-                ) 
-    .registration__text-field.cards-position10
-        form(action="/").position-filter320
-            .text-field__header
-                label(for="field").text-field__name Данные для входа в сервис 
-            input#field.text-field__input.position-input-large-area(
-                type="text"
-                placeholder="Email"
-                )
-    .registration__text-field.cards-position10
-        form(action="/").position-filter320
-            input#field.text-field__input.position-input-large-area(
-                type="text"
-                placeholder="Пароль"
-                )
-    .registration__toggle
-        form(action="")
-            ul.text-field__toggle.cards-position20
-                li 
-                    input#reg-sw.switch(
-                        type="checkbox"
-                        )
-                    label(for="reg-sw") Получать спецпредложения 
-    .registration__button-pay.cards-position30
-        .button-pay
-            a(href="#").button-pay__link Перейти к оплате
-                span.material-icons.material-icons_white arrow_forward  
-    .registration__sign-in 
-        p Уже есть аккаунт на Toxin
-        button.button-click-sec Войти
+            label(for="reg-sw") Получать спецпредложения 
+        a(href="#").cards-position30.button-pay__link Перейти к оплате
+            span.material-icons.material-icons_white arrow_forward  
+        .registration__sign-in 
+            p Уже есть аккаунт на Toxin
+            a.button-click-sec Войти

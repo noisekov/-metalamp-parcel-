@@ -2,8 +2,8 @@
 html(lang="en")
   head
     meta(charset="UTF-8")
-    meta(name='description' content='Краткое описание страницы в браузере.')
-    meta(name='keywords' content='ключевые слова')
+    meta(name='description' content='Сайт отеля Toxin по подбору номеров')
+    meta(name='keywords' content='отель, хостел, аренда номера, номера')
     meta(name='viewport' content='width=device-width, initial-scale=1')
     title Toxin
     link(rel="stylesheet", href="styles/style.css")
@@ -13,20 +13,21 @@ html(lang="en")
     .wrapper    
       include components/form-elements/form-elements.pug
       .marBtm40 
-        img.first-logo(src="images/first-logo.svg", alt="first-logo")
+        img.first-logo(src="images/first-logo.svg", alt="logo")
         include components/cards/cards.pug
       .marBtm40
-        img.first-logo(src="images/first-logo.svg", alt="first-logo")
+        img.first-logo(src="images/first-logo.svg", alt="logo")
         include components/headers & footers/header-up/header-up.pug
       .marBtm40
         include components/headers & footers/header-down/header-down.pug
+      .marBtm40
         include components/headers & footers/footer/footer.pug
         include components/headers & footers/footer-mobile/footer-mobile.pug
         include components/colors&type/colors&type.pug
+        include page/sign-in.pug
+        include page/registration.pug
       //- include page/landing-page.pug
-      //- include page/registration.pug
       //- include page/search-room.pug
-      //- include page/sign-in.pug
       //- include page/room-details.pug
     script(src='main.js')
 
