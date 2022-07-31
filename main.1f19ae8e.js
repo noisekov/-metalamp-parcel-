@@ -2495,18 +2495,48 @@ var dropImg = document.querySelectorAll("#js-dropdown-hidden");
 var drop = document.querySelectorAll("#js-input-guest");
 var styleField = document.querySelectorAll(".text-field__input-guest");
 drop.forEach(function (btn, i) {
-  btn.addEventListener("click", function (e) {
-    if (e.currentTarget == btn) {
-      dropdownGuest[i].classList.toggle(".active-guest");
-      dropImg[i].classList.toggle(".material-icons_rotate");
-      styleField[i].classList.toggle(".active-guest");
-    }
+  btn.addEventListener("click", function () {
+    dropdownGuest[i].classList.toggle(".active-guest");
+    dropImg[i].classList.toggle(".material-icons_rotate");
+    styleField[i].classList.toggle(".active-guest");
   });
+});
+dropdownGuest.forEach(function (item) {
+  item.addEventListener("click", function (e) {
+    e.stopPropagation();
+  });
+}); //Remove style dropdown if click to window missing
+// document.addEventListener("click" , function (){
+//    dropdownGuest.forEach(item =>{
+//       item.classList.remove(".active-guest");
+//       })
+//    dropImg.forEach(dropImg => {
+//       dropImg.classList.remove(".material-icons_rotate");
+//    })
+//    styleField.forEach(styleField => {
+//       styleField.classList.remove(".active-guest");
+//    })
+// })
+// if keydown ESC dropdown OFF
+
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Tab" || e.key === "Escape") {
+    dropdownGuest.forEach(function (item) {
+      item.classList.remove(".active-guest");
+    });
+    dropImg.forEach(function (dropImg) {
+      dropImg.classList.remove(".material-icons_rotate");
+    });
+    styleField.forEach(function (styleField) {
+      styleField.classList.remove(".active-guest");
+    });
+  }
 }); //counter
 
 var btnMinus = document.querySelector("#btnMinus");
 var btnPlus = document.querySelector("#btnPlus");
 var countValue = document.querySelector("#countValue");
+var textInput = document.querySelector(".text-field__input-guest");
 var count;
 btnMinus.addEventListener('click', function (e) {
   e.preventDefault();
@@ -2514,7 +2544,7 @@ btnMinus.addEventListener('click', function (e) {
   if (parseInt(countValue.innerHTML) - 1 >= 0) {
     count = parseInt(countValue.innerHTML) - 1;
     countValue.innerHTML = count;
-    textInput.value = count + ' Взрослых';
+    textInput.value = count + ' Гость';
   } else {
     textInput.value = "";
   }
@@ -2527,7 +2557,7 @@ btnPlus.addEventListener('click', function (e) {
   e.preventDefault();
   count = parseInt(countValue.innerHTML) + 1;
   countValue.innerHTML = count;
-  textInput.value = count + ' Взрослых';
+  textInput.value = count + ' Гость';
 
   if (coun === 0) {
     textInput.value = "";
@@ -2544,7 +2574,7 @@ btnMinusChild.addEventListener('click', function (e) {
   if (parseInt(countValueChild.innerHTML) - 1 >= 0) {
     coun = parseInt(countValueChild.innerHTML) - 1;
     countValueChild.innerHTML = coun;
-    textInput.value = coun + ' Детей';
+    textInput.value = coun + ' Гость';
   } else {
     textInput.value = "";
   }
@@ -2557,14 +2587,12 @@ btnPlusChild.addEventListener('click', function (e) {
   e.preventDefault();
   coun = parseInt(countValueChild.innerHTML) + 1;
   countValueChild.innerHTML = coun;
-  textInput.value = coun + ' Детей';
+  textInput.value = coun + ' Гость';
 
   if (coun === 0) {
     textInput.value = "";
   }
 }); //-----------
-
-var textInput = document.querySelector(".text-field__input-guest");
 },{}],"../node_modules/air-datepicker/air-datepicker.js":[function(require,module,exports) {
 var define;
 function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e14) { throw _e14; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e15) { didErr = true; err = _e15; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
@@ -5039,27 +5067,76 @@ btnsLike.forEach(function (btn, i) {
 },{}],"components/cards/cards.js":[function(require,module,exports) {
 
 },{}],"components/appartment/appartment.js":[function(require,module,exports) {
-document.addEventListener('click', showSlideLeft);
-document.addEventListener('click', showSlideRight);
-var slideLeft = document.querySelector("#js-slide-left");
-var slideRight = document.querySelector("#js-slide-right");
-var slidePhoto = document.querySelectorAll(".appartment__img");
+var appartImg = document.querySelectorAll(".appartment__img");
+var appartDots = document.querySelectorAll(".appartment__slider-bar-dots");
+var appartBar = document.querySelector(".appartment__slider-bar");
+var appartSliderBar = document.querySelectorAll(".appartment__slider-bar");
 
-function showSlideLeft(e) {
-  if (e.target.closest("#js-slide-left")) {
-    for (var i = 0; i < slidePhoto.length; i++) {
-      slidePhoto[i].style.left -= +271 + 'px';
-    }
-  }
+if (appartSliderBar.length > 0) {
+  appartSliderBar.forEach(function (el) {
+    el.addEventListener("click", function (e) {
+      console.log(this);
+    });
+  });
 }
 
-function showSlideRight(ev) {
-  if (ev.target.closest("#js-slide-right")) {
-    for (var i = 0; i < slidePhoto.length; i++) {
-      slidePhoto[i].style.right += +271 + 'px';
+appartDots.forEach(function (el) {
+  el.addEventListener("click", function (e) {
+    var _this = this;
+
+    if (e.target.closest(".appartment__slider-bar-dots")) {
+      appartDots.forEach(function (e) {
+        e.classList.remove("current");
+      });
+      this.classList.add("current");
+      appartImg.forEach(function (e) {
+        e.classList.remove("current");
+
+        for (var i = 0; i < appartImg.length; i++) {
+          if (_this == appartDots[i]) {
+            appartImg[i].classList.add("current");
+          }
+        }
+      });
+    }
+  });
+});
+},{}],"components/entry/entry.js":[function(require,module,exports) {
+var entryForm = document.querySelector(".entry form");
+var entryLogin = entryForm.querySelector("[type=text]");
+var entryPassword = entryForm.querySelector("[type=password]");
+var isStorageSupport = true;
+var storage = "";
+
+try {
+  storage = localStorage.getItem("login");
+} catch (err) {
+  isStorageSupport = false;
+} // entryLogin.focus()
+
+
+entryForm.addEventListener("submit", function (evt) {
+  evt.preventDefault();
+
+  if (!entryLogin.value || !entryPassword.value) {
+    console.log("Нужно вести пароль");
+  } else {
+    if (isStorageSupport) {
+      localStorage.setItem("login", entryLogin.value);
+      console.log(entryLogin.value);
     }
   }
-}
+});
+},{}],"components/headers & footers/header/header.js":[function(require,module,exports) {
+var burgerBtn = document.querySelectorAll(".header__burger");
+burgerBtn.forEach(function (evt) {
+  evt.addEventListener("click", function (evt) {
+    if (evt.target.closest(".header__burger")) {
+      evt.preventDefault();
+      this.classList.toggle("active");
+    }
+  });
+});
 },{}],"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/node_modules/process/browser.js":[function(require,module,exports) {
 
 // shim for using process in browser
@@ -16183,6 +16260,10 @@ require("./components/cards/cards");
 
 require("./components/appartment/appartment");
 
+require("./components/entry/entry");
+
+require("./components/headers & footers/header/header");
+
 var _jquery = _interopRequireDefault(require("jquery"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -16190,7 +16271,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var _default = window.$ = window.jQuery = _jquery.default;
 
 exports.default = _default;
-},{"./styles/style.scss":"styles/style.scss","./components/form-elements/form-elements":"components/form-elements/form-elements.js","./components/range-slider/range-slider":"components/range-slider/range-slider.js","./components/dropdown-guest/dropdown-guest":"components/dropdown-guest/dropdown-guest.js","./components/air-datepicker/air-datepicker":"components/air-datepicker/air-datepicker.js","./components/expandable-checkbox/expandable-checkbox":"components/expandable-checkbox/expandable-checkbox.js","./components/dropdown-default/dropdown-default":"components/dropdown-default/dropdown-default.js","./components/like-button/like-button":"components/like-button/like-button.js","./components/cards/cards":"components/cards/cards.js","./components/appartment/appartment":"components/appartment/appartment.js","jquery":"../node_modules/jquery/dist/jquery.js"}],"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./styles/style.scss":"styles/style.scss","./components/form-elements/form-elements":"components/form-elements/form-elements.js","./components/range-slider/range-slider":"components/range-slider/range-slider.js","./components/dropdown-guest/dropdown-guest":"components/dropdown-guest/dropdown-guest.js","./components/air-datepicker/air-datepicker":"components/air-datepicker/air-datepicker.js","./components/expandable-checkbox/expandable-checkbox":"components/expandable-checkbox/expandable-checkbox.js","./components/dropdown-default/dropdown-default":"components/dropdown-default/dropdown-default.js","./components/like-button/like-button":"components/like-button/like-button.js","./components/cards/cards":"components/cards/cards.js","./components/appartment/appartment":"components/appartment/appartment.js","./components/entry/entry":"components/entry/entry.js","./components/headers & footers/header/header":"components/headers & footers/header/header.js","jquery":"../node_modules/jquery/dist/jquery.js"}],"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -16218,7 +16299,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59496" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58615" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
