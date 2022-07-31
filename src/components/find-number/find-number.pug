@@ -4,8 +4,7 @@
         form(action="")
             .date
                 .date-dropdown
-                    .text-field__header 
-                        label.text-field__name(for="date-picker-cal1") Прибытие
+                    label.text-field__header.text-field__name(for="date-picker-cal1") Прибытие
                     .text-field__body
                         i.material-icons expand_more
                         input#cal-two-input-find-number.text-field__input-date-dropdown.position-filter150(
@@ -14,8 +13,7 @@
                             autocomplete="off"
                             )
                 .date-dropdown
-                    .text-field__header 
-                        label.text-field__name(for="date-picker-cal2") Выезд
+                    label.text-field__header.text-field__name(for="date-picker-cal2") Выезд
                     .text-field__body
                         i.material-icons expand_more
                         input#cal-two-input-find-number.text-field__input-date-dropdown.position-filter150(
@@ -25,8 +23,7 @@
                             )
     .find-number__body.cards-position30
         form(action="").position-filter320
-            .text-field__header 
-                p.text-field__name Гости
+            p.text-field__header.text-field__name Гости
             .text-field__body#js-input-guest
                 i.material-icons#js-dropdown-hidden expand_more
                 input.text-field__input-guest.position-input-large-area(
@@ -55,8 +52,8 @@
                                 span 0
                                 button +
                 .text-field__button
-                    button Применить
+                    button(type = "submit") Применить
     .find-number__button-pay 
         .button-pay
             a(href="#").button-pay__link Подобрать номер
-                span.material-icons.material-icons_white arrow_forward  
+                i.material-icons.material-icons_white arrow_forward  

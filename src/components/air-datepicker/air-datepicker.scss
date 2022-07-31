@@ -91,7 +91,7 @@
 	color: #fff;
 	border: none;
     font-weight: 700;
-	background: var(--adp-cell-background-color-selected)
+	background: var(--adp-cell-background-color-selected);
 }
 .air-datepicker-cell.-selected-.-current- {
 	color: #fff;
@@ -455,8 +455,7 @@
 	--adp-cell-border-radius: 22px;
 	--adp-cell-background-color-selected: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
 	--adp-cell-background-color-selected-hover: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-	--adp-cell-background-color-in-range: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-	--adp-cell-background-color-in-range: opacity 0.25;//*!!!!!!!!!!!!!!!!!*/
+	--adp-cell-background-color-in-range:linear-gradient(180deg, rgba(188, 156, 255, 0.25) 0%, rgba(188, 156, 255, 0.25)  100%);
 	--adp-cell-background-color-in-range-hover: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
 	--adp-cell-border-color-in-range: var(--adp-cell-background-color-selected);
 	--adp-btn-height: 30px;

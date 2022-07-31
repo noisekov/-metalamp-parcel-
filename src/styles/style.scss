@@ -67,7 +67,8 @@ body {
 //landing-page
 .landing-page {
 	background: url(../images/landing-page.jpg) no-repeat;
-	height: 900px;
+	background-position: center;
+	background-size: cover;
 	position: relative;
 	&-block{
 		display: block;
@@ -82,9 +83,7 @@ body {
 		}
 	}	
 	&_abs{
-		position: absolute;
-		top: 70px;
-		left: 140px;
+		padding: 70px 0 386px 140px;
 	}
 }
 //sign-in

@@ -24,8 +24,7 @@
                 include ../dropdown-guest/dropdown-guest.pug
             .form-elements__masked-text-field
                 form(action="")
-                    .text-field__header 
-                        label.text-field__name(for="masked-text-field") Masked text field
+                    label.text-field__header.text-field__name(for="masked-text-field") Masked text field
                     input#masked-text-field.text-field__masked-text-field.position-input-large-area(
                         type="text" 
                         placeholder="дд.мм.гг" 
@@ -34,8 +33,7 @@
                 form(action="")
                     .date
                         .date-dropdown
-                            .text-field__header 
-                                label.text-field__name(for="cal-two-input") Date dropdown
+                            label.text-field__header.text-field__name(for="cal-two-input") Date dropdown
                             .text-field__body
                                 i.material-icons expand_more
                                 input#cal-two-input.text-field__input-date-dropdown.position-filter150(
@@ -44,8 +42,7 @@
                                     autocomplete="off"
                                     )
                         .date-dropdown
-                            .text-field__header 
-                                label.text-field__name(for="cal-two-input") Date dropdown
+                            label.text-field__header.text-field__name(for="cal-two-input") Date dropdown
                             .text-field__body
                                 i.material-icons expand_more
                                 input#cal-two-input.text-field__input-date-dropdown.position-filter150(
@@ -55,27 +52,23 @@
                                     )
             .form-elements__filter-date-dropdown
                 form(action="").position-filter266
-                    .text-field__header 
-                        label.text-field__name(for="one-picker") Filter date dropdown
+                    label.text-field__header.text-field__name(for="one-picker") Filter date dropdown
                     .text-field__body
                         i.material-icons expand_more
                         input#one-picker.text-field__input-filter-date-dropdown.position-input-area(
-                        type="text" 
-                        placeholder="19 авг - 23 авг" 
-                        autocomplete="off"
+                            type="text" 
+                            placeholder="19 авг - 23 авг" 
+                            autocomplete="off"
                         )
             .form-elements__button
                 form(action="")     
-                    .text-field__header 
-                        label.text-field__name(for="before") Subscription text field
+                    label.text-field__header.text-field__name(for="before") Subscription text field
                     input.footer-up__input.position-input-area(
                         type="text" 
                         placeholder="Email" 
-                        name="button"
                         )
-                    label.footer-up__arrow(for="before")
-                    a.footer-up__arrow(href="#") 
-                        span.material-icons.material-icons_arrow arrow_forward  
+                    button(type="submit").footer-up__arrow
+                        i.material-icons.material-icons_arrow arrow_forward  
             .form-elements__dropdown-default
                 include ../dropdown-default/dropdown-default.pug
             .form-elements__dropdown-expanded
@@ -117,7 +110,7 @@
                 form(action="").position-filter266
                     .text-field__body.position-mb17
                         label.text-field__name-expandable(for="Expandable checkbox") Expandable checkbox list
-                        label(for="Expandable checkbox").material-icons expand_less
+                        i.material-icons expand_less
                     ul.text-field__expandable-checkbox-list
                         li  
                             input#dch1(type="checkbox")
@@ -171,8 +164,7 @@
                 include ../rate-button/rate-button.pug
             .form-elements__dropdown
                 form(action="").position-filter320
-                    .text-field__header
-                        label.text-field__name(for="dropdown") Dropdown 
+                    label.text-field__header.text-field__name(for="dropdown") Dropdown 
                     .text-field__body
                         i.material-icons expand_more
                         input#dropdown.text-field__input-dropdown-default.position-input-large-area(
@@ -222,7 +214,7 @@
             .form-elements__buttons
                 form(action="").position-filter266 
                     .text-field__header.range-slider_position
-                                label.text-field__name(for="button-click") Buttons
+                        label.text-field__name(for="button-click") Buttons
                     .button
                         button.button-click.button-position click me
                         button.button-click_active click me
@@ -233,13 +225,12 @@
             .form-elements__button-pay 
                 .button-pay
                     a(href="#").button-pay__link Перейти к оплате
-                        span.material-icons.material-icons_white arrow_forward  
+                        i.material-icons.material-icons_white arrow_forward  
             .form-elements__pagination 
                 include ../pagination/pagination.pug
             .form-elements__dropdown
                 form(action="").position-filter320
-                    .text-field__header
-                        label.text-field__name(for="dropdown") Dropdown 
+                    label.text-field__header.text-field__name(for="dropdown") Dropdown 
                     .text-field__body
                         i.material-icons expand_more
                         input#dropdown.text-field__input-dropdown-default.position-input-large-area(
@@ -273,8 +264,7 @@
                             button Очистить
             .form-elements__bullet-list
                 form(action="").position-filter255
-                    .text-field__header
-                        label.text-field__name(for="bullet-list") Bullet list 
+                    label.text-field__header.text-field__name(for="bullet-list") Bullet list 
                     .text-field__body.bullet-list
                         ul 
                             li Нельзя с питомцами
@@ -284,13 +274,13 @@
         .form-elements__icons-block 
             .icons-block
                 .icons-block__img 
-                    span.material-icons.material-icons_purpure insert_emoticon
+                    i.material-icons.material-icons_purpure insert_emoticon
                 .icons-block__body 
                     p Комфорт
                     p Шумопоглощающие стены
             .icons-block
                 .icons-block__img 
-                    span.material-icons.material-icons_purpure location_city
+                    i.material-icons.material-icons_purpure location_city
                 .icons-block__body
                     p Удобство
                     p Окно в каждой из спален
@@ -303,10 +293,10 @@
                     span  5 дней назад
             .review__body
                 .text-field__like-button.review__block
-                    .text-field__like-button-block.text-field__like-button-block_position-like.position-mr14
+                    .text-field__like-button-block.position-mr14
                         //- button#js-like-button.like-button 
                         //-     span.like-button__value 12
-                        span.material-icons.material-icons_like.material-icons_like-color favorite
+                        i.material-icons.material-icons_like.material-icons_like-color favorite
                         input#lb3.like(
                             type="checkbox"
                             checked

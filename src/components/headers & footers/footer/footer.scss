@@ -47,6 +47,9 @@
                     margin-bottom: 0;
                 }
             }
+            & a {
+                color: $darkshade5;
+            }
         }
         &__title {
             font-weight: 700 ;
@@ -62,9 +65,6 @@
             display: flex;
             flex-direction: column;
             flex: 0 1 260px;
-        }
-        &__list {
-            color: $darkshade5;
         }
         &__input {
             width: 100%;
