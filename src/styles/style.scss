@@ -113,3 +113,100 @@ body {
 	justify-content: center;
 	padding: 19px 0;
 }
+//room-details
+.room-details {
+	background-color: #FFFFFF;
+	border-bottom: 1px solid rgba(31, 32, 65, 0.25);
+	& h6 {
+		font-family: 'Montserrat';
+		font-weight: 700;
+		font-size: 19px;
+		line-height: 23px;
+		color: #1F2041;
+		margin-bottom: 20px;
+	}
+	&__img{
+		display: flex;
+		& img {
+			object-fit: cover;
+			vertical-align: top;
+		}
+		&-left{
+			flex: 1 1 67%;
+		}
+		&-right{
+			display: flex;
+			flex-direction: column;
+			flex: 1 1 33%;
+		}
+	}
+	&__body{
+	}
+	&__wrapper{
+		padding: 70px 0;
+	}
+	&__content{
+		display: flex;
+		justify-content: space-between;
+		&-block{
+			display: flex;
+			justify-content: flex-start;
+			flex-direction: column;
+			margin-right: 69px;
+			width: 100%;
+		}
+	}
+}
+.number-block{
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	margin-bottom: 10px;
+}
+.about-number {
+	display: flex;
+	flex-direction: column;
+}
+.impression{
+	display: flex;
+}
+.reviews-world{
+	margin-bottom: 30px;
+	&__title {
+		display: flex;
+		justify-content: space-between;
+		& span {
+			font-family: 'Montserrat';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 14px;
+			text-align: right;
+			color: rgba(31, 32, 65, 0.5);
+		}
+	}
+	&__position {
+		margin-bottom: 22px;
+	}
+}
+.rule {
+	& h6 {
+		padding-left: 20px;
+	}
+}
+.other {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.cancel {
+	flex: 0 1 341px;
+	& p {
+		font-family: 'Montserrat';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 24px;
+		color: rgba(31, 32, 65, 0.75);
+	}
+}
