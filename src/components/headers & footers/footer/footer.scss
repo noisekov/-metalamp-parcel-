@@ -101,3 +101,37 @@
             }
     }
 }
+
+@media (max-width:768px) {
+    .footer{
+        padding: 120px 0;
+        &-up{
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            &__nav{
+                display: none;
+            }
+            &__block{
+                margin-right: 0;
+                align-items: center;
+            }
+            &::after{
+                display: none;
+            }
+            &__text {
+                display: none;
+            }
+        }
+        &-down {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+            &__title{
+                margin-bottom: 25px;
+                text-align: center;
+            }
+        }
+    }
+}
