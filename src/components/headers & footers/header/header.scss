@@ -84,9 +84,9 @@ header{
     }
 }
 .header__burger {
-    display: none;
-    // visibility: hidden;
-    // opacity: 0;
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
     width: 40px;
     height: 36px;
     cursor: pointer;
@@ -127,11 +127,12 @@ header{
 }
 @media (max-width:900px) {
     .header__burger {
-        // opacity: 1;
-        // visibility: visible;
+        position: relative;
+        opacity: 1;
+        visibility: visible;
         display: block;
-        // transition: all 0.5s ease;
-        // transform: rotateY(360deg);
+        transition: all 0.5s ease;
+        transform: rotateY(360deg);
     }
 }
 .header__burger.active {
