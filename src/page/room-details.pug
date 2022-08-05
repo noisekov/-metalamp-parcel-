@@ -3,6 +3,7 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
         title Room details 
     body 
         .wrapper
@@ -10,10 +11,10 @@ html(lang="en")
             .room-details
                 .room-details__img 
                     .room-details__img-left
-                        img(src="images/room-famous.jpg", width="981", height="485")
+                        img(src="../images/room-famous.jpg", width="981", height="485")
                     .room-details__img-right
-                        img(src="images/room-second.jpg", height="243", width="459")
-                        img(src="images/room-last.jpg", height="242", width="459")
+                        img(src="../images/room-second.jpg", height="243", width="459")
+                        img(src="../images/room-last.jpg", height="242", width="459")
                 .room-details__body.container 
                     .room-details__wrapper
                         .room-details__content
@@ -48,7 +49,7 @@ html(lang="en")
                                         span 2 отзыва
                                     .form-elements__review.reviews-world__position
                                         .review
-                                            img(src="images/avatar.png", alt="avatar")
+                                            img(src="../images/avatar.png", alt="avatar")
                                             .review__name
                                                 p Мурад Сарафанов
                                                 span  5 дней назад
@@ -64,7 +65,7 @@ html(lang="en")
                                             p Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.
                                     .form-elements__review
                                         .review
-                                            img(src="images/avatar2.png", alt="avatar2")
+                                            img(src="../images/avatar2.png", alt="avatar2")
                                             .review__name
                                                 p Патрисия Стёклышкова
                                                 span  Неделю назад
@@ -90,6 +91,5 @@ html(lang="en")
                                         h6 Отмена
                                         p Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
                             include ../components/choice/choice.pug
-                        
             include ../components/headers & footers/footer/footer.pug
-        
+            script(src="/page/room-details.js")

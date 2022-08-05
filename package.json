@@ -29,6 +29,7 @@
     "jsdom": "^20.0.0",
     "nouislider": "^15.6.0",
     "paginationjs": "^2.1.5",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "src": "^1.1.2"
   }
 }

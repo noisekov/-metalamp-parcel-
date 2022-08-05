@@ -211,3 +211,27 @@ body {
 		color: rgba(31, 32, 65, 0.75);
 	}
 }
+
+//toxin-navigation
+.toxin-navigation {
+	padding-top: 50px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.toxin-navigation a {
+	padding: 8px;
+	font-size: 20px;
+	margin-bottom: 20px;
+	text-decoration: underline;
+	color: #BC9CFF;
+	text-transform: uppercase;
+	font-weight: 700;
+	display: inline-block;
+	border: 3px solid #BC9CFF;
+	&:hover {
+		color: #FFFFFF;
+		background-color: #BC9CFF;
+	}
+}

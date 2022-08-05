@@ -32,7 +32,7 @@
         clip: rect(0 0 0 0);
         &:checked + .rate-button__star,
         &:hover + .rate-button__star{
-            background-image: url(/images/star.svg);
+            background-image: url(../images/star.svg);
         }
     }
     &__star{
@@ -41,7 +41,7 @@
         left: 0;
         height: 19px;
         width: 19px;
-        background-image: url(/images/star_border.svg);
+        background-image: url(../images/star_border.svg);
         background-repeat: repeat-x;
         -webkit-appearance: none;
         -moz-appearance: none;
@@ -68,7 +68,7 @@
             z-index: 1;
         }
         &:hover ~ .rate-button__star {
-            background-image: url(/images/star_border.svg)
+            background-image: url(../images/star_border.svg)
         }
     }
 }

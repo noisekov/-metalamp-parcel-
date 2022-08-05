@@ -7,33 +7,16 @@ html(lang="en")
         meta(name='viewport' content='width=device-width, initial-scale=1')
         title Toxin
         link(rel="stylesheet" href="styles/style.css")
-        link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
         link(rel="icon" href="images/ico.ico")
     body
-        .wrapper    
-            include components/form-elements/form-elements.pug
-            .marBtm40 
-                img.first-logo(src="images/first-logo.svg" alt="logo")
-                include components/cards/cards.pug
-            .marBtm40
-                img.first-logo(src="images/first-logo.svg" alt="logo")
-                include components/headers & footers/header/header-up.pug
-            .marBtm40
-                include components/headers & footers/header/header-down.pug
-            .marBtm40
-                include components/headers & footers/footer/footer.pug
-            .marBtm40
-                include components/headers & footers/footer-mobile/footer-mobile.pug
-                include components/colors&type/colors&type.pug
-            .marBtm40
-                include page/room-details.pug
-            .marBtm40
-                include page/sign-in.pug
-            .marBtm40
-                include page/registration.pug
-            .marBtm40
-                include page/landing-page.pug
-                //- include page/search-room.pug
+        .container 
+            .toxin-navigation 
+                a(href="page/ui-kit.pug") Ui-kit
+                a(href="page/sign-in.pug") Sign-in
+                a(href="page/landing-page.pug") Landing-page 
+                a(href="page/registration.pug") Registration
+                a(href="page/room-details.pug") Room-details
+                a(href="page/search-room.pug") Search-room
         script(src='main.js')
 
 
