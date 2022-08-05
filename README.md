@@ -1,8 +1,8 @@
-### How to start? ###
+# How to start?
 
 npm i <br>
-npm run start
+npm run start <br>
 
-i'll use webpack for this project in future
+This page , analog AirBnb
 
 https://noisekov.github.io/-metalamp-parcel-/
