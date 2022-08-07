@@ -7,5 +7,9 @@ html(lang="en")
         link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
         title Search-room
     body 
-        h1 Эта страница в разработке
+        .wrapper 
+            include ../components/headers & footers/header/header-up.pug
+            .search-room.container
+                h1 Эта страница в разработке
+            include ../components/headers & footers/footer/footer.pug
         script(src="/page/search-room.js")

@@ -2,6 +2,7 @@
 .footer {
     line-height: calc(17 / 14 * 100%);
     background-color: #ffffff;
+    flex: 0 0 auto;
     &-up {
         padding: 100px 0;
         display: flex;
