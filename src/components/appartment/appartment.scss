@@ -4,60 +4,59 @@
     border-radius: 4px;
     max-width: 270px;
     overflow-x: hidden;
-    &__photo {
-        position: relative;
-    }
-    &__img{
-        display: none;
-        &.current{
-            display: block;
-        }
-    }
-    &__slider-bar{
-        position: absolute;
-        top:80%;
-        left: 79%;
-        &-dots {
-            width: 7.5px;
-            height: 7.5px;
-            border-radius: 50%;
-            background-color: transparent;
-            border: 1px solid #FFFFFF;
-            margin-right: 4px;
-            &.current{
-                background-color: #FFFFFF;
-            }
-        }
-    }
-    &-feedback{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-    &-block {
-        line-height: 18px;
-        color: rgba(31, 32, 65, 0.5);
-        & span {
-            font-weight: 700;
-        }
-    }
-    &__body {
-        padding: 20px 17px 19px 20px;
-    }
-    &__title{
-        position: relative;
-        &::after {
-            content: "";
-            position: absolute;
-            top:38px;
-            left: 0px;
-            background: rgba(31, 32, 65, 0.1);
-            height: 1px;
-            width: 230px;
-        }
+}
+.appartment__photo {
+    position: relative;
+}
+.appartment__img{
+    display: none;
+    &.current{
+        display: block;
     }
 }
-
+.appartment__slider-bar{
+    position: absolute;
+    top:80%;
+    left: 79%;
+}
+.appartment__slider-bar-dots {
+    width: 7.5px;
+    height: 7.5px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid #FFFFFF;
+    margin-right: 4px;
+    &.current{
+        background-color: #FFFFFF;
+    }
+}
+.appartment-feedback{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.appartment-block {
+    line-height: 18px;
+    color: rgba(31, 32, 65, 0.5);
+    & span {
+        font-weight: 700;
+    }
+}
+.appartment__body {
+    padding: 20px 17px 19px 20px;
+}
+.appartment__title{
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        top:38px;
+        left: 0px;
+        background: rgba(31, 32, 65, 0.1);
+        height: 1px;
+        width: 230px;
+    }
+}
 .material-icons {
     &_img-left {
         transform: rotate(90deg);

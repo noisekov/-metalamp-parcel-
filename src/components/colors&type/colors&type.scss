@@ -24,18 +24,16 @@ h3 {
 }
 .color {
     background: #ffffff;
-    // .color__container
-    &__container {
-        padding: 0 140px 145px;
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 40px;
-        flex-wrap: wrap;
-    }
-    // .color__block-title
-    &__block-title {
-        flex: 0 0 436px;
-    }
+}
+.color__container {
+    padding: 0 140px 145px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+.color__block-title {
+    flex: 0 0 436px;
 }
 .block-color {
     display: flex;
@@ -43,81 +41,72 @@ h3 {
     &:last-child{
         margin-bottom: 0;
     }
-    &__dark-shade-100{
-        width: 70px;
-        height: 70px;
-        border-radius: 6px;
-        margin-right: 40px;
-        background-color: $darkshade;
-    }
-    &__dark-shade-75{
-        width: 70px;
-        height: 70px;
-        border-radius: 6px;
-        margin-right: 40px;
-        background-color: $darkshade75;
-    }
-    &__dark-shade-50{
-        width: 70px;
-        height: 70px;
-        border-radius: 6px;
-        margin-right: 40px;
-        background-color: $darkshade5;
-    }
-    &__dark-shade-25{
-        width: 70px;
-        height: 70px;
-        border-radius: 6px;
-        margin-right: 40px;
-        background-color: $darkshade25;
-    }
-    &__dark-shade-5{
-        width: 70px;
-        height: 70px;
-        border-radius: 6px;
-        margin-right: 40px;
-        background-color: $darkshade05;
-    }
-    &__purple{
-        width: 70px;
-        height: 70px;
-        border-radius: 6px;
-        margin-right: 40px;
-        background-color: $purple;
-    }
-    &__green{
-        width: 70px;
-        height: 70px;
-        border-radius: 6px;
-        margin-right: 40px;
-        background-color: $green;
-    }
-    // .block-color__body-name
-    &__body-name {
-        font-weight: 700;
-        font-size: 19px;
-        line-height: calc(28  / 19 * 100%);
-        color: $darkshade;
-    }
-    // .block-color__body-number
-    &__body-number {
-        font-size: 19px;
-        line-height: calc(28  / 19 * 100%);
-        color: $darkshade;
-    }
+}
+.block-color__dark-shade-100{
+    width: 70px;
+    height: 70px;
+    border-radius: 6px;
+    margin-right: 40px;
+    background-color: $darkshade;
+}
+.block-color__dark-shade-75{
+    width: 70px;
+    height: 70px;
+    border-radius: 6px;
+    margin-right: 40px;
+    background-color: $darkshade75;
+}
+.block-color__dark-shade-50{
+    width: 70px;
+    height: 70px;
+    border-radius: 6px;
+    margin-right: 40px;
+    background-color: $darkshade5;
+}
+.block-color__dark-shade-25{
+    width: 70px;
+    height: 70px;
+    border-radius: 6px;
+    margin-right: 40px;
+    background-color: $darkshade25;
+}
+.block-color__dark-shade-5{
+    width: 70px;
+    height: 70px;
+    border-radius: 6px;
+    margin-right: 40px;
+    background-color: $darkshade05;
+}
+.block-color__purple{
+    width: 70px;
+    height: 70px;
+    border-radius: 6px;
+    margin-right: 40px;
+    background-color: $purple;
+}
+.block-color__green{
+    width: 70px;
+    height: 70px;
+    border-radius: 6px;
+    margin-right: 40px;
+    background-color: $green;
+}
+.block-color__body-name {
+    font-weight: 700;
+    font-size: 19px;
+    line-height: calc(28  / 19 * 100%);
+    color: $darkshade;
+}
+.block-color__body-number {
+    font-size: 19px;
+    line-height: calc(28  / 19 * 100%);
+    color: $darkshade;
 }
 .block-title {
     display: flex;
     margin-bottom: 51px;
     &:last-child {
         margin-bottom: 0;
-    }
-    & span {
-        color: rgba(31, 32, 65, 0.25);
-        width: 30px;
-        height: 30px;
-        text-align: right;
-        margin-right: 30px;
     }
     &:first-child span{
         font-size: 24px;
@@ -134,8 +123,16 @@ h3 {
     &:last-child span{
         line-height: calc(24 / 14 * 100%);
     }
-    & p{
-        line-height: calc(24 / 14 * 100%);
-        color: rgba(31, 32, 65, 0.75);
-    }
+
+}
+.block-title span {
+    color: rgba(31, 32, 65, 0.25);
+    width: 30px;
+    height: 30px;
+    text-align: right;
+    margin-right: 30px;
+}
+.block-title p {
+    line-height: calc(24 / 14 * 100%);
+    color: rgba(31, 32, 65, 0.75);
 }

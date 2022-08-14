@@ -48,15 +48,14 @@ body {
     max-width: 1440px;
 	overflow-x: hidden; 
 	padding: 0 140px;
-}
-@media (max-width:1180px) {
-	.container {
+	@media (max-width:1180px) {
 		padding: 0 10px;
 		margin: 0 auto;
 		max-width: 1180px;
 		overflow-x: hidden; 
 	}
 }
+
 .first-logo {
 	margin: 30px 0 62px 30px;
 }
@@ -70,31 +69,30 @@ body {
 	background-position: center;
 	background-size: cover;
 	position: relative;
-	&-block{
-		display: block;
-		text-align: right;
-		&__text {
-			width: 297px;
-			position: absolute;
-			top: 93%;
-			right: 134px;
-			line-height: 24px;
-			color: rgba(31, 32, 65, 0.75);
-		}
-	}	
-	&_abs{
-		padding: 70px 0 386px 140px;
-	}
-}
-@media (max-width:900px) {
-	.landing-page {
+	@media (max-width:900px) {
 		display: flex;
 		justify-content: center;
-		&_abs{
-			padding: 70px 0 386px 0;
-		}
 	}
 }
+.landing-page-block {
+	display: block;
+	text-align: right;
+}	
+.landing-page-block__text {
+	width: 297px;
+	position: absolute;
+	top: 93%;
+	right: 134px;
+	line-height: 24px;
+	color: rgba(31, 32, 65, 0.75);
+}
+.landing-page_abs{
+	padding: 70px 0 386px 140px;
+	@media (max-width:900px) {
+		padding: 70px 0 386px 0;
+	}
+}
+
 //sign-in
 .sign-in {
 	background: url(../images/registration.jpg) no-repeat;
@@ -125,38 +123,38 @@ body {
 		color: #1F2041;
 		margin-bottom: 20px;
 	}
-	&__img{
-		display: flex;
-		& img {
-			object-fit: cover;
-			vertical-align: top;
-			width: 100%;
-		}
-		&-left{
-			flex: 1 1 67%;
-		}
-		&-right{
-			display: flex;
-			flex-direction: column;
-			flex: 1 1 33%;
-		}
+}
+.room-details__img {
+	display: flex;
+	& img {
+		object-fit: cover;
+		vertical-align: top;
+		width: 100%;
 	}
-	&__body{
-	}
-	&__wrapper{
-		padding: 70px 0;
-	}
-	&__content{
-		display: flex;
-		justify-content: space-between;
-		&-block{
-			display: flex;
-			justify-content: flex-start;
-			flex-direction: column;
-			margin-right: 69px;
-			width: 100%;
-		}
-	}
+}
+.room-details__img-left{
+	flex: 1 1 67%;
+}
+.room-details__img-right{
+	display: flex;
+	flex-direction: column;
+	flex: 1 1 33%;
+}
+.room-details__body {
+}
+.room-details__wrapper {
+	padding: 70px 0;
+}
+.room-details__content {
+	display: flex;
+	justify-content: space-between;
+}
+.room-details__content-block{
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: column;
+	margin-right: 69px;
+	width: 100%;
 }
 .number-block{
 	display: flex;
@@ -171,24 +169,24 @@ body {
 .impression{
 	display: flex;
 }
-.reviews-world{
+.reviews-world {
 	margin-bottom: 30px;
-	&__title {
-		display: flex;
-		justify-content: space-between;
-		& span {
-			font-family: 'Montserrat';
-			font-style: normal;
-			font-weight: 400;
-			font-size: 14px;
-			line-height: 14px;
-			text-align: right;
-			color: rgba(31, 32, 65, 0.5);
-		}
+}
+.reviews-world__title {
+	display: flex;
+	justify-content: space-between;
+	& span {
+		font-family: 'Montserrat';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 14px;
+		text-align: right;
+		color: rgba(31, 32, 65, 0.5);
 	}
-	&__position {
-		margin-bottom: 22px;
-	}
+}
+.reviews-world__position {
+	margin-bottom: 22px;
 }
 .rule {
 	& h6 {

@@ -1,7 +1,4 @@
 .text-field__toggle {
-    & li {
-        margin-bottom: 14px;
-    }
     & .switch:checked,
      .switch:not(:checked){
         position: absolute;
@@ -65,4 +62,7 @@
         -o-transition: all 0.2s ease;
         transition: all 0.2s ease;
     }    
+}
+.text-field__toggle li {
+    margin-bottom: 14px;
 }

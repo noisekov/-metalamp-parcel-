@@ -1,35 +1,33 @@
 @import "../../colors&type/colors&type.scss";
 .footer-mobile {
     line-height: calc(17 / 14 * 100%);
-    &__container{
-        background-color: #ffffff;
-        max-width: 768px;
-        margin: 0 auto 40px;
-    }
-    &__logo {
-    }
-    &__body {
-        margin: 120px 0 20px 0;
-        &-icon {
-            margin-bottom: 169px;
-        }
-    }
-    &__block {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    &__title {
-        color: $darkshade75;
-        margin-bottom: 25px;
-        text-align: center;
-    }
-    &__icon {
-        margin-right: 20px;
-        &:last-child {
-            margin-right: 0;
-        }
+}
+.footer-mobile__container {
+    background-color: #ffffff;
+    max-width: 768px;
+    margin: 0 auto 40px;
+}
+.footer-mobile__body {
+    margin: 120px 0 20px 0;
+}
+.footer-mobile__body-icon {
+    margin-bottom: 169px;
+}
+.footer-mobile__block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.footer-mobile__title {
+    color: $darkshade75;
+    margin-bottom: 25px;
+    text-align: center;
+}
+.footer-mobile__icon {
+    margin-right: 20px;
+    &:last-child {
+        margin-right: 0;
     }
 }
     
