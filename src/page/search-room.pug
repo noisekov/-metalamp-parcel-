@@ -8,8 +8,135 @@ html(lang="en")
         title Search-room
     body 
         .wrapper 
-            include ../components/headers & footers/header/header-up.pug
-            .search-room.container
-                h1 Эта страница в разработке
+            .search-room__header
+                include ../components/headers & footers/header/header-up.pug
+            .search-room
+                .container
+                    .search-room__body 
+                        .search-room__left
+                            form(action="#").position-filter266
+                                label.text-field__header.text-field__name(for="one-picker") Даты пребывания в отеле
+                                .text-field__body
+                                    i.material-icons expand_more
+                                    input#one-picker.text-field__input-filter-date-dropdown.position-input-area(
+                                        type="text" 
+                                        placeholder="19 авг - 23 авг" 
+                                        autocomplete="off"
+                                    )
+                            form(action="").position-filter266
+                                .text-field__header 
+                                    p.text-field__name Гости
+                                .text-field__body#js-input-guest
+                                    i.material-icons#js-dropdown-hidden expand_more
+                                    input.text-field__input-guest.position-input-large-area(
+                                        type="text" 
+                                        placeholder="3гостя, 1 младенец"
+                                        autocomplete="off"
+                                        )
+                                .text-field__block-list-hidden
+                                    .text-field__list
+                                        .text-field__list-dropdown
+                                            ul 
+                                                li Взрослые
+                                                li Дети
+                                                li Младенцы
+                                        .text-field__list-btn  
+                                            ul  
+                                                li.text-field__list-btn_col
+                                                    button#btnMinus -
+                                                    span#countValue 0
+                                                    button#btnPlus +
+                                                li.text-field__list-btn_col
+                                                    button#btnMinusChild -
+                                                    span#countValueChild 0
+                                                    button#btnPlusChild +
+                                                li.text-field__list-btn_col
+                                                    button -
+                                                    span 0
+                                                    button +
+                                    .text-field__button
+                                        button Применить
+                            form(action="/").position-filter266
+                                .text-field__header.range-slider_position
+                                    label.text-field__name(for="range-slider") Диапазон цены
+                                    .text-field__body-slider
+                                        span.text-field__name-fn.js-value-lower
+                                        span  - 
+                                        span.text-field__name-fn.js-value-upper 
+                                .slider-styled#slider
+                            span Стоимость за сутки пребывания в номере
+                            form(action="")
+                                .text-field__body.checkbox-buttons_position
+                                    label.text-field__name(for="checkbox-buttons") Правила дома
+                                ul.text-field__expandable-checkbox-list
+                                    li  
+                                        input#cb1(type="checkbox")
+                                        label(for="cb1") Можно курить
+                                    li  
+                                        input#cb2(type="checkbox" checked)
+                                        label(for="cb2") Можно с питомцами
+                                    li 
+                                        input#cb3(type="checkbox" checked)
+                                        label(for="cb3") Можно пригласить гостей <br> (до 10 человек)
+                            form(action="").position-filter266
+                                .text-field__body.position-filter.position-mb10
+                                    label.text-field__name(for="Rich checkbox buttons") Доступность
+                                ul.text-field__expandable-checkbox-list
+                                    li  
+                                        input#rc1(type="checkbox")
+                                        label(for="rc1") <span>Широкий коридор</span> <br>
+                                            p Ширина коридоров в номере не менее 91 см.
+                                    li  
+                                        input#rc2(type="checkbox")
+                                        label(for="rc2") <span>Помощник для инвалидов</span><br> 
+                                            p На 1 этаже вас встретит специалист  и проводит до номера.
+                            form(action="").position-filter266
+                                p.text-field__name.text-field__header Удобства номера
+                                .text-field__body
+                                    input.text-field__input-dropdown-default.position-input-area.js-dropdown-expanded(
+                                        type="text"
+                                        autocomplete="off" 
+                                        placeholder="2 спальни, 2 кровати..."
+                                        )
+                                    i.material-icons#js-default-hidden.js-dropdown-expanded expand_more
+                                .text-field__block-list-expanded
+                                    .text-field__list
+                                        .text-field__list-dropdown
+                                            ul 
+                                                li Спальни
+                                                li Кровати
+                                                li Ванные комнаты 
+                                        .text-field__list-btn
+                                            ul
+                                                li.text-field__list-btn_col
+                                                    button.js-first-elem-min -
+                                                    span.js-counter 2
+                                                    button.js-first-elem-plus +
+                                                li.text-field__list-btn_col
+                                                    button.js-second-elem-min -
+                                                    span 2
+                                                    button.js-second-elem-plus +
+                                                li.text-field__list-btn_col
+                                                    button.js-third-elem-min -
+                                                    span 2
+                                                    button.js-third-elem-plus +
+                            include ../components/expandable-checkbox/expandable-checkbox.pug
+                        .search-room__right
+                            h1 Номера, которые мы для вас подобрали
+                            .search-room__apparments
+                                include ../components/appartment/appartment.pug
+                                include ../components/appartment/appartment.pug
+                                include ../components/appartment/appartment.pug
+                                include ../components/appartment/appartment.pug
+                                include ../components/appartment/appartment.pug
+                                include ../components/appartment/appartment.pug
+                                include ../components/appartment/appartment.pug
+                                include ../components/appartment/appartment.pug
+                                include ../components/appartment/appartment.pug
+                                include ../components/appartment/appartment.pug
+                                include ../components/appartment/appartment.pug
+                                include ../components/appartment/appartment.pug
+                            .search-room__pagination
+                                include ../components/pagination/pagination.pug
             include ../components/headers & footers/footer/footer.pug
         script(src="/page/search-room.js")
