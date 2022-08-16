@@ -14,129 +14,541 @@ html(lang="en")
                 .container
                     .search-room__body 
                         .search-room__left
-                            form(action="#").position-filter266
-                                label.text-field__header.text-field__name(for="one-picker") Даты пребывания в отеле
-                                .text-field__body
-                                    i.material-icons expand_more
-                                    input#one-picker.text-field__input-filter-date-dropdown.position-input-area(
-                                        type="text" 
-                                        placeholder="19 авг - 23 авг" 
-                                        autocomplete="off"
-                                    )
-                            form(action="").position-filter266
-                                .text-field__header 
-                                    p.text-field__name Гости
-                                .text-field__body#js-input-guest
-                                    i.material-icons#js-dropdown-hidden expand_more
-                                    input.text-field__input-guest.position-input-large-area(
-                                        type="text" 
-                                        placeholder="3гостя, 1 младенец"
-                                        autocomplete="off"
+                            .search-room__left-small-margin
+                                form(action="#").position-filter266
+                                    label.text-field__header.text-field__name(for="one-picker") Даты пребывания в отеле
+                                    .text-field__body
+                                        i.material-icons expand_more
+                                        input#one-picker.text-field__input-filter-date-dropdown.position-input-area(
+                                            type="text" 
+                                            placeholder="19 авг - 23 авг" 
+                                            autocomplete="off"
                                         )
-                                .text-field__block-list-hidden
-                                    .text-field__list
-                                        .text-field__list-dropdown
-                                            ul 
-                                                li Взрослые
-                                                li Дети
-                                                li Младенцы
-                                        .text-field__list-btn  
-                                            ul  
-                                                li.text-field__list-btn_col
-                                                    button#btnMinus -
-                                                    span#countValue 0
-                                                    button#btnPlus +
-                                                li.text-field__list-btn_col
-                                                    button#btnMinusChild -
-                                                    span#countValueChild 0
-                                                    button#btnPlusChild +
-                                                li.text-field__list-btn_col
-                                                    button -
-                                                    span 0
-                                                    button +
-                                    .text-field__button
-                                        button Применить
-                            form(action="/").position-filter266
-                                .text-field__header.range-slider_position
-                                    label.text-field__name(for="range-slider") Диапазон цены
-                                    .text-field__body-slider
-                                        span.text-field__name-fn.js-value-lower
-                                        span  - 
-                                        span.text-field__name-fn.js-value-upper 
-                                .slider-styled#slider
-                            span Стоимость за сутки пребывания в номере
-                            form(action="")
-                                .text-field__body.checkbox-buttons_position
-                                    label.text-field__name(for="checkbox-buttons") Правила дома
-                                ul.text-field__expandable-checkbox-list
-                                    li  
-                                        input#cb1(type="checkbox")
-                                        label(for="cb1") Можно курить
-                                    li  
-                                        input#cb2(type="checkbox" checked)
-                                        label(for="cb2") Можно с питомцами
-                                    li 
-                                        input#cb3(type="checkbox" checked)
-                                        label(for="cb3") Можно пригласить гостей <br> (до 10 человек)
-                            form(action="").position-filter266
-                                .text-field__body.position-filter.position-mb10
-                                    label.text-field__name(for="Rich checkbox buttons") Доступность
-                                ul.text-field__expandable-checkbox-list
-                                    li  
-                                        input#rc1(type="checkbox")
-                                        label(for="rc1") <span>Широкий коридор</span> <br>
-                                            p Ширина коридоров в номере не менее 91 см.
-                                    li  
-                                        input#rc2(type="checkbox")
-                                        label(for="rc2") <span>Помощник для инвалидов</span><br> 
-                                            p На 1 этаже вас встретит специалист  и проводит до номера.
-                            form(action="").position-filter266
-                                p.text-field__name.text-field__header Удобства номера
-                                .text-field__body
-                                    input.text-field__input-dropdown-default.position-input-area.js-dropdown-expanded(
-                                        type="text"
-                                        autocomplete="off" 
-                                        placeholder="2 спальни, 2 кровати..."
-                                        )
-                                    i.material-icons#js-default-hidden.js-dropdown-expanded expand_more
-                                .text-field__block-list-expanded
-                                    .text-field__list
-                                        .text-field__list-dropdown
-                                            ul 
-                                                li Спальни
-                                                li Кровати
-                                                li Ванные комнаты 
-                                        .text-field__list-btn
-                                            ul
-                                                li.text-field__list-btn_col
-                                                    button.js-first-elem-min -
-                                                    span.js-counter 2
-                                                    button.js-first-elem-plus +
-                                                li.text-field__list-btn_col
-                                                    button.js-second-elem-min -
-                                                    span 2
-                                                    button.js-second-elem-plus +
-                                                li.text-field__list-btn_col
-                                                    button.js-third-elem-min -
-                                                    span 2
-                                                    button.js-third-elem-plus +
+                            .search-room__left-big-margin
+                                form(action="").position-filter266
+                                    .text-field__header 
+                                        p.text-field__name Гости
+                                    .text-field__body#js-input-guest
+                                        i.material-icons#js-dropdown-hidden expand_more
+                                        input.text-field__input-guest.position-input-large-area(
+                                            type="text" 
+                                            placeholder="3гостя, 1 младенец"
+                                            autocomplete="off"
+                                            )
+                                    .text-field__block-list-hidden.position-filter266
+                                        .text-field__list
+                                            .text-field__list-dropdown
+                                                ul 
+                                                    li Взрослые
+                                                    li Дети
+                                                    li Младенцы
+                                            .text-field__list-btn  
+                                                ul  
+                                                    li.text-field__list-btn_col
+                                                        button#btnMinus -
+                                                        span#countValue 0
+                                                        button#btnPlus +
+                                                    li.text-field__list-btn_col
+                                                        button#btnMinusChild -
+                                                        span#countValueChild 0
+                                                        button#btnPlusChild +
+                                                    li.text-field__list-btn_col
+                                                        button -
+                                                        span 0
+                                                        button +
+                                        .text-field__button
+                                            button Применить
+                            .search-room__left-big-margin
+                                form(action="/").position-filter266.search-room__left-small-margin
+                                    .text-field__header.range-slider_position
+                                        label.text-field__name(for="range-slider") Диапазон цены
+                                        .text-field__body-slider
+                                            span.text-field__name-fn.js-value-lower
+                                            span  - 
+                                            span.text-field__name-fn.js-value-upper 
+                                    .slider-styled#slider
+                                span.search-room__slider-subtitle Стоимость за сутки пребывания в номере
+                            .search-room__left-big-margin
+                                form(action="")
+                                    .text-field__body.checkbox-buttons_position
+                                        label.text-field__name(for="checkbox-buttons") Правила дома
+                                    ul.text-field__expandable-checkbox-list
+                                        li  
+                                            input#cb1(type="checkbox")
+                                            label(for="cb1") Можно курить
+                                        li  
+                                            input#cb2(type="checkbox" checked)
+                                            label(for="cb2") Можно с питомцами
+                                        li 
+                                            input#cb3(type="checkbox" checked)
+                                            label(for="cb3") Можно пригласить гостей <br> (до 10 человек)
+                            .search-room__left-big-margin
+                                form(action="").position-filter266
+                                    .text-field__body.position-filter.position-mb10
+                                        label.text-field__name(for="Rich checkbox buttons") Доступность
+                                    ul.text-field__expandable-checkbox-list
+                                        li  
+                                            input#rc1(type="checkbox")
+                                            label(for="rc1") <span>Широкий коридор</span> <br>
+                                                p Ширина коридоров в номере не менее 91 см.
+                                        li  
+                                            input#rc2(type="checkbox")
+                                            label(for="rc2") <span>Помощник для инвалидов</span><br> 
+                                                p На 1 этаже вас встретит специалист  и проводит до номера.
+                            .search-room__left-big-margin
+                                form(action="").position-filter266
+                                    p.text-field__name.text-field__header Удобства номера
+                                    .text-field__body
+                                        input.text-field__input-dropdown-default.position-input-area.js-dropdown-expanded(
+                                            type="text"
+                                            autocomplete="off" 
+                                            placeholder="2 спальни, 2 кровати..."
+                                            )
+                                        i.material-icons#js-default-hidden.js-dropdown-expanded expand_more
+                                    .text-field__block-list-expanded
+                                        .text-field__list
+                                            .text-field__list-dropdown
+                                                ul 
+                                                    li Спальни
+                                                    li Кровати
+                                                    li Ванные комнаты 
+                                            .text-field__list-btn
+                                                ul
+                                                    li.text-field__list-btn_col
+                                                        button.js-first-elem-min -
+                                                        span.js-counter 2
+                                                        button.js-first-elem-plus +
+                                                    li.text-field__list-btn_col
+                                                        button.js-second-elem-min -
+                                                        span 2
+                                                        button.js-second-elem-plus +
+                                                    li.text-field__list-btn_col
+                                                        button.js-third-elem-min -
+                                                        span 2
+                                                        button.js-third-elem-plus +
                             include ../components/expandable-checkbox/expandable-checkbox.pug
                         .search-room__right
-                            h1 Номера, которые мы для вас подобрали
+                            h1.search-room__title Номера, которые мы для вас подобрали
                             .search-room__apparments
-                                include ../components/appartment/appartment.pug
-                                include ../components/appartment/appartment.pug
-                                include ../components/appartment/appartment.pug
-                                include ../components/appartment/appartment.pug
-                                include ../components/appartment/appartment.pug
-                                include ../components/appartment/appartment.pug
-                                include ../components/appartment/appartment.pug
-                                include ../components/appartment/appartment.pug
-                                include ../components/appartment/appartment.pug
-                                include ../components/appartment/appartment.pug
-                                include ../components/appartment/appartment.pug
-                                include ../components/appartment/appartment.pug
+                                .search-room__apparment
+                                     include ../components/appartment/appartment.pug
+                                .search-room__apparment  
+                                    .appartment 
+                                        .appartment__photo
+                                            ul 
+                                                li: img(src="../images/appartment2.png", alt="appartment")
+                                                li 
+                                                li 
+                                                li 
+                                            .appartment__slider-bar 
+                                                ul
+                                                    button
+                                                    button
+                                                    button
+                                                    button
+                                        .appartment__body 
+                                            .appartment__title 
+                                                .find-number__header.cards-position20
+                                                    .find-number__name №<span>840</span> <span></span>
+                                                    .find-number__title <span>9 900₽</span> в сутки
+                                                .appartment-feedback
+                                                    fieldset
+                                                        .rate-button__group
+                                                            input.rate-button__input(type="radio" name="star-as" value="1" id="star-app-second-1")
+                                                            label.rate-button__star(for="star-app-second-1" aria-label="the worst") 
+
+                                                            input.rate-button__input(type="radio" name="star-as" value="2" id="star-app-second-2")
+                                                            label.rate-button__star(for="star-app-second-2" aria-label="bad") 
+
+                                                            input.rate-button__input(type="radio" name="star-as" value="3" id="star-app-second-3")
+                                                            label.rate-button__star(for="star-app-second-3" aria-label="normal") 
+
+                                                            input.rate-button__input(type="radio" name="star-as" value="4" id="star-app-second-4" checked)
+                                                            label.rate-button__star(for="star-app-second-4" aria-label="good") 
+
+                                                            input.rate-button__input(type="radio" name="star-as" value="5" id="star-app-second-5" )
+                                                            label.rate-button__star(for="star-app-second-5" aria-label="perfect") 
+                                                    .appartment-block <span>65</span> Отзывов
+                                .search-room__apparment  
+                                    .appartment 
+                                        .appartment__photo
+                                            ul 
+                                                li: img(src="../images/appartment12.jpg", alt="appartment")
+                                                li 
+                                                li 
+                                                li 
+                                            .appartment__slider-bar 
+                                                ul
+                                                    button
+                                                    button
+                                                    button
+                                                    button
+                                        .appartment__body 
+                                            .appartment__title 
+                                                .find-number__header.cards-position20
+                                                    .find-number__name №<span>980</span> <span>ЛЮКС</span>
+                                                    .find-number__title <span>8 500₽</span> в сутки
+                                                .appartment-feedback
+                                                    fieldset
+                                                        .rate-button__group
+                                                            input.rate-button__input(type="radio" name="star-fh" value="1" id="star-app-th-1")
+                                                            label.rate-button__star(for="star-app-th-1" aria-label="the worst") 
+
+                                                            input.rate-button__input(type="radio" name="star-fh" value="2" id="star-app-th-2")
+                                                            label.rate-button__star(for="star-app-th-2" aria-label="bad") 
+
+                                                            input.rate-button__input(type="radio" name="star-fh" value="3" id="star-app-th-3" checked)
+                                                            label.rate-button__star(for="star-app-th-3" aria-label="normal") 
+
+                                                            input.rate-button__input(type="radio" name="star-fh" value="4" id="star-app-th-4" )
+                                                            label.rate-button__star(for="star-app-th-4" aria-label="good") 
+
+                                                            input.rate-button__input(type="radio" name="star-fh" value="5" id="star-app-th-5" )
+                                                            label.rate-button__star(for="star-app-th-5" aria-label="perfect") 
+                                                    .appartment-block <span>35</span> Отзывов
+                                .search-room__apparment  
+                                    .appartment 
+                                        .appartment__photo
+                                            ul 
+                                                li: img(src="../images/appartment11.jpg", alt="appartment")
+                                                li 
+                                                li 
+                                                li 
+                                            .appartment__slider-bar 
+                                                ul
+                                                    button
+                                                    button
+                                                    button
+                                                    button
+                                        .appartment__body 
+                                            .appartment__title 
+                                                .find-number__header.cards-position20
+                                                    .find-number__name №<span>856</span> <span></span>
+                                                    .find-number__title <span>7 300₽</span> в сутки
+                                                .appartment-feedback
+                                                    fieldset
+                                                        .rate-button__group
+                                                            input.rate-button__input(type="radio" name="star-uk" value="1" id="star-app-second-1")
+                                                            label.rate-button__star(for="star-app-second-1" aria-label="the worst") 
+
+                                                            input.rate-button__input(type="radio" name="star-uk" value="2" id="star-app-second-2")
+                                                            label.rate-button__star(for="star-app-second-2" aria-label="bad") 
+
+                                                            input.rate-button__input(type="radio" name="star-uk" value="3" id="star-app-second-3" )
+                                                            label.rate-button__star(for="star-app-second-3" aria-label="normal") 
+
+                                                            input.rate-button__input(type="radio" name="star-uk" value="4" id="star-app-second-4")
+                                                            label.rate-button__star(for="star-app-second-4" aria-label="good") 
+
+                                                            input.rate-button__input(type="radio" name="star-uk" value="5" id="star-app-second-5" checked)
+                                                            label.rate-button__star(for="star-app-second-5" aria-label="perfect") 
+                                                    .appartment-block <span>19</span> Отзывов
+                                .search-room__apparment  
+                                    .appartment 
+                                        .appartment__photo
+                                            ul 
+                                                li: img(src="../images/appartment10.jpg", alt="appartment")
+                                                li 
+                                                li 
+                                                li 
+                                            .appartment__slider-bar 
+                                                ul
+                                                    button
+                                                    button
+                                                    button
+                                                    button
+                                        .appartment__body 
+                                            .appartment__title 
+                                                .find-number__header.cards-position20
+                                                    .find-number__name №<span>740</span> <span></span>
+                                                    .find-number__title <span>6 000₽</span> в сутки
+                                                .appartment-feedback
+                                                    fieldset
+                                                        .rate-button__group
+                                                            input.rate-button__input(type="radio" name="star-hh" value="1" id="star-app-second-1")
+                                                            label.rate-button__star(for="star-app-second-1" aria-label="the worst") 
+
+                                                            input.rate-button__input(type="radio" name="star-hh" value="2" id="star-app-second-2")
+                                                            label.rate-button__star(for="star-app-second-2" aria-label="bad") 
+
+                                                            input.rate-button__input(type="radio" name="star-hh" value="3" id="star-app-second-3")
+                                                            label.rate-button__star(for="star-app-second-3" aria-label="normal") 
+
+                                                            input.rate-button__input(type="radio" name="star-hh" value="4" id="star-app-second-4" checked)
+                                                            label.rate-button__star(for="star-app-second-4" aria-label="good") 
+
+                                                            input.rate-button__input(type="radio" name="star-hh" value="5" id="star-app-second-5" )
+                                                            label.rate-button__star(for="star-app-second-5" aria-label="perfect") 
+                                                    .appartment-block <span>44</span> Отзывов
+                                .search-room__apparment  
+                                    .appartment 
+                                        .appartment__photo
+                                            ul 
+                                                li: img(src="../images/appartment9.jpg", alt="appartment")
+                                                li 
+                                                li 
+                                                li 
+                                            .appartment__slider-bar 
+                                                ul
+                                                    button
+                                                    button
+                                                    button
+                                                    button
+                                        .appartment__body 
+                                            .appartment__title 
+                                                .find-number__header.cards-position20
+                                                    .find-number__name №<span>982</span> <span></span>
+                                                    .find-number__title <span>5 800₽</span> в сутки
+                                                .appartment-feedback
+                                                    fieldset
+                                                        .rate-button__group
+                                                            input.rate-button__input(type="radio" name="star-wr" value="1" id="star-app-second-1")
+                                                            label.rate-button__star(for="star-app-second-1" aria-label="the worst") 
+
+                                                            input.rate-button__input(type="radio" name="star-wr" value="2" id="star-app-second-2")
+                                                            label.rate-button__star(for="star-app-second-2" aria-label="bad") 
+
+                                                            input.rate-button__input(type="radio" name="star-wr" value="3" id="star-app-second-3" checked)
+                                                            label.rate-button__star(for="star-app-second-3" aria-label="normal") 
+
+                                                            input.rate-button__input(type="radio" name="star-wr" value="4" id="star-app-second-4" )
+                                                            label.rate-button__star(for="star-app-second-4" aria-label="good") 
+
+                                                            input.rate-button__input(type="radio" name="star-wr" value="5" id="star-app-second-5" )
+                                                            label.rate-button__star(for="star-app-second-5" aria-label="perfect") 
+                                                    .appartment-block <span>56</span> Отзывов
+                                .search-room__apparment  
+                                    .appartment 
+                                        .appartment__photo
+                                            ul 
+                                                li: img(src="../images/appartment8.jpg", alt="appartment")
+                                                li 
+                                                li 
+                                                li 
+                                            .appartment__slider-bar 
+                                                ul
+                                                    button
+                                                    button
+                                                    button
+                                                    button
+                                        .appartment__body 
+                                            .appartment__title 
+                                                .find-number__header.cards-position20
+                                                    .find-number__name №<span>678</span> <span></span>
+                                                    .find-number__title <span>5 500₽</span> в сутки
+                                                .appartment-feedback
+                                                    fieldset
+                                                        .rate-button__group
+                                                            input.rate-button__input(type="radio" name="star-qa" value="1" id="star-app-second-1")
+                                                            label.rate-button__star(for="star-app-second-1" aria-label="the worst") 
+
+                                                            input.rate-button__input(type="radio" name="star-qa" value="2" id="star-app-second-2")
+                                                            label.rate-button__star(for="star-app-second-2" aria-label="bad") 
+
+                                                            input.rate-button__input(type="radio" name="star-qa" value="3" id="star-app-second-3")
+                                                            label.rate-button__star(for="star-app-second-3" aria-label="normal") 
+
+                                                            input.rate-button__input(type="radio" name="star-qa" value="4" id="star-app-second-4" )
+                                                            label.rate-button__star(for="star-app-second-4" aria-label="good") 
+
+                                                            input.rate-button__input(type="radio" name="star-qa" value="5" id="star-app-second-5" checked)
+                                                            label.rate-button__star(for="star-app-second-5" aria-label="perfect") 
+                                                    .appartment-block <span>45</span> Отзывов
+                                .search-room__apparment  
+                                    .appartment 
+                                        .appartment__photo
+                                            ul 
+                                                li: img(src="../images/appartment7.jpg", alt="appartment")
+                                                li 
+                                                li 
+                                                li 
+                                            .appartment__slider-bar 
+                                                ul
+                                                    button
+                                                    button
+                                                    button
+                                                    button
+                                        .appartment__body 
+                                            .appartment__title 
+                                                .find-number__header.cards-position20
+                                                    .find-number__name №<span>450</span> <span></span>
+                                                    .find-number__title <span>5 300₽</span> в сутки
+                                                .appartment-feedback
+                                                    fieldset
+                                                        .rate-button__group
+                                                            input.rate-button__input(type="radio" name="star-jk" value="1" id="star-app-second-1")
+                                                            label.rate-button__star(for="star-app-second-1" aria-label="the worst") 
+
+                                                            input.rate-button__input(type="radio" name="star-jk" value="2" id="star-app-second-2")
+                                                            label.rate-button__star(for="star-app-second-2" aria-label="bad") 
+
+                                                            input.rate-button__input(type="radio" name="star-jk" value="3" id="star-app-second-3")
+                                                            label.rate-button__star(for="star-app-second-3" aria-label="normal") 
+
+                                                            input.rate-button__input(type="radio" name="star-jk" value="4" id="star-app-second-4" checked)
+                                                            label.rate-button__star(for="star-app-second-4" aria-label="good") 
+
+                                                            input.rate-button__input(type="radio" name="star-jk" value="5" id="star-app-second-5" )
+                                                            label.rate-button__star(for="star-app-second-5" aria-label="perfect") 
+                                                    .appartment-block <span>39</span> Отзывов
+                                .search-room__apparment  
+                                    .appartment 
+                                        .appartment__photo
+                                            ul 
+                                                li: img(src="../images/appartment6.jpg", alt="appartment")
+                                                li 
+                                                li 
+                                                li 
+                                            .appartment__slider-bar 
+                                                ul
+                                                    button
+                                                    button
+                                                    button
+                                                    button
+                                        .appartment__body 
+                                            .appartment__title 
+                                                .find-number__header.cards-position20
+                                                    .find-number__name №<span>350</span> <span></span>
+                                                    .find-number__title <span>5 000₽</span> в сутки
+                                                .appartment-feedback
+                                                    fieldset
+                                                        .rate-button__group
+                                                            input.rate-button__input(type="radio" name="star-po" value="1" id="star-app-second-1")
+                                                            label.rate-button__star(for="star-app-second-1" aria-label="the worst") 
+
+                                                            input.rate-button__input(type="radio" name="star-po" value="2" id="star-app-second-2")
+                                                            label.rate-button__star(for="star-app-second-2" aria-label="bad") 
+
+                                                            input.rate-button__input(type="radio" name="star-po" value="3" id="star-app-second-3" checked)
+                                                            label.rate-button__star(for="star-app-second-3" aria-label="normal") 
+
+                                                            input.rate-button__input(type="radio" name="star-po" value="4" id="star-app-second-4" )
+                                                            label.rate-button__star(for="star-app-second-4" aria-label="good") 
+
+                                                            input.rate-button__input(type="radio" name="star-po" value="5" id="star-app-second-5" )
+                                                            label.rate-button__star(for="star-app-second-5" aria-label="perfect") 
+                                                    .appartment-block <span>77</span> Отзывов
+                                .search-room__apparment  
+                                    .appartment 
+                                        .appartment__photo
+                                            ul 
+                                                li: img(src="../images/appartment5.jpg", alt="appartment")
+                                                li 
+                                                li 
+                                                li 
+                                            .appartment__slider-bar 
+                                                ul
+                                                    button
+                                                    button
+                                                    button
+                                                    button
+                                        .appartment__body 
+                                            .appartment__title 
+                                                .find-number__header.cards-position20
+                                                    .find-number__name №<span>666</span> <span></span>
+                                                    .find-number__title <span>5 000₽</span> в сутки
+                                                .appartment-feedback
+                                                    fieldset
+                                                        .rate-button__group
+                                                            input.rate-button__input(type="radio" name="star-nj" value="1" id="star-app-second-1")
+                                                            label.rate-button__star(for="star-app-second-1" aria-label="the worst") 
+
+                                                            input.rate-button__input(type="radio" name="star-nj" value="2" id="star-app-second-2")
+                                                            label.rate-button__star(for="star-app-second-2" aria-label="bad") 
+
+                                                            input.rate-button__input(type="radio" name="star-nj" value="3" id="star-app-second-3")
+                                                            label.rate-button__star(for="star-app-second-3" aria-label="normal") 
+
+                                                            input.rate-button__input(type="radio" name="star-nj" value="4" id="star-app-second-4" )
+                                                            label.rate-button__star(for="star-app-second-4" aria-label="good") 
+
+                                                            input.rate-button__input(type="radio" name="star-nj" value="5" id="star-app-second-5" checked)
+                                                            label.rate-button__star(for="star-app-second-5" aria-label="perfect") 
+                                                    .appartment-block <span>25</span> Отзывов
+                                .search-room__apparment  
+                                    .appartment 
+                                        .appartment__photo
+                                            ul 
+                                                li: img(src="../images/appartment4.jpg", alt="appartment")
+                                                li 
+                                                li 
+                                                li 
+                                            .appartment__slider-bar 
+                                                ul
+                                                    button
+                                                    button
+                                                    button
+                                                    button
+                                        .appartment__body 
+                                            .appartment__title 
+                                                .find-number__header.cards-position20
+                                                    .find-number__name №<span>444</span> <span></span>
+                                                    .find-number__title <span>5 000₽</span> в сутки
+                                                .appartment-feedback
+                                                    fieldset
+                                                        .rate-button__group
+                                                            input.rate-button__input(type="radio" name="star-l" value="1" id="star-app-second-1")
+                                                            label.rate-button__star(for="star-app-second-1" aria-label="the worst") 
+
+                                                            input.rate-button__input(type="radio" name="star-l" value="2" id="star-app-second-2")
+                                                            label.rate-button__star(for="star-app-second-2" aria-label="bad") 
+
+                                                            input.rate-button__input(type="radio" name="star-l" value="3" id="star-app-second-3" checked)
+                                                            label.rate-button__star(for="star-app-second-3" aria-label="normal") 
+
+                                                            input.rate-button__input(type="radio" name="star-l" value="4" id="star-app-second-4" )
+                                                            label.rate-button__star(for="star-app-second-4" aria-label="good") 
+
+                                                            input.rate-button__input(type="radio" name="star-l" value="5" id="star-app-second-5" )
+                                                            label.rate-button__star(for="star-app-second-5" aria-label="perfect") 
+                                                    .appartment-block <span>15</span> Отзывов
+                                .search-room__apparment  
+                                    .appartment 
+                                        .appartment__photo
+                                            ul 
+                                                li: img(src="../images/appartment3.jpg", alt="appartment")
+                                                li 
+                                                li 
+                                                li 
+                                            .appartment__slider-bar 
+                                                ul
+                                                    button
+                                                    button
+                                                    button
+                                                    button
+                                        .appartment__body 
+                                            .appartment__title 
+                                                .find-number__header.cards-position20
+                                                    .find-number__name №<span>352</span> <span></span>
+                                                    .find-number__title <span>5 000₽</span> в сутки
+                                                .appartment-feedback
+                                                    fieldset
+                                                        .rate-button__group
+                                                            input.rate-button__input(type="radio" name="star-vb" value="1" id="star-app-second-1")
+                                                            label.rate-button__star(for="star-app-second-1" aria-label="the worst") 
+
+                                                            input.rate-button__input(type="radio" name="star-vb" value="2" id="star-app-second-2")
+                                                            label.rate-button__star(for="star-app-second-2" aria-label="bad") 
+
+                                                            input.rate-button__input(type="radio" name="star-vb" value="3" id="star-app-second-3" checked)
+                                                            label.rate-button__star(for="star-app-second-3" aria-label="normal") 
+
+                                                            input.rate-button__input(type="radio" name="star-vb" value="4" id="star-app-second-4" )
+                                                            label.rate-button__star(for="star-app-second-4" aria-label="good") 
+
+                                                            input.rate-button__input(type="radio" name="star-vb" value="5" id="star-app-second-5" )
+                                                            label.rate-button__star(for="star-app-second-5" aria-label="perfect") 
+                                                    .appartment-block <span>55</span> Отзывов
                             .search-room__pagination
-                                include ../components/pagination/pagination.pug
+                                .pagination
+                                    ul.pagination__body 
+                                        li.pagination__button_active 1
+                                        li.pagination__button 2
+                                        li.pagination__button 3
+                                        li.pagination__button ...
+                                        li.pagination__button 15
+                                        li.pagination__button
+                                            span.material-icons.material-icons_pagination-right arrow_forward  
+                                    .pagination__count 1 – 12 из 100+ вариантов аренды
             include ../components/headers & footers/footer/footer.pug
         script(src="/page/search-room.js")
