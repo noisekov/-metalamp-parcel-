@@ -156,15 +156,79 @@ body {
 .number-block{
 	display: flex;
 	width: 100%;
-	justify-content: space-between;
 	margin-bottom: 10px;
 }
 .about-number {
 	display: flex;
 	flex-direction: column;
+	margin-right: 70px;
 }
 .impression{
+}
+.impression__body {
 	display: flex;
+	justify-content: space-between;
+}
+.impression__review {
+	border: 1px solid #000;
+	border-radius: 50%;
+	width: 120px;
+	height: 120px;
+	margin-right: 50px;
+}
+.impression__vote {
+	display: flex;
+	align-self: flex-end;
+	width: 146px;
+	height: 96px;
+}
+.impression__vote-items {
+	font-size: 14px;
+	line-height: 24px;
+	color: rgba(31, 32, 65, 0.75);
+	position: relative;
+}
+.impression__vote-item {
+	&_excellent::before {
+		content: "";
+		position: absolute;
+		top: 7px;
+		right: 151px;
+		width: 10px;
+		border-radius: 50%;
+		height: 10px;
+		background: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
+	}
+	&_good::before {
+		content: "";
+		position: absolute;
+		top: 31px;
+		right: 151px;
+		width: 10px;
+		border-radius: 50%;
+		height: 10px;
+		background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+	}
+	&_normal::before {
+		content: "";
+		position: absolute;
+		top: 55px;
+		right: 151px;
+		width: 10px;
+		border-radius: 50%;
+		height: 10px;
+		background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+	}
+	&_bad::before {
+		content: "";
+		position: absolute;
+		top: 79px;
+		right: 151px;
+		width: 10px;
+		border-radius: 50%;
+		height: 10px;
+		background: linear-gradient(180deg, #919191 0%, #3D4975 100%);
+	}
 }
 .reviews-world {
 	margin-bottom: 30px;
