@@ -170,11 +170,25 @@ body {
 	justify-content: space-between;
 }
 .impression__review {
-	border: 1px solid #000;
-	border-radius: 50%;
 	width: 120px;
 	height: 120px;
 	margin-right: 50px;
+}
+.impression__review-title {
+	fill: #BC9CFF;
+	font-size: 14px;
+}
+.impression__review-number {
+	text-anchor: middle;
+	font-size: 0.6em;
+	transform: translateY(-0.1em);
+	font-weight: 700;
+}
+.impression__review-label {
+	text-anchor: middle;
+	font-size: 0.3em;
+	transform: translateY(1.2em);
+	font-weight: 400;
 }
 .impression__vote {
 	display: flex;
