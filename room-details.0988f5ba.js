@@ -16276,7 +16276,11 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var _default = window.$ = window.jQuery = _jquery.default;
 
 exports.default = _default;
-},{"./styles/style.scss":"styles/style.scss","./components/form-elements/form-elements":"components/form-elements/form-elements.js","./components/range-slider/range-slider":"components/range-slider/range-slider.js","./components/dropdown-guest/dropdown-guest":"components/dropdown-guest/dropdown-guest.js","./components/air-datepicker/air-datepicker":"components/air-datepicker/air-datepicker.js","./components/expandable-checkbox/expandable-checkbox":"components/expandable-checkbox/expandable-checkbox.js","./components/dropdown-default/dropdown-default":"components/dropdown-default/dropdown-default.js","./components/like-button/like-button":"components/like-button/like-button.js","./components/cards/cards":"components/cards/cards.js","./components/appartment/appartment":"components/appartment/appartment.js","./components/entry/entry":"components/entry/entry.js","./components/headers & footers/header/header":"components/headers & footers/header/header.js","jquery":"../node_modules/jquery/dist/jquery.js"}],"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./styles/style.scss":"styles/style.scss","./components/form-elements/form-elements":"components/form-elements/form-elements.js","./components/range-slider/range-slider":"components/range-slider/range-slider.js","./components/dropdown-guest/dropdown-guest":"components/dropdown-guest/dropdown-guest.js","./components/air-datepicker/air-datepicker":"components/air-datepicker/air-datepicker.js","./components/expandable-checkbox/expandable-checkbox":"components/expandable-checkbox/expandable-checkbox.js","./components/dropdown-default/dropdown-default":"components/dropdown-default/dropdown-default.js","./components/like-button/like-button":"components/like-button/like-button.js","./components/cards/cards":"components/cards/cards.js","./components/appartment/appartment":"components/appartment/appartment.js","./components/entry/entry":"components/entry/entry.js","./components/headers & footers/header/header":"components/headers & footers/header/header.js","jquery":"../node_modules/jquery/dist/jquery.js"}],"room-details.js":[function(require,module,exports) {
+"use strict";
+
+require("/main.js");
+},{"/main.js":"main.js"}],"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -16480,5 +16484,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","main.js"], null)
-//# sourceMappingURL=/main.1f19ae8e.js.map
+},{}]},{},["../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","room-details.js"], null)
+//# sourceMappingURL=/room-details.0988f5ba.js.map
