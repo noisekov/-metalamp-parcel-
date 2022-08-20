@@ -12,10 +12,26 @@ let apply = {
    }
 }
 
+
+let valueDate1 = document.querySelector(".js-value1")
+let valueDate2 = document.querySelector(".js-value2")
+
+let date1 = new Date();
+let date2 = new Date();
+
 calInTwo = new AirDatepicker('#cal-two-input',{
+   // multipleDates: true,
+   selectedDates: [date1, date2],
+   onSelect ({date1}) {
+      date1 = valueDate1;
+   },
+   onSelect ({date2}) {
+      date2 = valueDate2;
+   },
    range: true,
-   buttons: ['clear', apply],
+   buttons: ['clear', apply],   
 });
+
 
 calInTwo = new AirDatepicker('#cal-two-input-find-number',{
    range: true,
