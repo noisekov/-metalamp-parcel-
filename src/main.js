@@ -13,7 +13,29 @@ import './components/headers & footers/header/header';
 
 
 
-
 import $ from "jquery";
 export default (window.$ = window.jQuery = $);
 
+$(document).ready(function(){
+    console.log(typeof window.jQuery); 
+})
+
+// import pagination from "paginationjs";
+
+// $('#pagination-container').pagination({
+//     dataSource: [1, 2, 3, 4, 5, 6, 7, ...  195],
+//     callback: function(data, pagination) {
+//         // template method of yourself
+//         let html = template(data);
+//         $('#data-container').html(html)
+//     }
+// })
+
+
+
+// import 'item-quantity-dropdown';
+// import 'item-quantity-dropdown/lib/item-quantity-dropdown.css';
+
+// $(document).ready(() => {
+//     $('.iqdropdown').iqDropdown({ [options] });
+//   });

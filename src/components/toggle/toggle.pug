@@ -1,15 +1,19 @@
-form(action="")
-    .text-field__body.checkbox-buttons_position
-        label.text-field__name(for="toggle") Toggle
-    ul.text-field__toggle
-        li 
-            input#tg1.switch(
-                type="checkbox" 
-                checked
-                )
-            label(for="tg1") Получать спецпредложения 
-        li 
-            input#tg2.switch(
-                type="checkbox"
-                )
-            label(for="tg2") Получать спецпредложения
+mixin toggle(name= "Toggle", nameLabel= "Получать спецпредложения", id="tg1", forr="tg1")
+    form(action="")
+        .text-field__body.checkbox-buttons_position
+            label.text-field__name(for="toggle")=name
+        ul.text-field__toggle
+            li 
+                input.switch(
+                    id=`${id}`
+                    type="checkbox" 
+                    checked
+                    )
+                label(for=`${forr}`)=nameLabel
+            li 
+                input#tg2.switch(
+                    type="checkbox"
+                    )
+                label(for="tg2")=nameLabel
++toggle("Toggle", "Получать спецпредложения")
++toggle("Toggle", "Получать спецпредложения", "tg7", "tg7")
