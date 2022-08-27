@@ -1,5 +1,5 @@
 // //dropdown-expanded
-const dropdownExpanded = document.querySelector(".text-field__block-list-expanded");
+const dropdownExpanded = document.querySelector(".area__block-list-expanded");
 const dropExp = document.querySelector("#js-default-hidden");
 
 

@@ -1,0 +1,181 @@
+//room-details
+.room-details {
+	background-color: #FFFFFF;
+	border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+	& h6 {
+		font-family: 'Montserrat';
+		font-weight: 700;
+		font-size: 19px;
+		line-height: 23px;
+		color: #1F2041;
+		margin-bottom: 20px;
+	}
+}
+.room-details__img {
+	display: flex;
+	& img {
+		object-fit: cover;
+		vertical-align: top;
+		width: 100%;
+	}
+}
+.room-details__img-left{
+	flex: 1 1 67%;
+}
+.room-details__img-right{
+	display: flex;
+	flex-direction: column;
+	flex: 1 1 33%;
+}
+.room-details__body {
+}
+.room-details__wrapper {
+	padding: 70px 0;
+}
+.room-details__content {
+	display: flex;
+	justify-content: space-between;
+}
+.room-details__content-block{
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: column;
+	margin-right: 69px;
+	width: 100%;
+}
+.number-block{
+	display: flex;
+	width: 100%;
+	margin-bottom: 10px;
+}
+.about-number {
+	display: flex;
+	flex-direction: column;
+	margin-right: 70px;
+}
+.impression{
+}
+.impression__body {
+	display: flex;
+	justify-content: space-between;
+}
+.impression__review {
+	width: 120px;
+	height: 120px;
+	margin-right: 50px;
+}
+.impression__review-title {
+	fill: #BC9CFF;
+	font-size: 14px;
+}
+.impression__review-number {
+	text-anchor: middle;
+	font-size: 0.6em;
+	transform: translateY(-0.1em);
+	font-weight: 700;
+}
+.impression__review-label {
+	text-anchor: middle;
+	font-size: 0.3em;
+	transform: translateY(1.2em);
+	font-weight: 400;
+}
+.impression__vote {
+	display: flex;
+	align-self: flex-end;
+	width: 146px;
+	height: 96px;
+}
+.impression__vote-items {
+	font-size: 14px;
+	line-height: 24px;
+	color: rgba(31, 32, 65, 0.75);
+	position: relative;
+}
+.impression__vote-item {
+	&_excellent::before {
+		content: "";
+		position: absolute;
+		top: 7px;
+		right: 151px;
+		width: 10px;
+		border-radius: 50%;
+		height: 10px;
+		background: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
+	}
+	&_good::before {
+		content: "";
+		position: absolute;
+		top: 31px;
+		right: 151px;
+		width: 10px;
+		border-radius: 50%;
+		height: 10px;
+		background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+	}
+	&_normal::before {
+		content: "";
+		position: absolute;
+		top: 55px;
+		right: 151px;
+		width: 10px;
+		border-radius: 50%;
+		height: 10px;
+		background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+	}
+	&_bad::before {
+		content: "";
+		position: absolute;
+		top: 79px;
+		right: 151px;
+		width: 10px;
+		border-radius: 50%;
+		height: 10px;
+		background: linear-gradient(180deg, #919191 0%, #3D4975 100%);
+	}
+}
+.reviews-world {
+	margin-bottom: 30px;
+}
+.reviews-world__title {
+	display: flex;
+	justify-content: space-between;
+	& span {
+		font-family: 'Montserrat';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 14px;
+		text-align: right;
+		color: rgba(31, 32, 65, 0.5);
+	}
+}
+.reviews-world__position {
+	margin-bottom: 22px;
+}
+.rule {
+	& h6 {
+		padding-left: 20px;
+	}
+}
+.other {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.cancel {
+	flex: 0 1 341px;
+	& p {
+		font-family: 'Montserrat';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 24px;
+		color: rgba(31, 32, 65, 0.75);
+	}
+}
+.donut-segment:hover,
+.donut-circle:hover,
+.donut-ring:hover{
+	stroke-width: 2;
+}

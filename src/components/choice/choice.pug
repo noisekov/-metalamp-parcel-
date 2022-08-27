@@ -4,60 +4,59 @@
             .find-number__name №<span>888</span> <span>люкс</span>
             .find-number__title <span>9 990₽</span> в сутки
         .find-number__dropdown.cards-position20
-            form(action="")
-                .date
-                    .date-dropdown
-                        .text-field__header 
-                            label.text-field__name(for="date-picker") Прибытие
-                        .text-field__body
-                            i.material-icons expand_more
-                            input#cal-two-input-choice.text-field__input-date-dropdown.position-filter150(
-                                type="text" 
-                                placeholder="19.08.2019" 
-                                autocomplete="off"
-                                )
-                    .date-dropdown
-                        .text-field__header 
-                            label.text-field__name(for="date-picker") Выезд
-                        .text-field__body
-                            i.material-icons expand_more
-                            input.text-field__input-date-dropdown.position-filter150(
-                                type="text" 
-                                placeholder="23.08.2019" 
-                                autocomplete="off"
-                                )
+            .date
+                .date-dropdown
+                    .area__header 
+                        label.area__name(for="date-picker") Прибытие
+                    .area__body
+                        i.material-icons expand_more
+                        input#cal-two-input-choice.area__input-date-dropdown.position-filter150(
+                            type="text" 
+                            placeholder="19.08.2019" 
+                            autocomplete="off"
+                            )
+                .date-dropdown
+                    .area__header 
+                        label.area__name(for="date-picker") Выезд
+                    .area__body
+                        i.material-icons expand_more
+                        input.area__input-date-dropdown.position-filter150(
+                            type="text" 
+                            placeholder="23.08.2019" 
+                            autocomplete="off"
+                            )
         .find-number__guest.cards-position20
-            form(action="").position-filter320
-                .text-field__header 
-                    p.text-field__name Гости
-                .text-field__body#js-input-guest
+            .position-filter320
+                .area__header 
+                    p.area__name Гости
+                .area__body#js-input-guest
                     i.material-icons#js-dropdown-hidden expand_more
-                    input.text-field__input-guest.position-input-large-area(
+                    input.area__input-guest.position-input-large-area(
                         type="text" 
                         placeholder="3 гостя"
                         )
-                .text-field__block-list-hidden
-                    .text-field__list
-                        .text-field__list-dropdown
+                .area__block-list-hidden
+                    .area__list
+                        .area__list-dropdown
                             ul 
                                 li Взрослые
                                 li Дети
                                 li Младенцы
-                        .text-field__list-btn  
+                        .area__list-btn  
                             ul  
-                                li.text-field__list-btn_col
+                                li.area__list-btn_col
                                     button -
                                     span 0
                                     button +
-                                li.text-field__list-btn_col
+                                li.area__list-btn_col
                                     button -
                                     span 0
                                     button +
-                                li.text-field__list-btn_col
+                                li.area__list-btn_col
                                     button -
                                     span 0
                                     button +
-                    .text-field__button
+                    .area__button
                         button Применить
         .find-number__body.cards-position30
             .find-number__body-block.cards-position10

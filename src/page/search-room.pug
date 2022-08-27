@@ -16,63 +16,63 @@ html(lang="en")
                         .search-room__left
                             .search-room__left-small-margin
                                 form(action="#").position-filter266
-                                    label.text-field__header.text-field__name(for="one-picker") Даты пребывания в отеле
-                                    .text-field__body
+                                    label.area__header.area__name(for="one-picker") Даты пребывания в отеле
+                                    .area__body
                                         i.material-icons expand_more
-                                        input#one-picker.text-field__input-filter-date-dropdown.position-input-area(
+                                        input#one-picker.area__input-filter-date-dropdown.position-input-area(
                                             type="text" 
                                             placeholder="19 авг - 23 авг" 
                                             autocomplete="off"
                                         )
                             .search-room__left-big-margin
                                 form(action="").position-filter266
-                                    .text-field__header 
-                                        p.text-field__name Гости
-                                    .text-field__body#js-input-guest
+                                    .area__header 
+                                        p.area__name Гости
+                                    .area__body#js-input-guest
                                         i.material-icons#js-dropdown-hidden expand_more
-                                        input.text-field__input-guest.position-input-large-area(
+                                        input.area__input-guest.position-input-large-area(
                                             type="text" 
                                             placeholder="3гостя, 1 младенец"
                                             autocomplete="off"
                                             )
-                                    .text-field__block-list-hidden.position-filter266
-                                        .text-field__list
-                                            .text-field__list-dropdown
+                                    .area__block-list-hidden.position-filter266
+                                        .area__list
+                                            .area__list-dropdown
                                                 ul 
                                                     li Взрослые
                                                     li Дети
                                                     li Младенцы
-                                            .text-field__list-btn  
+                                            .area__list-btn  
                                                 ul  
-                                                    li.text-field__list-btn_col
+                                                    li.area__list-btn_col
                                                         button#btnMinus -
                                                         span#countValue 0
                                                         button#btnPlus +
-                                                    li.text-field__list-btn_col
+                                                    li.area__list-btn_col
                                                         button#btnMinusChild -
                                                         span#countValueChild 0
                                                         button#btnPlusChild +
-                                                    li.text-field__list-btn_col
+                                                    li.area__list-btn_col
                                                         button -
                                                         span 0
                                                         button +
-                                        .text-field__button
+                                        .area__button
                                             button Применить
                             .search-room__left-big-margin
                                 form(action="/").position-filter266.search-room__left-small-margin
-                                    .text-field__header.range-slider_position
-                                        label.text-field__name(for="range-slider") Диапазон цены
-                                        .text-field__body-slider
-                                            span.text-field__name-fn.js-value-lower
+                                    .area__header.range-slider_position
+                                        label.area__name(for="range-slider") Диапазон цены
+                                        .area__body-slider
+                                            span.area__name-fn.js-value-lower
                                             span  - 
-                                            span.text-field__name-fn.js-value-upper 
+                                            span.area__name-fn.js-value-upper 
                                     .slider-styled#slider
                                 span.search-room__slider-subtitle Стоимость за сутки пребывания в номере
                             .search-room__left-big-margin
                                 form(action="")
-                                    .text-field__body.checkbox-buttons_position
-                                        label.text-field__name(for="checkbox-buttons") Правила дома
-                                    ul.text-field__expandable-checkbox-list
+                                    .area__body.checkbox-buttons_position
+                                        label.area__name(for="checkbox-buttons") Правила дома
+                                    ul.area__expandable-checkbox-list
                                         li  
                                             input#cb1(type="checkbox")
                                             label(for="cb1") Можно курить
@@ -84,9 +84,9 @@ html(lang="en")
                                             label(for="cb3") Можно пригласить гостей <br> (до 10 человек)
                             .search-room__left-big-margin
                                 form(action="").position-filter266
-                                    .text-field__body.position-filter.position-mb10
-                                        label.text-field__name(for="Rich checkbox buttons") Доступность
-                                    ul.text-field__expandable-checkbox-list
+                                    .area__body.position-filter.position-mb10
+                                        label.area__name(for="Rich checkbox buttons") Доступность
+                                    ul.area__expandable-checkbox-list
                                         li  
                                             input#rc1(type="checkbox")
                                             label(for="rc1") <span>Широкий коридор</span> <br>
@@ -97,32 +97,32 @@ html(lang="en")
                                                 p На 1 этаже вас встретит специалист  и проводит до номера.
                             .search-room__left-big-margin
                                 form(action="").position-filter266
-                                    p.text-field__name.text-field__header Удобства номера
-                                    .text-field__body
-                                        input.text-field__input-dropdown-default.position-input-area.js-dropdown-expanded(
+                                    p.area__name.area__header Удобства номера
+                                    .area__body
+                                        input.area__input-dropdown-default.position-input-area.js-dropdown-expanded(
                                             type="text"
                                             autocomplete="off" 
                                             placeholder="2 спальни, 2 кровати..."
                                             )
                                         i.material-icons#js-default-hidden.js-dropdown-expanded expand_more
-                                    .text-field__block-list-expanded
-                                        .text-field__list
-                                            .text-field__list-dropdown
+                                    .area__block-list-expanded
+                                        .area__list
+                                            .area__list-dropdown
                                                 ul 
                                                     li Спальни
                                                     li Кровати
                                                     li Ванные комнаты 
-                                            .text-field__list-btn
+                                            .area__list-btn
                                                 ul
-                                                    li.text-field__list-btn_col
+                                                    li.area__list-btn_col
                                                         button.js-first-elem-min -
                                                         span.js-counter 2
                                                         button.js-first-elem-plus +
-                                                    li.text-field__list-btn_col
+                                                    li.area__list-btn_col
                                                         button.js-second-elem-min -
                                                         span 2
                                                         button.js-second-elem-plus +
-                                                    li.text-field__list-btn_col
+                                                    li.area__list-btn_col
                                                         button.js-third-elem-min -
                                                         span 2
                                                         button.js-third-elem-plus +

@@ -1,19 +1,16 @@
 mixin toggle(name= "Toggle", nameLabel= "Получать спецпредложения", id="tg1", forr="tg1")
-    form(action="")
-        .text-field__body.checkbox-buttons_position
-            label.text-field__name(for="toggle")=name
-        ul.text-field__toggle
-            li 
-                input.switch(
-                    id=`${id}`
-                    type="checkbox" 
-                    checked
-                    )
-                label(for=`${forr}`)=nameLabel
-            li 
-                input#tg2.switch(
-                    type="checkbox"
-                    )
-                label(for="tg2")=nameLabel
-+toggle("Toggle", "Получать спецпредложения")
-+toggle("Toggle", "Получать спецпредложения", "tg7", "tg7")
+    .area__body.checkbox-buttons_position
+        label.area__name(for="toggle")=name
+    ul.area__toggle
+        li 
+            input.switch(
+                id=`${id}`
+                type="checkbox" 
+                checked
+                )
+            label(for=`${forr}`)=nameLabel
+        li 
+            input#tg2.switch(
+                type="checkbox"
+                )
+            label(for="tg2")=nameLabel

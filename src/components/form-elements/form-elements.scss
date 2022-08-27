@@ -79,7 +79,7 @@
 .form-elements__review {
     flex: 0 1 710px;
 }
-.text-field__radio-buttons{
+.area__radio-buttons{
     display: flex;
     line-height: 24px;
     color: rgba(31, 32, 65, 0.5);
@@ -134,13 +134,13 @@
         opacity: 0;
     }
 }
-.text-field__input-filter-date-dropdown {
+.area__input-filter-date-dropdown {
     color:  rgba(31, 32, 65, 0.75);
     border: 1px solid rgba(31, 32, 65, 0.25);
     border-radius: 4px;
     line-height: 18px;
 }
-.text-field__button {
+.area__button {
     & button {
         background-color: #fff;
         font-weight: 700;
@@ -158,10 +158,10 @@
         float: left;
     }
 }
-.text-field__list-dropdown {
+.area__list-dropdown {
     margin-left: 13px;
 }
-.text-field__list-dropdown li {
+.area__list-dropdown li {
     margin-bottom: 22px;
     &:first-child {
         margin-top: 13px;
@@ -170,7 +170,7 @@
         margin-bottom: 17px;
     }
 }
-.text-field__expandable-checkbox-list {
+.area__expandable-checkbox-list {
     & input[type="checkbox"]:checked,
      input[type="checkbox"]:not(:checked){
         position: absolute;
@@ -233,7 +233,7 @@
         opacity: 0;
         }
 }
-.text-field__expandable-checkbox-list li {
+.area__expandable-checkbox-list li {
     line-height: 18px;
     color: rgba(31, 32, 65, 0.5);
     margin: 0 0 10px 0px;
@@ -244,34 +244,34 @@
         margin-bottom: 0px;
     }
 }
-.text-field__expandable-checkbox-list span {
+.area__expandable-checkbox-list span {
     font-weight: 700;
     line-height: 18px;
     color: rgba(31, 32, 65, 0.75);
 }
-.text-field__expandable-checkbox-list p {
+.area__expandable-checkbox-list p {
     font-size: 12px;
     line-height: 14px;
     color: rgba(31, 32, 65, 0.5);
 }
-.text-field__name {
+.area__name {
     font-weight: 700;
     font-size: 12px;
     line-height: calc(15 / 12 * 100%);
     text-transform: uppercase;
     color: #1F2041;
 }
-.text-field__name-fn {
+.area__name-fn {
     text-transform: uppercase;
     font-size: 12px;
     line-height: 15px;
     color: rgba(31, 32, 65, 0.5);  
 }
-.text-field__body {
+.area__body {
     position: relative; 
     display: flex;
 }
-.text-field__input-date-dropdown {
+.area__input-date-dropdown {
     position: relative;
     padding: 13px 30px 13px 15px;
     color:  rgba(31, 32, 65, 0.75);
@@ -287,7 +287,7 @@
         }    
 }
 //text-field
-.text-field__masked-text-field {
+.area__masked-text-field {
     border: 1px solid rgba(31, 32, 65, 0.25);
     border-radius: 4px;
     &::-webkit-input-placeholder {
@@ -315,12 +315,12 @@
         } 
     }
 }
-.text-field__header{
+.area__header{
     margin-bottom: 5px;
     display: flex;
     justify-content: space-between;
 }
-.text-field__input {
+.area__input {
     border: 1px solid rgba(31, 32, 65, 0.25);
     border-radius: 4px;
     &::-webkit-input-placeholder {
@@ -346,7 +346,7 @@
         } 
     }
 }
-.text-field__input_active {
+.area__input_active {
     border: 1px solid rgba(31, 32, 65, 0.5);
     border-radius: 4px; 
     &::-webkit-input-placeholder {

@@ -1,4 +1,4 @@
-.text-field__like-button {
+.area__like-button {
     display: flex;
     & input.like:checked,
     input.like:not(:checked){
@@ -55,7 +55,7 @@
         }
    }
 }
-.text-field__like-button-block {
+.area__like-button-block {
     font-size: 10px;
     line-height: 12px;
     color: rgba(31, 32, 65, 0.25);

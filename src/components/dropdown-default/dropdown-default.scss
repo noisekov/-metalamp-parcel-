@@ -1,13 +1,13 @@
-.text-field__input-dropdown-default {
+.area__input-dropdown-default {
     color:  rgba(31, 32, 65, 0.75);
     border: 1px solid rgba(31, 32, 65, 0.25);
     border-radius: 4px 4px 0 0;
     cursor: pointer;
 }
-.text-field__block-list-expanded {
+.area__block-list-expanded {
     display: none;
 }
-.text-field__block-list-expanded.\.active-expanded {
+.area__block-list-expanded.\.active-expanded {
     position: absolute;
     display: flex;
     z-index: 5;

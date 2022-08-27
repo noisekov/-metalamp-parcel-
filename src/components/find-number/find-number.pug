@@ -1,57 +1,56 @@
 .find-number 
     h1.cards-position20 Найдём номера под ваши пожелания
     .find-number__dropdown.cards-position20
-        form(action="")
-            .date
-                .date-dropdown
-                    label.text-field__header.text-field__name(for="date-picker-cal1") Прибытие
-                    .text-field__body
-                        i.material-icons expand_more
-                        input#cal-two-input-find-number.text-field__input-date-dropdown.position-filter150(
-                            type="text" 
-                            placeholder="дд.мм.гг" 
-                            autocomplete="off"
-                            )
-                .date-dropdown
-                    label.text-field__header.text-field__name(for="date-picker-cal2") Выезд
-                    .text-field__body
-                        i.material-icons expand_more
-                        input.text-field__input-date-dropdown.position-filter150(
-                            type="text" 
-                            placeholder="дд.мм.гг" 
-                            autocomplete="off"
-                            )
+        .date
+            .date-dropdown
+                label.area__header.area__name(for="date-picker-cal1") Прибытие
+                .area__body
+                    i.material-icons expand_more
+                    input#cal-two-input-find-number.area__input-date-dropdown.position-filter150(
+                        type="text" 
+                        placeholder="дд.мм.гг" 
+                        autocomplete="off"
+                        )
+            .date-dropdown
+                label.area__header.area__name(for="date-picker-cal2") Выезд
+                .area__body
+                    i.material-icons expand_more
+                    input.area__input-date-dropdown.position-filter150(
+                        type="text" 
+                        placeholder="дд.мм.гг" 
+                        autocomplete="off"
+                        )
     .find-number__body.cards-position30
-        form(action="").position-filter320
-            p.text-field__header.text-field__name Гости
-            .text-field__body#js-input-guest
+        .position-filter320
+            p.area__header.area__name Гости
+            .area__body#js-input-guest
                 i.material-icons#js-dropdown-hidden expand_more
-                input.text-field__input-guest.position-input-large-area(
+                input.area__input-guest.position-input-large-area(
                     type="text" 
                     placeholder="Сколько гостей"
                     )
-            .text-field__block-list-hidden
-                .text-field__list
-                    .text-field__list-dropdown
+            .area__block-list-hidden
+                .area__list
+                    .area__list-dropdown
                         ul 
                             li Взрослые
                             li Дети
                             li Младенцы
-                    .text-field__list-btn  
+                    .area__list-btn  
                         ul  
-                            li.text-field__list-btn_col
+                            li.area__list-btn_col
                                 button -
                                 span 0
                                 button +
-                            li.text-field__list-btn_col
+                            li.area__list-btn_col
                                 button -
                                 span 0
                                 button +
-                            li.text-field__list-btn_col
+                            li.area__list-btn_col
                                 button -
                                 span 0
                                 button +
-                .text-field__button
+                .area__button
                     button(type = "submit") Применить
     .find-number__button-pay 
         .button-pay

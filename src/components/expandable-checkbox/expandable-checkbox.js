@@ -1,5 +1,5 @@
 //dropdown expandble
-const dropdownExpandable = document.querySelector(".text-field__expandable-checkbox-list-hidden")
+const dropdownExpandable = document.querySelector(".area__expandable-checkbox-list-hidden")
 document.addEventListener("click", expandable);
 function expandable (e) {
    if (e.target.closest(".js-expand-display-hidden")) {

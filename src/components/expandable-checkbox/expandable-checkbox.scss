@@ -1,4 +1,4 @@
-.text-field__expandable-checkbox-list-hidden {
+.area__expandable-checkbox-list-hidden {
     display: none;
     width: 266px;
     height: inherit;
@@ -64,7 +64,7 @@
         opacity: 0;
         }
 }
-.text-field__expandable-checkbox-list-hidden li {
+.area__expandable-checkbox-list-hidden li {
     line-height: 18px;
     color: rgba(31, 32, 65, 0.5);
     margin: 0 0 10px 0px;
@@ -75,17 +75,17 @@
         margin-bottom: 0px;
     }
 }
-.text-field__expandable-checkbox-list-hidden span {
+.area__expandable-checkbox-list-hidden span {
     font-weight: 700;
     line-height: 18px;
     color: rgba(31, 32, 65, 0.75);
 }
-.text-field__expandable-checkbox-list-hidden p {
+.area__expandable-checkbox-list-hidden p {
     font-size: 12px;
     line-height: 14px;
     color: rgba(31, 32, 65, 0.5);
 }
-.text-field__name-expandable{
+.area__name-expandable{
     padding: 10px 0 0 0;
     font-weight: 700;
     font-size: 12px;
@@ -94,7 +94,7 @@
     color: #1F2041;
     cursor: pointer;
 }
-.text-field__expandable-checkbox-list-hidden.\.active-expandble{
+.area__expandable-checkbox-list-hidden.\.active-expandble{
     display: block;
     position: absolute;
     background: #ffffff;

@@ -1,13 +1,18 @@
 .cards
     .cards__container
         .cards__container_left 
-            include ../find-number/find-number.pug
-            include ../registration/registration.pug
+            form(action="#") 
+                include ../find-number/find-number.pug
+            form(action="#") 
+                include ../registration/registration.pug
         .cards__container_middle 
-            include ../choice/choice.pug
-            include ../entry/entry.pug
+            form(action="#") 
+                include ../choice/choice.pug
+            form(action="#" method="POST") 
+                include ../entry/entry.pug
         .cards__container_right 
-            .calendar.cards-position40#calendar
+            form(action="#") 
+                .calendar.cards-position40#calendar
             .cards-position40
                 include ../appartment/appartment.pug
             .appartment 

@@ -10,6 +10,7 @@ html(lang="en")
         .wrapper
             include ../components/headers & footers/header/header-up.pug
             .sign-in
-                include ../components/entry/entry.pug
+                form(action="#" method="POST") 
+                    include ../components/entry/entry.pug
             include ../components/headers & footers/footer/footer.pug
         script(src="/page/sign-in.js")

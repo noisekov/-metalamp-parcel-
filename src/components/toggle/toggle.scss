@@ -1,4 +1,4 @@
-.text-field__toggle {
+.area__toggle {
     & .switch:checked,
      .switch:not(:checked){
         position: absolute;
@@ -63,6 +63,6 @@
         transition: all 0.2s ease;
     }    
 }
-.text-field__toggle li {
+.area__toggle li {
     margin-bottom: 14px;
 }

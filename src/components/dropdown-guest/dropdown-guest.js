@@ -1,8 +1,8 @@
 //dropdown-guest
-const dropdownGuest = document.querySelectorAll(".text-field__block-list-hidden");
+const dropdownGuest = document.querySelectorAll(".area__block-list-hidden");
 const dropImg = document.querySelectorAll("#js-dropdown-hidden")
 const drop = document.querySelectorAll("#js-input-guest")
-const styleField = document.querySelectorAll(".text-field__input-guest")
+const styleField = document.querySelectorAll(".area__input-guest")
 
 if (drop.length >= 1){
    drop.forEach((btn, i) => {
@@ -42,7 +42,7 @@ if (drop.length >= 1){
    const btnPlus = document.querySelector("#btnPlus");
    const countValue = document.querySelector("#countValue");
 
-   const textInput = document.querySelector(".text-field__input-guest");
+   const textInput = document.querySelector(".area__input-guest");
 
    let count;
    btnMinus.addEventListener('click', function (e){

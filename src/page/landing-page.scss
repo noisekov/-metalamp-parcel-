@@ -1,0 +1,29 @@
+//landing-page
+.landing-page {
+	background: url(../images/landing-page.jpg) no-repeat;
+	background-position: center;
+	background-size: cover;
+	position: relative;
+	@media (max-width:900px) {
+		display: flex;
+		justify-content: center;
+	}
+}
+.landing-page-block {
+	display: block;
+	text-align: right;
+}	
+.landing-page-block__text {
+	width: 297px;
+	position: absolute;
+	top: 93%;
+	right: 134px;
+	line-height: 24px;
+	color: rgba(31, 32, 65, 0.75);
+}
+.landing-page_abs{
+	padding: 70px 0 386px 140px;
+	@media (max-width:900px) {
+		padding: 70px 0 386px 0;
+	}
+}

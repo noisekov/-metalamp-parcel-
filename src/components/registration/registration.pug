@@ -1,15 +1,15 @@
 .registration
     h1.cards-position20 Регистрация аккаунта
     form(action="/").position-filter320
-        input#field.text-field__input.cards-position10.position-input-large-area(
+        input#field.area__input.cards-position10.position-input-large-area(
             type="text"
             placeholder="Имя" 
             )
-        input#field.text-field__input.cards-position10.position-input-large-area(
+        input#field.area__input.cards-position10.position-input-large-area(
             type="text"
             placeholder="Фамилия"
             )
-        ul.text-field__radio-buttons.cards-position20
+        ul.area__radio-buttons.cards-position20
             li 
                 input#reg1(
                     type="radio" 
@@ -23,21 +23,21 @@
                     name="reg"
                     )
                 label(for="reg2") Женщина 
-        label.text-field__header.text-field__name(for="masked-text-field") Дата рождения
-        input#masked-text-field.cards-position20.text-field__masked-text-field.position-input-large-area(
+        label.area__header.area__name(for="masked-text-field") Дата рождения
+        input#masked-text-field.cards-position20.area__masked-text-field.position-input-large-area(
             type="text"
             placeholder="дд.мм.гг"
             ) 
-        label(for="field").text-field__header.text-field__name Данные для входа в сервис 
-        input#field.text-field__input.cards-position10.position-input-large-area(
+        label(for="field").area__header.area__name Данные для входа в сервис 
+        input#field.area__input.cards-position10.position-input-large-area(
             type="text"
             placeholder="Email"
             )
-        input#field.text-field__input.cards-position10.position-input-large-area(
+        input#field.area__input.cards-position10.position-input-large-area(
             type="text"
             placeholder="Пароль"
             )
-        .text-field__toggle.cards-position20
+        .area__toggle.cards-position20
             input#reg-sw.switch(
                 type="checkbox"
                 )

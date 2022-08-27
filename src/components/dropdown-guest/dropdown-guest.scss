@@ -1,44 +1,44 @@
-.text-field__input-guest {
+.area__input-guest {
     border: 1px solid rgba(31, 32, 65, 0.25);
     border-radius: 4px;
     cursor: pointer;
 }
-.text-field__input-guest.\.active-guest {
+.area__input-guest.\.active-guest {
     border: 1px solid rgba(31, 32, 65, 0.25);
     border-radius: 4px 4px 0 0;
     cursor: pointer;
 }
-.text-field__block-list-hidden {
+.area__block-list-hidden {
     display: none;
     flex-direction: column;
     border: 1px solid rgba(31, 32, 65, 0.25);
     border-radius: 0 0 4px 4px;
 }
-.text-field__block-list-hidden.\.active-guest{
+.area__block-list-hidden.\.active-guest{
     display: flex;
     position: absolute;
     width: 320px;
     background: #ffffff;
     z-index: 3;
 }
-.text-field__block-list {
+.area__block-list {
     display: flex;
     flex-direction: column;
     border: 1px solid rgba(31, 32, 65, 0.25);
     border-radius: 0 0 4px 4px;
 }
-.text-field__list {
+.area__list {
     display: flex;
     justify-content: space-between;
 }
-.text-field__list-dropdown {
+.area__list-dropdown {
     font-weight: 700;
     font-size: 12px;
     line-height: 15px;
     text-transform: uppercase;
     color: #1F2041;
 }
-.text-field__list-btn_col {
+.area__list-btn_col {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -50,7 +50,7 @@
     margin: 7px;
     width:92px;
 }
-.text-field__list-btn_col button {
+.area__list-btn_col button {
     width: 30px;
     height: 30px;
     border: 1px solid rgba(31, 32, 65, 0.25);
